@@ -368,11 +368,11 @@ b, strong {
 		background: #0d0c15;
 		color: $text-white;
 	}
-	.feature-card .uil,
+	.feature-card .uil, .button-text,
 	.navbar-light .navbar-brand,
 	h1, h2, h3, h4, h5, h6, p, .close,
 	.color-mode, .navbar-toggler .navbar-toggler-icon, .txtAboutMe{
-		color: $text-white;
+		color: $text-white !important;
 	}
 	.owl-carousel {
 		.owl-nav button.owl-next,

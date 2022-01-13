@@ -24,6 +24,29 @@ body {
   letter-spacing: 0.2px;
 }
 
+.meImg {
+  height: 50px;
+  width: 50px;
+  margin-right: 10px;
+  background-repeat: no-repeat;
+  background-position: 50%;
+  border-radius: 50%;
+  background-size: 100% auto;
+  background-image: url("../images/me.jpeg");
+  border-radius: 50%;
+  -webkit-box-shadow: 0;
+          box-shadow: 0;
+  -webkit-transition: -webkit-box-shadow 1s;
+  transition: -webkit-box-shadow 1s;
+  transition: box-shadow 1s;
+  transition: box-shadow 1s, -webkit-box-shadow 1s;
+}
+
+.meImg:hover {
+  -webkit-box-shadow: 0 0 0 10px rgba(33, 81, 153, 0.2);
+          box-shadow: 0 0 0 10px rgba(33, 81, 153, 0.2);
+}
+
 ul {
   margin: 0;
   padding: 0;

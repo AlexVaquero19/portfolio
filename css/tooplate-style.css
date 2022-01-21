@@ -11,6 +11,17 @@ body {
   padding-top: 70px;
 }
 
+.intermediateIcons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 40px;
+  height: 40px;
+}
+
 .full-screen {
   padding: 2rem 0;
 }

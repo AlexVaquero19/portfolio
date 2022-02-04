@@ -78,7 +78,7 @@
         <div class="row">
           <div class="col-lg-5 col-md-12 col-12 d-flex align-items-center">
             <div class="about-text">
-              <small class="small-text">Bienvenido a <span class="mobile-block">mi portfolio!</span></small>
+              <small class="small-text p-0">Bienvenido a <span class="mobile-block">mi portfolio!</span></small>
               <h1 class="animated animated-text">
                 <span class="mr-2">Hola a todos!, Soy</span>
                 <div class="animated-info">
@@ -112,8 +112,8 @@
                     <li><span class="aboutMeTitles uil uil-user">Edad: </span><span class="edad"></span> (19/04/1999)</li>
                     <li><span class="aboutMeTitles uil uil-postcard">Email: </span><small>vaquero.alejandro19@gmail.com</small></li>
                     <hr class="bg-dark"/>
-                    <li>
-                      Me considero una persona muy activa que quiere aprender y formarse todo lo que pueda. La programación es mi pasión y me gustaría poder aprender todo lo posible. Además, soy una persona que trabaja muy bien en equipo.
+                    <li class="fs-6">
+                      Soy una persona con inquietudes que acaba de empezar su vida laboral, que está en busca de una empresa con la que poder crecer personal y laboralmente hablando.<br /> Lo que más busco es la formación continua y el uso de tecnologías punteras o que se me pueda dar acceso a estudiarlo por mi cuenta para poder reciclarme.
                     </li>
                   </ul>
                 </div>
@@ -149,9 +149,11 @@
             </div>
           </div>
 
-          <div class="row d-flex justify-content-center">
-            <button class="btn custom-btn custom-btn-bg mr-1" data-toggle="modal" data-target="#urlsModal"><i class="uil uil-globe"></i> Visitar Proyectos</button>
-            <a href="./codepen.html" class="btn custom-btn custom-btn-bg"><i class="uil uil-globe"></i> Ver Proyectos Codepen</a>
+          <div class="row d-flex">
+            <div class="justify-content-center d-flex">
+              <a class="btn custom-btn custom-btn-bg mr-1" data-bs-toggle="modal" data-bs-target="#urlsModal"><i class="uil uil-globe"></i> Visitar Proyectos</a>
+              <a href="./codepen.html" class="btn custom-btn custom-btn-bg ms-2"><i class="uil uil-globe"></i> Ver Proyectos Codepen</a>
+            </div>
           </div>
         </div>
     </section>
@@ -169,7 +171,9 @@
                 </div>
                 <div class="timeline-info">
                   <h3><span>Programador C# .NET</span><small>GMV</small></h3>
-                  <p>Desarrollo de un proyecto para la Gestión de Barcos en España en el Departamento de Defensa.</p>
+                  <p class="fs-6">- Desarrollo y mantenimeinto de un proyecto para la Gestión de Barcos en España en el Departamento de Defensa usando C# .NET Framework 4.5, Visual Studio 2022 y TFS (Team Foundation Server) como control de Código Fuente.</p>
+                  <p class="fs-6">- Uso de Python 3.10 y Selenium para realizar scraping y obtener información de buques e imágenes de disntinas páginas.</p>
+                  <p class="fs-6">- Creación de una página web de la que se van a poder descargar los datos de emergencias del año actual y los 3 años anteriores, usando SOAP, AJAX y Web Services.</p>
                 </div>
               </div>
 
@@ -179,7 +183,9 @@
                 </div>
                 <div class="timeline-info">
                   <h3><span>Desarrollador WEB</span><small>Segundoplano</small></h3>
-                  <p>Desarrollo de varios Proyectos en PHP (Symfony 5) para gestión de Fincas y Clubs.</p>
+                  <p class="fs-6">- Desarrollo de un Proyecto desde 0 en PHP (Symfony 5) para gestión de Fincas y Clubs.</p>
+                  <p class="fs-6">- Mantenimeinto de una página web con un formualario y parte de blog.</p>
+                  <p class="fs-6">- Mantenimiento de un E-Commerce que se dedica a la venta de radiadores</p>
                 </div>
               </div>
 
@@ -189,7 +195,7 @@
                 </div>
                 <div class="timeline-info">
                   <h3><span>Técnico Informático</span><small>Indra</small></h3>
-                  <p>Montaje de estaciones de trabajo, intalación de Sistema Operativo y software.</p>
+                  <p class="fs-6">- Montaje de estaciones de trabajo, intalación de Sistema Operativo y software.</p>
                 </div>
               </div>
             </div>
@@ -239,7 +245,7 @@
                 <img class="mx-2" src="./images/icons/css3.svg" alt="CSS3">  
                 <img class="mx-2" src="./images/icons/bootstrap.svg" alt="Bootstrap">  
                 <img class="mx-2" src="./images/icons/js.svg" alt="JavaScript">  
-                <img class="mx-2" src="./images/icons/jQuery.svg" alt="jQuery">  
+                <img class="mx-2 bg-dark-mode-svg" src="./images/icons/jQuery.svg" alt="jQuery">  
                 <img class="mx-2" src="./images/icons/mysql.svg" alt="MySql">  
                 <img class="mx-2" src="./images/icons/php.svg" alt="PHP">  
                 <img class="mx-2" src="./images/icons/symfony.svg" alt="Symfony">  
@@ -252,10 +258,10 @@
             <div class="row">
               <div class=" col intermediateIcons">
                 <img class="mx-3" src="./images/icons/cSharp.svg" alt="C#">  
-                <img class="mx-3" src="./images/icons/java.svg" alt="Java">  
+                <img class="mx-3 bg-dark-mode-svg" src="./images/icons/java.svg" alt="Java">  
                 <img class="mx-3" src="./images/icons/net.svg" alt=".NET">  
                 <img class="mx-3" src="./images/icons/python.svg" alt="Python">  
-                <img class="mx-3" src="./images/icons/sqlServer.svg" alt="SQL Server">
+                <img class="mx-3 bg-dark-mode-svg" src="./images/icons/sqlServer.svg" alt="SQL Server">
               </div>
             </div>
           </div>
@@ -268,7 +274,7 @@
       <div class="container">
         <div class="row">
           <div class="col-lg-12 col-12">                                
-            <p class="copyright-text text-center mb-0">&copy; <span class="anio"></span> Alejandro Vaquero Toba</p>
+            <p class="copyright-text text-center">&copy; <span class="anio"></span> Alejandro Vaquero Toba</p>
           </div> 
         </div>
       </div>
@@ -280,9 +286,7 @@
         <div class="modal-content">
           <div class="modal-header">
             <h5 class="modal-title" id="exampleModalLabel">Proyectos</h5>
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
-            </button>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
           <div class="modal-body">
             <div class="row p-3 justify-content-between centrado-peque">

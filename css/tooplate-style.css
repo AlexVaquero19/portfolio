@@ -445,7 +445,7 @@ b, strong {
   background: #222222;
 }
 
-.dark-mode .navbar-toggler .navbar-toggler-icon {
+.dark-mode .navbar-toggler .navbar-toggler-icon, .dark-mode .bg-dark-mode-svg {
   background: #ffffff;
 }
 

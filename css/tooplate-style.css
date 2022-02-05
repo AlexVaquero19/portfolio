@@ -606,6 +606,11 @@ b, strong {
   color: #f7f3f3;
 }
 
+.switchMode {
+  position: absolute;
+  right: 50px;
+}
+
 .social-links .uil {
   color: #f7f3f3;
   font-size: 20px;

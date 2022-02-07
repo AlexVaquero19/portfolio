@@ -18,8 +18,8 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  width: 40px;
-  height: 40px;
+  width: 45px;
+  height: 45px;
 }
 
 .full-screen {
@@ -465,6 +465,11 @@ b, strong {
   height: 100%;
   position: absolute;
   left: 42px;
+}
+
+.bg-dark-mode-svg-rounded {
+  background: #ffffff;
+  border-radius: 50%;
 }
 
 .timeline-yr {

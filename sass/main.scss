@@ -47,8 +47,8 @@ body {
 .intermediateIcons{
 	display: flex;
 	justify-content: center;
-	width: 40px;
-	height: 40px;
+	width: 45px;
+	height: 45px;
 }
 
 .full-screen {
@@ -436,6 +436,11 @@ b, strong {
     	position: absolute;
     	left: 42px; 
 	}
+}
+
+.bg-dark-mode-svg-rounded{
+	background: $text-white;
+	border-radius: 50%;
 }
 
 .timeline-yr {

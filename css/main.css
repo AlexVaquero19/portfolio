@@ -464,22 +464,31 @@ b, strong {
   width: 3px;
   height: 100%;
   position: absolute;
-  left: 38px;
+  left: 42px;
 }
 
 .timeline-yr {
   background: #112a4e;
   border-radius: 100%;
   position: absolute;
-  width: 75px;
-  height: 75px;
-  line-height: 75px;
+  width: 85px;
+  height: 85px;
+  line-height: 85px;
   text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .timeline-yr span {
   color: #ffffff;
-  font-size: 16px;
+  font-size: 15px;
   font-weight: bold;
   display: block;
   line-height: 75px;
@@ -723,4 +732,4 @@ b, strong {
     vertical-align: top;
   }
 }
-/*# sourceMappingURL=tooplate-style.css.map */
+/*# sourceMappingURL=main.css.map */

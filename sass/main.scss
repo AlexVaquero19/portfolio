@@ -434,7 +434,7 @@ b, strong {
     	width: 3px;
     	height: 100%;
     	position: absolute;
-    	left: 38px; 
+    	left: 42px; 
 	}
 }
 
@@ -442,13 +442,16 @@ b, strong {
 	background: $button-color;
 	border-radius: 100%;
 	position: absolute;
-	width: 75px;
-	height: 75px;
-	line-height: 75px;
+	width: 85px;
+	height: 85px;
+	line-height: 85px;
 	text-align: center;
+	display: flex;
+    align-items: center;
+    justify-content: center;
 	span {
 		color: $text-white;
-    	font-size: $link-font-size;
+    	font-size: 15px;
     	font-weight: $font-weight-bold;
     	display: block;
     	line-height: 75px;

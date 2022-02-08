@@ -437,6 +437,36 @@ b, strong {
 		color: $text-white;
 		text-shadow: 2px 3px #ffffff38;
 	}
+
+	.dropdown-menu{
+		background: $modal-background;
+		color: $text-white;
+		.dropdown-item{
+			color: $text-white;
+		}
+		.dropdown-item img{
+			background: $text-white;
+			border-radius: 25%;
+		}
+		.bg-git{
+			border-radius: 50% !important;
+		}
+	}
+}
+
+.svg-social img{
+	width: 15px;
+	height: 15px;
+}
+
+.svg-social li{
+	display: flex;
+	align-items: center;
+}
+
+.dropdown-item.active, .dropdown-item:active{
+	color: transparent;
+	background-color: transparent;
 }
 
 

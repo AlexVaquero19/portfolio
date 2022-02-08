@@ -468,6 +468,43 @@ b, strong {
   text-shadow: 2px 3px #ffffff38;
 }
 
+.dark-mode .dropdown-menu {
+  background: #222222;
+  color: #ffffff;
+}
+
+.dark-mode .dropdown-menu .dropdown-item {
+  color: #ffffff;
+}
+
+.dark-mode .dropdown-menu .dropdown-item img {
+  background: #ffffff;
+  border-radius: 25%;
+}
+
+.dark-mode .dropdown-menu .bg-git {
+  border-radius: 50% !important;
+}
+
+.svg-social img {
+  width: 15px;
+  height: 15px;
+}
+
+.svg-social li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.dropdown-item.active, .dropdown-item:active {
+  color: transparent;
+  background-color: transparent;
+}
+
 .timeline-wrapper {
   position: relative;
   padding-bottom: 10px;

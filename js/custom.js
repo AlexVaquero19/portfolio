@@ -89,7 +89,6 @@ $(document).ready(function() {
   function animateText(){
       setInterval(function(){ 
           $(".txtAnim").toggleClass("animate__lightSpeedOutRight animate__lightSpeedInLeft");
-
           $(".delete").text(animatedText[contAnimated]);
           
           setTimeout(function(){

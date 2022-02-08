@@ -51,10 +51,10 @@ body {
 	display: flex;
 	justify-content: center;
 	flex-wrap: wrap;
-}
-.intermediateIcons img{
-	width: 45px;
-	height: 45px;
+	img{
+		width: 45px;
+		height: 45px;
+	}
 }
 
 .full-screen {
@@ -204,26 +204,10 @@ b, strong {
 
 .animated-item {
 	color: $main-color;
-}
-
-.animated-item {
     font-size: 32px;
     line-height: inherit;
     display: block;
-    //opacity: 0;
 	min-width: 140%;
-    //overflow: hidden;
-    //position: absolute;
-    //top: 0;
-    //right: 0;
-    //left: 0;
-    /*animation: BottomTotop 6s linear infinite 0s;
-    &:nth-child(2n+2) {
-        animation-delay: 2s;
-    }
-    &:nth-child(3n+3) {
-        animation-delay: 4s;
-    }*/
 }
 
 @keyframes BottomTotop {

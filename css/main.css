@@ -182,20 +182,10 @@ b, strong {
 
 .animated-item {
   color: #4c979b;
-}
-
-.animated-item {
   font-size: 32px;
   line-height: inherit;
   display: block;
   min-width: 140%;
-  /*animation: BottomTotop 6s linear infinite 0s;
-    &:nth-child(2n+2) {
-        animation-delay: 2s;
-    }
-    &:nth-child(3n+3) {
-        animation-delay: 4s;
-    }*/
 }
 
 @-webkit-keyframes BottomTotop {

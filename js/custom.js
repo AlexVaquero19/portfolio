@@ -6,16 +6,14 @@
 
     // COLOR MODE
     $('.color-mode').click(function(){
-        $('.color-mode-icon').fadeOut().fadeIn();
         $('.color-mode-icon').toggleClass('active');
         $('body').toggleClass('dark-mode');
-        $('.mode').fadeOut();
 
         if(contModes % 2 === 0) 
             $('.mode').text('Modo Claro');
         else
             $('.mode').text('Modo Oscuro');
-        $('.mode').fadeIn();
+        $('.mode').show();
         
         contModes++;
     });

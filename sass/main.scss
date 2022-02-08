@@ -24,6 +24,9 @@ $button-color: #112a4e;
 $small-color: #b1b1b1;
 $modal-background: #222222;
 $navbar-background: #464646;
+$link-color: #074a4d;
+$custom-button-shadow: #074a4db3;
+$custom-button-shadow-hover: #4c979bb3;
 
 $small-font-size: 14px;
 $link-font-size: 16px;
@@ -76,9 +79,17 @@ body {
     border-radius: 50%;
 	box-shadow: 0;
   	transition: box-shadow 1s;
+	&:hover{
+		box-shadow: 0 0 0 10px rgba(27, 159, 163, 0.247);
+	}
 }
-.meImg:hover{
-	box-shadow: 0 0 0 10px rgba(33, 81, 153, 0.2);
+
+small a{
+	font-weight: bold;
+	color: $main-color;
+	&:hover{
+		color: $link-color !important;
+	}
 }
 
 ul {
@@ -150,6 +161,9 @@ b, strong {
     font-size: $small-font-size;
     line-height: normal;
     overflow: hidden;
+
+	box-shadow: -7px 6px 9px 2px $custom-button-shadow;
+
     @include transition-effect;
     &:hover {
     	color: $main-color;
@@ -160,6 +174,7 @@ b, strong {
 		&:hover {
 	    	background: $main-color;
 	    	color: $text-white !important;
+			box-shadow: -7px 6px 9px 2px $custom-button-shadow-hover;
 	    }
     }
 }
@@ -345,6 +360,7 @@ b, strong {
 	font-size: 16px;
 	font-weight: $font-weight-normal;
 	display: block;
+	text-shadow: 2px 3px #00000038;
 }
 
 
@@ -413,8 +429,13 @@ b, strong {
 		background: $modal-background;
 	}
 
-	.navbar-toggler .navbar-toggler-icon, .bg-dark-mode-svg{
-		background: $text-white;
+	.navbar-toggler .navbar-toggler-icon, .bg-dark-mode-svg, hr{
+		background: $text-white !important;
+	}
+
+	.copyright-text{
+		color: $text-white;
+		text-shadow: 2px 3px #ffffff38;
 	}
 }
 

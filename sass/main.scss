@@ -50,6 +50,9 @@ body {
 .intermediateIcons{
 	display: flex;
 	justify-content: center;
+	flex-wrap: wrap;
+}
+.intermediateIcons img{
 	width: 45px;
 	height: 45px;
 }
@@ -757,6 +760,10 @@ b, strong {
 
 	.centrado-peque{
 		justify-content: center;
+	}
+
+	.basic{
+		margin-top: 2em;
 	}
 }
 

@@ -18,6 +18,11 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.intermediateIcons img {
   width: 45px;
   height: 45px;
 }
@@ -766,6 +771,9 @@ b, strong {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+  }
+  .basic {
+    margin-top: 2em;
   }
 }
 

@@ -34,7 +34,7 @@
     // SMOOTHSCROLL
     $(function() {
       $('.nav-link, .custom-btn-link').on('click', function(event) {
-        var $anchor = $(this);
+        let $anchor = $(this);
         if(!$(this)[0].getAttribute("href") == "#")
         {
             $('html, body').stop().animate({
@@ -52,9 +52,9 @@
 $(document).ready(function() { 
     
   let dob = new Date("1999/04/19");
-  var today = new Date();
-  var dayDiff = Math.ceil(today - dob) / (1000 * 60 * 60 * 24 * 365);
-  var age = parseInt(dayDiff);
+  let today = new Date();
+  let dayDiff = Math.ceil(today - dob) / (1000 * 60 * 60 * 24 * 365);
+  let age = parseInt(dayDiff);
 
   let counter = 0;
   
@@ -77,6 +77,11 @@ $(document).ready(function() {
       }
 
       counter++;
+  });
+
+  $(window).scroll(function(){
+    $(".dropdown-toggle").removeClass("show");
+    $(".dropdown-menu").removeClass("show");
   });
 
   let animatedText = ["Alejandro Vaquero Toba", "Programador", "Desarrollador Web"];

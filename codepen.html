@@ -5,43 +5,48 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="Portfolio personal">
     <meta name="author" content="Alejandro Vaquero Toba">
+    <meta description="Portfolio personal con toda la información	sobre mi vida profesional y proyectos en Codepen">
 
     <title>Portfolio - Alejandro</title>
 
+    <!-- Styles -->
     <link rel="stylesheet" href="./css/bootstrap.min.css">
     <link rel="stylesheet" href="./css/carousel.min.css">
     <link rel="stylesheet" href="./css/unicons.css">
     <link rel="stylesheet" href="./css/theme.min.css">
 
-    <!-- MAIN STYLE -->
+    <!-- Main Style -->
     <link rel="stylesheet" href="./css/main.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
-    <link rel="shortcut icon" href="./images/icon.ico" type="image/x-icon">
+    
+    <!-- Icon Page -->
+    <link rel="shortcut icon" href="./images/icons/icon.svg" type="image/x-icon">
   </head>
+
   <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light animate__animated animate__fadeIn">
+      <div class="container">
 
-  <!-- MENU -->
-  <nav class="navbar navbar-expand-lg navbar-light animate__animated animate__fadeIn">
-    <div class="container">
+        <a class="navbar-brand d-flex align-items-center animationBackground" href="./">
+          <div class="meImg me-3"> </div> Alejandro
+        </a>
 
-      <a class="navbar-brand d-flex align-items-center animationBackground" href="./">
-        <div class="meImg me-3"> </div> Alejandro
-      </a>
-
-      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-        <ul class="navbar-nav switchMode ml-lg-auto d-block d-sm-none d-md-block">
-          <div class="ml-lg-4">
-            <div class="color-mode d-lg-flex justify-content-center align-items-center">
-              <i class="color-mode-icon txtMode"></i>
-              <span class="txtMode mode">Modo Oscuro</span>
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+          <ul class="navbar-nav switchMode ml-lg-auto d-block d-sm-none d-md-block">
+            <div class="ml-lg-4">
+              <div class="color-mode d-lg-flex justify-content-center align-items-center">
+                <i class="color-mode-icon txtMode"></i>
+                <span class="txtMode mode">Modo Oscuro</span>
+              </div>
             </div>
-          </div>
-        </ul>
+          </ul>
 
+        </div>
       </div>
-    </div>
-  </nav>
+    </nav>
 
+    <!-- Dark/Light Mode-->
     <section class="about justify-content-center align-items-center animate__animated animate__fadeInDown d-block d-sm-block d-md-none">
       <div class="container">
         <div class="d-flex justify-content-center">
@@ -52,6 +57,7 @@
       </div>
     </section>
 
+    <!-- Code Pen Projects-->
     <section class="project py-5 animate__animated animate__fadeInDown">
       <div class="container">
         <div class="row">
@@ -71,9 +77,10 @@
             on <a href="https://codepen.io">CodePen</a>.
           </iframe>
         </div>
-      </div>
+        </div>
     </section>
     
+    <!-- Scripts -->
     <script src="js/jquery-3.3.1.min.js"></script>
     <script src="js/popper.min.js"></script>
     <script src="js/bootstrap.min.js"></script>

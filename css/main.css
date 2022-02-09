@@ -149,6 +149,11 @@ b, strong {
   color: #4c979b;
 }
 
+.custom-btn:active {
+  -webkit-transform: translateY(4px);
+          transform: translateY(-4px);
+}
+
 .custom-btn.custom-btn-bg {
   background: #112a4e;
   color: #ffffff;

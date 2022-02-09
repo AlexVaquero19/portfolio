@@ -172,6 +172,9 @@ b, strong {
     &:hover {
     	color: $main-color;
     }
+	&:active{
+		transform: translateY(4px);
+	}
     &.custom-btn-bg {
     	background: $button-color;
 		color: $text-white;

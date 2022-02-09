@@ -20,12 +20,12 @@ body {
           justify-content: center;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  margin-top: 0.5em;
 }
 
 .intermediateIcons img {
   width: 45px;
   height: 45px;
+  margin-top: 0.5em;
 }
 
 .full-screen {

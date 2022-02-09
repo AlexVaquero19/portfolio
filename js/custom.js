@@ -9,10 +9,6 @@
         $('.color-mode-icon').toggleClass('active');
         $('body').toggleClass('dark-mode');
 
-        if(contModes % 2 === 0) 
-            $('.mode').text('Modo Claro');
-        else
-            $('.mode').text('Modo Oscuro');
         $('.mode').show();
         
         contModes++;

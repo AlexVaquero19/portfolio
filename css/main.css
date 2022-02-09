@@ -274,16 +274,6 @@ b, strong {
   transition: transform 200ms linear, -webkit-transform 200ms linear;
 }
 
-.navbar[class*="-unpinned"] {
-  -webkit-transform: translate(0, -150%);
-          transform: translate(0, -150%);
-}
-
-.navbar[class*="-pinned"] {
-  -webkit-transform: translate(0, 0);
-          transform: translate(0, 0);
-}
-
 .navbar[class*="headroom--not-top"] {
   background: #ffffff;
   border-bottom: 1px solid #f0f0f0;

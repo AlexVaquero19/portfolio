@@ -155,7 +155,7 @@ b, strong {
 }
 
 .custom-btn.custom-btn-bg {
-  background: #112a4e;
+  background: #366a7f;
   color: #ffffff;
 }
 
@@ -511,7 +511,7 @@ b, strong {
 
 .timeline-wrapper:before {
   content: "";
-  background: #112a4e;
+  background: #366a7f;
   width: 3px;
   height: 100%;
   position: absolute;
@@ -524,7 +524,7 @@ b, strong {
 }
 
 .timeline-yr {
-  background: #112a4e;
+  background: #366a7f;
   border-radius: 100%;
   position: absolute;
   width: 85px;
@@ -558,7 +558,7 @@ b, strong {
 }
 
 .timeline-info small {
-  color: #112a4e;
+  color: #366a7f;
   font-size: 16px;
   font-weight: bold;
   display: inline-block;
@@ -657,11 +657,11 @@ b, strong {
 }
 
 .contact-form .submit-btn:hover {
-  background: #112a4e;
+  background: #366a7f;
 }
 
 .contact-info {
-  background: #112a4e;
+  background: #366a7f;
   border-radius: 0 0 3px 3px;
   position: relative;
   bottom: 8px;

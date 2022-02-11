@@ -151,7 +151,7 @@ b, strong {
 
 .custom-btn:active {
   -webkit-transform: translateY(4px);
-          transform: translateY(-4px);
+          transform: translateY(4px);
 }
 
 .custom-btn.custom-btn-bg {
@@ -447,7 +447,7 @@ b, strong {
 }
 
 .dark-mode .modal-content {
-  background: #222222;
+  background: #5d5d5d;
 }
 
 .dark-mode .navbar-toggler .navbar-toggler-icon, .dark-mode .bg-dark-mode-svg, .dark-mode hr {
@@ -460,7 +460,7 @@ b, strong {
 }
 
 .dark-mode .dropdown-menu {
-  background: #222222;
+  background: #5d5d5d;
   color: #ffffff;
 }
 

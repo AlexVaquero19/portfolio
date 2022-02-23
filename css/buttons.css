@@ -26,7 +26,7 @@
   margin: 0;
   width: 3rem;
   height: 3rem;
-  background: #112a4e;
+  background: #366a7f;
   border-radius: 1.625rem;
 }
 
@@ -72,7 +72,7 @@
   bottom: 0;
   padding: 0.75rem 0;
   margin: 0 0 0 1.85rem;
-  color: #112a4e;
+  color:#366a7f;
   font-weight: 700;
   line-height: 1.6;
   text-align: left;
@@ -81,6 +81,8 @@
 
 .learn-more:hover .circle {
   width: 100%;
+  transition: 0.5s;
+  background: #4c979b;
 }
 
 .learn-more:hover .circle .icon.arrow {

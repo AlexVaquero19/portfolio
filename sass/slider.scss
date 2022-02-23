@@ -19,7 +19,7 @@
   @media screen and (max-width: 768px) {
     min-height: 500px;
     height: auto;
-    margin: 180px auto;
+    margin: 75px auto auto;
   }
 
   @media screen and (max-height: 500px) and (min-width: 992px) {
@@ -138,7 +138,7 @@
     font-size: 24px;
     font-weight: 700;
     color: #0d0925;
-    margin-bottom: 20px;
+    margin: 30px 0;
   }
 
   &__text {

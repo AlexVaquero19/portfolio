@@ -4,8 +4,7 @@
   border: 1px solid #000;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (auto)[3];
-      grid-template-columns: repeat(3, auto);
+  grid-template-columns: repeat(3, auto);
 }
 
 h1 {

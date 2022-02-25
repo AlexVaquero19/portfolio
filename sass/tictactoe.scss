@@ -1,0 +1,36 @@
+$black: #000;
+$white: #fff;
+
+.board {
+    height: 150px;
+    width: 150px;
+    border: 1px solid $black;
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+}
+
+h1 {
+    margin: 0 0 24px 0 !important;
+}
+
+.cells {
+    height: 50px;
+    width: 50px;
+    border: 1px solid $black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 1s;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.dark-mode {
+    .board, .cells {
+        border: 1px solid $white;
+    }
+
+    .container {
+        color: $white;
+    }
+}

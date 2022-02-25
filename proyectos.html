@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="./css/theme.min.css">
 
     <!-- Main Style -->
+    <link rel="stylesheet" href="./css/tictactoe/main.css">
     <link rel="stylesheet" href="./css/main.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     
@@ -53,7 +54,7 @@
     </nav>
 
     <!-- Code Pen Projects-->
-    <section class="project py-5 animate__animated animate__fadeInDown">
+    <section class="project mt-2 mb-3 animate__animated animate__fadeInDown">
       <div class="container">
         <div class="row">
           <div class="col-lg-11 text-center mx-auto col-12">
@@ -74,15 +75,58 @@
         </div>
         </div>
     </section>
+
+    <!--Tic Tac Toe-->
+    <div class="container d-flex justify-content-center my-4">
+      <img src="./images/icons/tictactoe.svg" class="img-fluid me-3" width="50px" alt="TicTacToe Img SVG"> <h1>Tic Tac Toe</h1>
+    </div>
     
+    <section class="container mb-5">
+        <div class="row">
+            <div class="col-6 d-flex flex-column align-items-center">
+                <div><h2 id="turn"></h2></div>
+                <div><h1 id="message"></h1></div>
+
+                <div class="board">
+                    <div class="cells" data-cell-index="0"></div>
+                    <div class="cells" data-cell-index="1"></div>
+                    <div class="cells" data-cell-index="2"></div>
+                    <div class="cells" data-cell-index="3"></div>
+                    <div class="cells" data-cell-index="4"></div>
+                    <div class="cells" data-cell-index="5"></div>
+                    <div class="cells" data-cell-index="6"></div>
+                    <div class="cells" data-cell-index="7"></div>
+                    <div class="cells" data-cell-index="8"></div>
+                </div>
+                <div><button class="btn btn-secondary mt-3 d-none" id="btnReiniciar">Reinciar</button></div>
+            </div>
+            <div class="col-6 text-center">
+                <div class="fs-3 fw-bold">Resultados</div>
+                <div class="d-flex justify-content-evenly fs-3">
+                    <div>X</div>
+                    <div>O</div>
+                </div>
+                <div class="d-flex justify-content-center">
+                    <hr class="w-50"/>
+                </div>
+                <div class="d-flex justify-content-evenly fs-5">
+                    <div class="X">0</div>
+                    <div class="O">0</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Scripts -->
     <script src="js/jquery-3.3.1.min.js"></script>
     <script src="js/popper.min.js"></script>
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/Headroom.js"></script>
     <script src="js/jQuery.headroom.js"></script>
     <script src="js/owl.carousel.min.js"></script>
     <script src="js/smoothscroll.js"></script>
     <script src="js/custom.js"></script>
+    <script src="js/tictactoe/main.js"></script>
   </body>
 </html>

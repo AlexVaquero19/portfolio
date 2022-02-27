@@ -258,6 +258,10 @@ b, strong {
   }
 }
 
+.subtitle {
+  color: #4c979b !important;
+}
+
 .listaAboutMe {
   padding: 0 0 0 2em;
 }

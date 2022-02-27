@@ -446,6 +446,10 @@ b, strong {
   color: #ffffff !important;
 }
 
+.dark-mode .subtitle {
+  color: #4c979b !important;
+}
+
 .dark-mode .modal-content {
   background: #272727;
 }

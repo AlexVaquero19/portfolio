@@ -78,7 +78,7 @@ $(document).ready(function() {
     $(".dropdown-menu").removeClass("show");
   });
 
-  let animatedText = ["Alejandro Vaquero Toba", "Programador", "Desarrollador Web"];
+  let animatedText = ["Programador", "Desarrollador Web"];
   let contAnimated = 0;
   function animateText(){
       setInterval(function(){ 
@@ -92,7 +92,7 @@ $(document).ready(function() {
 
           contAnimated++;
 
-          if(contAnimated > 2)
+          if(contAnimated > animatedText.length-1)
               contAnimated = 0
       }, 3500);        
   }

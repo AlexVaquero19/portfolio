@@ -30,11 +30,11 @@ h1 {
   font-weight: bold;
 }
 
-.dark-mode .board, .dark-mode .cells, .dark-mode #cronometro {
+.dark-mode .board, .dark-mode .cells {
   border: 1px solid #fff;
 }
 
-.dark-mode .container {
+.dark-mode .container, .dark-mode #cronometro {
   color: #fff;
 }
 /*# sourceMappingURL=tictactoe.css.map */

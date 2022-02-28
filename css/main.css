@@ -258,10 +258,6 @@ b, strong {
   }
 }
 
-.subtitle {
-  color: #4c979b !important;
-}
-
 .listaAboutMe {
   padding: 0 0 0 2em;
 }
@@ -379,11 +375,40 @@ b, strong {
   position: relative;
 }
 
+.habilities {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(0, 1fr))[4];
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 13px;
+}
+
+.habilities div {
+  border-radius: 35px;
+}
+
+.habilities .border {
+  margin: 2px 2px 2px;
+}
+
+.habilities img {
+  width: 35px;
+  height: 35px;
+}
+
+.habilities.hab-hobbies {
+  -ms-grid-columns: (minmax(0, 1fr))[3];
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
 .copyright-text {
-  font-size: 16px;
-  font-weight: normal;
+  font-size: 17px;
+  font-weight: bold;
   display: block;
-  text-shadow: 2px 3px #00000038;
+  text-transform: uppercase;
 }
 
 .color-mode {
@@ -487,6 +512,10 @@ b, strong {
 
 .dark-mode .dropdown-menu .bg-git {
   border-radius: 50% !important;
+}
+
+.dark-mode .habilities {
+  color: #ffffff;
 }
 
 .svg-social img {
@@ -705,6 +734,26 @@ b, strong {
   }
 }
 
+@media (max-width: 1300px) {
+  .name {
+    font-size: 2em !important;
+  }
+  .subtitle {
+    font-size: 1.8em !important;
+  }
+}
+
+@media (max-width: 1250px) {
+  .habilities {
+    -ms-grid-columns: (minmax(0, 1fr))[3];
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+  .habilities.hab-hobbies {
+    -ms-grid-columns: (minmax(0, 1fr))[2];
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
 @media (max-width: 991px) {
   .full-screen {
     padding-bottom: 4rem;
@@ -722,6 +771,12 @@ b, strong {
   }
   .contact-info {
     padding: 0 2rem;
+  }
+  .name {
+    font-size: 2.8em !important;
+  }
+  .subtitle {
+    font-size: 2em !important;
   }
 }
 
@@ -776,6 +831,16 @@ b, strong {
   .basic {
     margin-top: 2em;
   }
+  .habilities {
+    -ms-grid-columns: (minmax(0, 1fr))[2];
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .name {
+    font-size: 2em !important;
+  }
+  .subtitle {
+    font-size: 1.8em !important;
+  }
 }
 
 @media (max-width: 320px) {
@@ -802,4 +867,3 @@ b, strong {
     vertical-align: top;
   }
 }
-/*# sourceMappingURL=main.css.map */

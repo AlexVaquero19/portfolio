@@ -338,13 +338,33 @@ b, strong {
 	}
 }
 
+.habilities{
+	display: grid;
+	grid-template-columns: repeat(4,minmax(0,1fr));
+	align-items: center;
+	font-size: 13px;
+	div{
+		border-radius: 35px;
+	}
+	.border{
+		margin: 2px 2px 2px;
+	}
+	img{
+		width: 35px;
+		height: 35px;
+	}
+	&.hab-hobbies{
+		grid-template-columns: repeat(3,minmax(0,1fr));
+	}
+}
+
 
 // COPYRIGHT TEXT
 .copyright-text {
-	font-size: 16px;
-	font-weight: $font-weight-normal;
+	font-size: 17px;
+	font-weight: bold;
 	display: block;
-	text-shadow: 2px 3px #00000038;
+	text-transform: uppercase;
 }
 
 
@@ -443,6 +463,10 @@ b, strong {
 		.bg-git{
 			border-radius: 50% !important;
 		}
+	}
+
+	.habilities{
+		color: $text-white;
 	}
 }
 
@@ -669,6 +693,23 @@ b, strong {
 	}
 }
 
+@media (max-width:1300px) {
+	.name{
+		font-size: 2em !important;
+	}
+	.subtitle {
+		font-size: 1.8em !important;
+	}
+}
+
+@media (max-width:1250px) {
+	.habilities {
+		grid-template-columns: repeat(3,minmax(0,1fr));
+		&.hab-hobbies{
+			grid-template-columns: repeat(2,minmax(0,1fr));
+		}
+	}
+}
 
 @media (max-width: 991px) {
 	.full-screen {
@@ -691,6 +732,13 @@ b, strong {
 
 	.contact-info {
 		padding: 0 2rem;
+	}
+
+	.name{
+		font-size: 2.8em !important;
+	}
+	.subtitle {
+		font-size: 2em !important;
 	}
 }
 
@@ -757,6 +805,17 @@ b, strong {
 
 	.basic{
 		margin-top: 2em;
+	}
+
+	.habilities {
+		grid-template-columns: repeat(2,minmax(0,1fr));
+	}
+
+	.name{
+		font-size: 2em !important;
+	}
+	.subtitle {
+		font-size: 1.8em !important;
 	}
 }
 

@@ -4,7 +4,8 @@
   border: 1px solid #000;
   display: -ms-grid;
   display: grid;
-  grid-template-columns: repeat(3, auto);
+  -ms-grid-columns: (auto)[3];
+      grid-template-columns: repeat(3, auto);
 }
 
 h1 {
@@ -37,4 +38,3 @@ h1 {
 .dark-mode .container, .dark-mode #cronometro {
   color: #fff;
 }
-/*# sourceMappingURL=tictactoe.css.map */

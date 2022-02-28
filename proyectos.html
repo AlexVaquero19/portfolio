@@ -27,20 +27,60 @@
   <body>
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-light animate__animated animate__fadeIn">
-      <div class="container">
+      <div class="container d-flex">
+
         <a class="navbar-brand d-flex align-items-center animationBackground" href="./">
-          <div class="meImg me-3"> </div> Alejandro
+          <div class="meImg me-3"> </div> 
         </a>
 
-        <!-- Dark/Light Mode-->
+        <!-- Dark/Light Mode Mobile -->
         <div class="d-sm-flex d-md-none justify-content-center">
           <div class="color-mode">
             <i class="color-mode-icon"></i>
           </div>
         </div>
 
-        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-          <ul class="navbar-nav switchMode ml-lg-auto d-block d-sm-none d-md-block">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+          <span class="navbar-toggler-icon"></span>
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse ms-md-5" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item m-2">
+              <a href="./#project" class="nav-link p-0"><span data-hover="Proyectos">Proyectos</span></a>
+            </li>
+            <li class="nav-item m-2">
+              <a href="./#resume" class="nav-link p-0"><span data-hover="Resumen">Resumen</span></a>
+            </li>
+            <li class="nav-item m-2">
+              <a href="./#skills" class="nav-link p-0"><span data-hover="Habilidades">Habilidades</span></a>
+            </li>
+            <li class="nav-item m-2">
+              <a href="./#otros" class="nav-link p-0"><span data-hover="Otros">Otros</span></a>
+            </li>
+
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Social
+              </a>
+              <ul class="dropdown-menu svg-social" aria-labelledby="navbarDropdown">
+                <li>
+                  <a class="dropdown-item" href="https://www.linkedin.com/in/alexvaquero19/" target="_blank">
+                    <img class="me-2" src="./images/icons/linkedin.svg" alt="Instagram">Linked In
+                  </a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="https://github.com/AlexVaquero19/" target="_blank">
+                    <img class="me-2 bg-git" src="./images/icons/github.svg" alt="Github">GitHub
+                  </a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+
+          <ul class="navbar-nav switchMode ml-lg-auto d-sm-none d-md-block">
             <div class="ml-lg-4">
               <div class="color-mode d-lg-flex justify-content-center align-items-center">
                 <i class="color-mode-icon txtMode"></i>
@@ -90,6 +130,10 @@
             </div>
         </div>
     </section>
+
+    <div class="justify-content-center d-flex">
+      <a href="./" class="btn custom-btn custom-btn-bg ms-2"><i class="uil uil-arrow-left"></i> Volver</a>
+    </div>
 
     <!-- Scripts -->
     <script src="js/jquery-3.3.1.min.js"></script>

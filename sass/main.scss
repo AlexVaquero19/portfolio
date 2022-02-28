@@ -348,6 +348,11 @@ b, strong {
 	}
 	.border{
 		margin: 2px 2px 2px;
+		div{
+			display: flex;
+			width: 100%;
+			justify-content: center;
+		}
 	}
 	img{
 		width: 35px;

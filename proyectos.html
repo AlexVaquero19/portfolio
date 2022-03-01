@@ -19,6 +19,8 @@
     <link rel="stylesheet" href="./css/tictactoe.min.css">
     <link rel="stylesheet" href="./css/main.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"/>
+    <link rel="stylesheet" href="./css/socialLinks.css">
     
     <!-- Icon Page -->
     <link rel="shortcut icon" href="./images/icons/icon.svg" type="image/x-icon">
@@ -60,24 +62,6 @@
             <li class="nav-item m-2">
               <a href="./#otros" class="nav-link p-0"><span data-hover="Otros">Otros</span></a>
             </li>
-
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                Social
-              </a>
-              <ul class="dropdown-menu svg-social" aria-labelledby="navbarDropdown">
-                <li>
-                  <a class="dropdown-item" href="https://www.linkedin.com/in/alexvaquero19/" target="_blank">
-                    <img class="me-2" src="./images/icons/linkedin.svg" alt="Instagram">Linked In
-                  </a>
-                </li>
-                <li>
-                  <a class="dropdown-item" href="https://github.com/AlexVaquero19/" target="_blank">
-                    <img class="me-2 bg-git" src="./images/icons/github.svg" alt="Github">GitHub
-                  </a>
-                </li>
-              </ul>
-            </li>
           </ul>
 
           <ul class="navbar-nav switchMode ml-lg-auto d-sm-none d-md-block">
@@ -90,6 +74,40 @@
         </div>
       </div>
     </nav>
+
+    <!-- Social -->
+    <section class="wrapper mb-4 mt-4">
+      <a href="https://www.facebook.com/alejandro.vaquerotoba" target="_blank">
+        <div class="icon facebook">
+          <div class="tooltip">Facebook</div>
+          <span><i class="fa-brands fa-facebook"></i></span>
+        </div>
+      </a>
+      <a href="https://twitter.com/Alex_vaquero19" target="_blank">
+        <div class="icon twitter">
+          <div class="tooltip">Twitter</div>
+          <span><i class="fab fa-twitter"></i></span>
+        </div>
+      </a>
+      <a href="https://www.instagram.com/alex_vaquero19/" target="_blank">
+        <div class="icon instagram">
+          <div class="tooltip">Instagram</div>
+          <span><i class="fab fa-instagram"></i></span>
+        </div>
+      </a>
+      <a href="https://github.com/AlexVaquero19" target="_blank">
+        <div class="icon github">
+          <div class="tooltip">Github</div>
+          <span><i class="fab fa-github"></i></span>
+        </div>
+      </a>
+      <a href="https://www.linkedin.com/in/alexvaquero19/" target="_blank">
+        <div class="icon linkedin">
+          <div class="tooltip">LinkedIn</div>
+          <span><i class="fab fa-linkedin"></i></span>
+        </div>
+      </a>
+    </section>
 
     <!--Tic Tac Toe-->
     <div class="container d-flex justify-content-center my-4">
@@ -132,8 +150,15 @@
     </section>
 
     <div class="justify-content-center d-flex">
-      <a href="./" class="btn custom-btn custom-btn-bg ms-2"><i class="uil uil-arrow-left"></i> Volver</a>
+      <a href="./" class="btn custom-btn custom-btn-bg ms-2"><i class="fa-solid fa-arrow-left me-2"></i> Volver</a>
     </div>
+
+    <!-- Footer -->
+    <footer class="footer fixed-bottom">
+      <div class="container d-flex align-items-center copyright-text justify-content-center fw-bold py-3">                            
+        <i class="fa-solid fa-copyright me-2"></i> <span class="anio me-2"></span> Alejandro Vaquero Toba
+      </div>
+    </footer>
 
     <!-- Scripts -->
     <script src="js/jquery-3.3.1.min.js"></script>

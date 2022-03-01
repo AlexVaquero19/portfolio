@@ -9,11 +9,13 @@ a {
     justify-content: center;
     font-family: "Poppins", sans-serif;
     align-items: center;
+    justify-content: start;
+    margin-left: 1em;
 }
   
 .wrapper .icon {
     position: relative;
-    background-color: #e3f9ff;
+    background-color: #f8fafb;
     border-radius: 50%;
     padding: 15px;
     margin: 10px;
@@ -48,14 +50,14 @@ a {
     height: 8px;
     width: 8px;
     background-color: #ffffff;
-    bottom: -3px;
+    bottom: 26px;
     left: 50%;
     transform: translate(-50%) rotate(45deg);
     transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 }
 
 .wrapper .icon:hover .tooltip {
-    top: -45px;
+    top: 58px;
     opacity: 1;
     visibility: visible;
     pointer-events: auto;

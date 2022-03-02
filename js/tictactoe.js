@@ -27,6 +27,8 @@ $(document).ready(function(){
 
         console.log(mode);
         mode == "amigo" ? $("#turn").html("Turno de " + player1) : $("#turn").html('');
+
+        $("#btnRestart").trigger("click");
     });
 
     $(".cells").on("click", function(e){

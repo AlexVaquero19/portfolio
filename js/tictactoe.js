@@ -42,6 +42,7 @@ $(document).ready(function(){
 
             player = selectPlayer(clicks, player1, player2);
             mode == "amigo" ? $("#turn").html("Turno de " + player) : $("#turn").html("");
+
             let playerWinner = checkWinner();
 
             if(mode == "maquina" && playerWinner == ''){
@@ -53,6 +54,7 @@ $(document).ready(function(){
                 }
             }
 
+            playerWinner = checkWinner();
             if(playerWinner != '') {
                 let result = parseInt($("."+playerWinner).text());
 

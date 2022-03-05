@@ -27,6 +27,7 @@ $navbar-background: #464646;
 $link-color: #074a4d;
 $custom-button-shadow: #074a4db3;
 $custom-button-shadow-hover: #4c979bb3;
+$bodybg: #cbe9f542;
 
 $small-font-size: 14px;
 $link-font-size: 16px;
@@ -45,6 +46,7 @@ $link-font-size: 16px;
 body {
 	font-family: $font-base;
 	padding-top: 70px;
+	background: $bodybg;
 }
 
 .intermediateIcons{
@@ -82,10 +84,6 @@ body {
 	background-image: url("../images/me.jpeg");
     border-radius: 50%;
 	box-shadow: 0;
-  	transition: box-shadow 1s;
-	&:hover{
-		box-shadow: 0 0 0 10px rgba(27, 159, 163, 0.247);
-	}
 }
 
 small a{
@@ -242,9 +240,9 @@ b, strong {
     will-change: transform;
     transition: transform 200ms linear;
     &[class*="headroom--not-top"] {
-    	background: $text-white;
+    	background: #f1fbff;
     	// box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.09);
-    	border-bottom: 1px solid #f0f0f0;
+    	border-bottom: 1px solid $bodybg;
     	padding-top: 0;
     	padding-bottom: 0;
     }
@@ -347,6 +345,7 @@ b, strong {
 		border-radius: 35px;
 	}
 	.border{
+		border: 1px solid $link-color !important;
 		margin: 2px 2px 2px;
 		div{
 			display: flex;

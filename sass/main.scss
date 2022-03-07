@@ -240,7 +240,7 @@ b, strong {
     will-change: transform;
     transition: transform 200ms linear;
     &[class*="headroom--not-top"] {
-    	background: #f1fbff;
+    	background: #f1fafb;
     	// box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.09);
     	border-bottom: 1px solid $bodybg;
     	padding-top: 0;

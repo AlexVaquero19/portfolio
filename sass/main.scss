@@ -36,6 +36,12 @@ $link-font-size: 16px;
 	transition: all 0.4s ease;
 }
 
+.footer-projects{
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+}
+
 .imgMap{
 	background-image: url("../images/icons.png");
 	width: 60px;

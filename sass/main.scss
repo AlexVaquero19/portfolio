@@ -27,7 +27,7 @@ $navbar-background: #464646;
 $link-color: #074a4d;
 $custom-button-shadow: #074a4db3;
 $custom-button-shadow-hover: #4c979bb3;
-$bodybg: #cbe9f542;
+$bodybg: #f5fcff;
 
 $small-font-size: 14px;
 $link-font-size: 16px;
@@ -240,7 +240,7 @@ b, strong {
     will-change: transform;
     transition: transform 200ms linear;
     &[class*="headroom--not-top"] {
-    	background: #f1fafb;
+    	background: #f5fcff;
     	// box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.09);
     	border-bottom: 1px solid $bodybg;
     	padding-top: 0;

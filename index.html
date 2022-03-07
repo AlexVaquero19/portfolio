@@ -23,6 +23,7 @@
     <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"/>
     <link rel="stylesheet" href="./css/socialLinks.css">
+    <link rel="stylesheet" href="./css/toggle.min.css">
 
     <!-- Icon Page -->
     <link rel="shortcut icon" href="./images/icons/icon.svg" type="image/x-icon">
@@ -39,9 +40,7 @@
 
         <!-- Dark/Light Mode Mobile -->
         <div class="d-sm-flex d-md-none justify-content-center">
-          <div class="color-mode">
-            <i class="color-mode-icon"></i>
-          </div>
+          <span class="spanSwitchMobile"></span>
         </div>
 
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -83,11 +82,9 @@
           </ul>
 
           <ul class="navbar-nav switchMode ml-lg-auto d-sm-none d-md-block">
-            <div class="ml-lg-4">
-              <div class="color-mode d-lg-flex justify-content-center align-items-center">
-                <i class="color-mode-icon txtMode"></i>
-              </div>
-            </div>
+            <span class="spanSwitchPc">
+              <input type="checkbox" id="switch" class="color-mode miSwitch" /><label for="switch" class="miSwitch">Toggle</label>
+            </span>
           </ul>
         </div>
       </div>

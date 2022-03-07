@@ -57,6 +57,20 @@ $(document).ready(function() {
 
   $(".txtAboutMe").hide();
 
+  if($(window).width() <= 768) 
+    $(".miSwitch").appendTo(".spanSwitchMobile");
+  
+  if($(window).width() >= 768) 
+    $(".miSwitch").appendTo(".spanSwitchPc");
+  
+  $(window).resize(function() {
+    if($(window).width() >= 768) 
+      $(".miSwitch").appendTo(".spanSwitchPc");
+    
+    if($(window).width() <= 768) 
+      $(".miSwitch").appendTo(".spanSwitchMobile");
+  });
+
   $(".btnSobreMi").on("click", function(){
       if(counter % 2 == 0){
           $(".txtAboutMe").addClass("animate__animated animate__bounceInDown");

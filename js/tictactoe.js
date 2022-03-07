@@ -25,7 +25,6 @@ $(document).ready(function(){
         $(".gameModeSelected").html("<h4 class='my-1'>VS " + txtMode + "</h4>");
         $(".game").removeClass("d-none");
 
-        console.log(mode);
         mode == "amigo" ? $("#turn").html("Turno de " + player1) : $("#turn").html('');
 
         $("#btnRestart").trigger("click");
@@ -50,6 +49,7 @@ $(document).ready(function(){
             if(mode == "maquina" && playerWinner == ''){
                 playerBoard.sort(() => Math.random() - 0.5);
                 player = selectPlayer(clicks, player1, player2);
+
                 if(!compruebaEmpate()) {
                     automaticPlayerTurn(player);
                     clicks++;
@@ -78,12 +78,10 @@ $(document).ready(function(){
 
     function automaticPlayerTurn(player) {
         automaticPlayerClick = playerBoard[0];
-
         clickedPlayers[automaticPlayerClick] = player;
 
         $(".board").find(".cells")[automaticPlayerClick].innerHTML = player;
         playerBoard.splice(playerBoard.indexOf(automaticPlayerClick), 1);
-        console.log(playerBoard);
     }
 
     $("#btnRestart").on("click", function() {

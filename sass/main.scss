@@ -57,7 +57,6 @@ body {
 	font-family: $font-base;
 	padding-top: 70px;
 	background: $bodybg;
-	transition: 0.3s;
 }
 
 .intermediateIcons{
@@ -428,7 +427,7 @@ b, strong {
 	    }
 	}
 	.small-text, .navbar .container {
-		background: #0d0c15;
+		background: #0d0c15 !important;
 		color: $text-white;
 	}
 	.feature-card .uil, .button-text,

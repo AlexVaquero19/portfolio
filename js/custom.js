@@ -2,16 +2,12 @@
 
   "use strict";
 
-    let contModes = 0;
-
     // COLOR MODE
     $('.color-mode').click(function(){
         $('.color-mode-icon').toggleClass('active');
         $('body').toggleClass('dark-mode');
 
         $('.mode').show();
-        
-        contModes++;
     });
 
     // HEADER
@@ -37,10 +33,8 @@
             event.preventDefault();
         }
       });
-    });  
+    });
 
-    // TOOLTIP
-    //$('.social-links a').tooltip();
 })(jQuery);
 
 $(document).ready(function() { 
@@ -49,7 +43,6 @@ $(document).ready(function() {
   let today = new Date();
   let dayDiff = Math.ceil(today - dob) / (1000 * 60 * 60 * 24 * 365);
   let age = parseInt(dayDiff);
-
   let counter = 0;
   
   $(".edad").text(age);
@@ -94,6 +87,7 @@ $(document).ready(function() {
 
   let animatedText = ["Programador", "Desarrollador Web"];
   let contAnimated = 0;
+  
   function animateText(){
       setInterval(function(){ 
           $(".txtAnim").toggleClass("animate__lightSpeedOutRight animate__lightSpeedInLeft");

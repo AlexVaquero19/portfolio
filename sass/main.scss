@@ -49,6 +49,10 @@ $link-font-size: 16px;
 	display: inline-block;
 }
 
+.navbar .container{
+	background: $bodybg !important;
+}
+
 body {
 	font-family: $font-base;
 	padding-top: 70px;
@@ -220,7 +224,7 @@ b, strong {
     font-size: 32px;
     line-height: inherit;
     display: block;
-	min-width: 140%;
+	min-width: 115%;
 }
 
 @keyframes BottomTotop {

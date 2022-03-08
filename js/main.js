@@ -90,19 +90,19 @@ $(document).ready(function() {
   
   function animateText(){
       setInterval(function(){ 
-          $(".txtAnim").toggleClass("animate__lightSpeedOutRight animate__lightSpeedInLeft");
+          $(".txtAnim").toggleClass("animate__fadeOutRight animate__fadeInLeft");
           $(".delete").text(animatedText[contAnimated]);
           
           setTimeout(function(){
-              $('.txtAnim').toggleClass('animate__lightSpeedInLeft animate__lightSpeedOutRight');
+              $('.txtAnim').toggleClass('animate__fadeInLeft animate__fadeOutRight');
               //$(".txtAnim").removeClass("animate__animated animate__zoomIn");
-          }, 2500);
+          }, 2000);
 
           contAnimated++;
 
           if(contAnimated > animatedText.length-1)
               contAnimated = 0
-      }, 3500);        
+      }, 3000);        
   }
 
   animateText();

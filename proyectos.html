@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Portfolio personal">
+    <meta name="author" content="Alejandro Vaquero Toba">
+    <meta description="Portfolio personal con toda la información	sobre mi vida profesional y otros proyectos">
+
+    <title>Portfolio - Alejandro - Proyectos</title>
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/carousel.min.css">
+    <link rel="stylesheet" href="./css/unicons.css">
+    <link rel="stylesheet" href="./css/theme.min.css">
+
+    <!-- Main Style -->
+    <link rel="stylesheet" href="./css/tictactoe.min.css">
+    <link rel="stylesheet" href="./css/main.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"/>
+    <link rel="stylesheet" href="./css/socialLinks.css">
+    <link rel="stylesheet" href="./css/toggle.min.css">
+    
+    <!-- Icon Page -->
+    <link rel="shortcut icon" href="./images/icons/icon.svg" type="image/x-icon">
+  </head>
+
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light animate__animated animate__fadeIn">
+      <div class="container d-flex">
+
+        <a class="navbar-brand d-flex align-items-center animationBackground" href="./">
+          <div class="meImg me-3"> </div> 
+        </a>
+
+        <!-- Dark/Light Mode Mobile -->
+        <div class="d-sm-flex d-md-none justify-content-center">
+          <span class="spanSwitchMobile"></span>
+        </div>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+          <span class="navbar-toggler-icon"></span>
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse ms-md-5" id="navbarNav">
+          <ul class="navbar-nav align-items-center">
+            <li class="nav-item m-2">
+              <a href="./#project" class="nav-link p-0"><span data-hover="Proyectos">Proyectos</span></a>
+            </li>
+            <li class="nav-item m-2">
+              <a href="./#resume" class="nav-link p-0"><span data-hover="Resumen">Resumen</span></a>
+            </li>
+            <li class="nav-item m-2">
+              <a href="./#skills" class="nav-link p-0"><span data-hover="Habilidades">Habilidades</span></a>
+            </li>
+            <li class="nav-item m-2">
+              <a href="./#otros" class="nav-link p-0"><span data-hover="Otros">Otros</span></a>
+            </li>
+
+            <!-- Social -->
+            <section class="wrapper">
+              <a href="https://github.com/AlexVaquero19" target="_blank">
+                <div class="icon github">
+                  <div class="tooltip">Github</div>
+                  <span><i class="fab fa-github fa-lg"></i></span>
+                </div>
+              </a>
+              <a href="https://www.linkedin.com/in/alexvaquero19/" target="_blank">
+                <div class="icon linkedin">
+                  <div class="tooltip">LinkedIn</div>
+                  <span><i class="fab fa-linkedin fa-lg"></i></span>
+                </div>
+              </a>
+            </section>
+          </ul>
+
+          <ul class="navbar-nav switchMode ml-lg-auto d-sm-none d-md-block d-flex">
+            <span class="spanSwitchPc">
+              <input type="checkbox" id="switch" class="color-mode miSwitch" /><label for="switch" class="miSwitch">Toggle</label>
+            </span>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!--Tic Tac Toe-->
+    <div class="container d-flex justify-content-center mt-5 mb-3">
+      <img src="./images/icons/tictactoe.svg" class="img-fluid me-3 bg-dark-mode-svg" width="50px" alt="TicTacToe Img SVG"> <h1 class="mb-0">Tic Tac Toe</h1>
+    </div>
+
+    <div class="d-flex justify-content-evenly">
+      <a class="btn custom-btn custom-btn-bg ms-2 mode" mode="maquina"><i class="fa-solid fa-brain me-2"></i>VS Máquina</a>
+      <a class="btn custom-btn custom-btn-bg ms-2 mode" mode="amigo"><i class="fa-solid fa-user-group me-2"></i>VS Amigo/a</a>
+    </div>
+    
+    <div class="text-center gameModeSelected"></div>
+
+    <section class="container mb-3 game animate__animated animate__fadeInDown d-none">
+        <div class="row">
+            <div class="col-6 d-flex flex-column align-items-center">
+                <div><h2 id="turn"></h2></div>
+                <div><h1 id="message"></h1></div>
+                <div class="board">
+                    <div class="cells" data-cell-index="0"></div>
+                    <div class="cells" data-cell-index="1"></div>
+                    <div class="cells" data-cell-index="2"></div>
+                    <div class="cells" data-cell-index="3"></div>
+                    <div class="cells" data-cell-index="4"></div>
+                    <div class="cells" data-cell-index="5"></div>
+                    <div class="cells" data-cell-index="6"></div>
+                    <div class="cells" data-cell-index="7"></div>
+                    <div class="cells" data-cell-index="8"></div>
+                </div>
+                <div><button class="btn btn-secondary mt-3 d-none" id="btnRestart">Reinciar</button></div>
+            </div>
+            <div class="col-6 text-center">
+                <div class="fs-3 fw-bold">Resultados</div>
+                <div class="d-flex justify-content-evenly fs-3">
+                    <div>X</div>
+                    <div>O</div>
+                </div>
+                <div class="d-flex justify-content-center">
+                    <hr class="w-50"/>
+                </div>
+                <div class="d-flex justify-content-evenly fs-5">
+                    <div class="X">0</div>
+                    <div class="O">0</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="d-flex justify-content-center mt-5">
+      <a href="./" class="btn custom-btn custom-btn-bg ms-2"><i class="fa-solid fa-arrow-left me-2"></i> Volver</a>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer-projects">
+      <div class="container d-flex align-items-center copyright-text justify-content-center fw-bold py-3">                            
+        <i class="fa-solid fa-copyright me-2"></i> <span class="anio me-2"></span> Alejandro Vaquero Toba
+      </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/Headroom.js"></script>
+    <script src="js/jQuery.headroom.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/smoothscroll.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/tictactoe.js"></script>
+  </body>
+</html>

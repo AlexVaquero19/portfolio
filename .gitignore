@@ -1,4 +1,3 @@
 .vscode/
 .old/
-scss/
-*.scss
+sass/

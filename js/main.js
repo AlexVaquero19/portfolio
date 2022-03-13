@@ -1,42 +1,3 @@
-(function ($) {
-
-  "use strict";
-
-    // COLOR MODE
-    $('.color-mode').click(function(){
-        $('.color-mode-icon').toggleClass('active');
-        $('body').toggleClass('dark-mode');
-
-        $('.mode').show();
-    });
-
-    // HEADER
-    $(".navbar").headroom();
-
-    // PROJECT CAROUSEL
-    $('.owl-carousel').owlCarousel({
-    	items: 1,
-	    loop:true,
-	    margin:10,
-	    nav:true
-	});
-
-    // SMOOTHSCROLL
-    $(function() {
-      $('.nav-link, .custom-btn-link').on('click', function(event) {
-        let $anchor = $(this);
-        if(!$(this)[0].getAttribute("href") == "#")
-        {
-            $('html, body').stop().animate({
-                scrollTop: $($anchor.attr('href')).offset().top - 49
-            }, 1000);
-            event.preventDefault();
-        }
-      });
-    });
-
-})(jQuery);
-
 $(document).ready(function() { 
     
   let dob = new Date("1999/04/19");
@@ -44,11 +5,43 @@ $(document).ready(function() {
   let dayDiff = Math.ceil(today - dob) / (1000 * 60 * 60 * 24 * 365);
   let age = parseInt(dayDiff);
   let counter = 0;
+  let animatedText = ["Programador", "Desarrollador Web"];
+  let contAnimated = 0;
   
+  // COLOR MODE
+  $('.color-mode').click(function(){
+    $('.color-mode-icon').toggleClass('active');
+    $('body').toggleClass('dark-mode');
+
+    $('.mode').show();
+  });
+
+  // HEADER
+  $(".navbar").headroom();
+
   $(".edad").text(age);
   $(".anio").text(today.getFullYear());
-
   $(".txtAboutMe").hide();
+
+  // PROJECT CAROUSEL
+  $('.owl-carousel').owlCarousel({
+    items: 1,
+    loop:true,
+    margin:10,
+    nav:true
+  });
+
+  // SMOOTHSCROLL
+  $('.nav-link, .custom-btn-link').on('click', function(event) {
+    let $anchor = $(this);
+    if(!$(this)[0].getAttribute("href") == "#")
+    {
+        $('html, body').stop().animate({
+            scrollTop: $($anchor.attr('href')).offset().top - 49
+        }, 1000);
+        event.preventDefault();
+    }
+  });
 
   if($(window).width() <= 768) 
     $(".miSwitch").appendTo(".spanSwitchMobile");
@@ -84,9 +77,6 @@ $(document).ready(function() {
     $(".dropdown-toggle").removeClass("show");
     $(".dropdown-menu").removeClass("show");
   });
-
-  let animatedText = ["Programador", "Desarrollador Web"];
-  let contAnimated = 0;
   
   function animateText(){
       setInterval(function(){ 
@@ -107,7 +97,7 @@ $(document).ready(function() {
 
   animateText();
 
-  var swiper = new Swiper('.blog-slider', {
+  let swiper = new Swiper('.blog-slider', {
     spaceBetween: 30,
     effect: 'fade',
     loop: true,

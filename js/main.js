@@ -7,7 +7,8 @@ $(document).ready(function() {
   let counter = 0;
   let animatedText = ["Programador", "Desarrollador Web"];
   let contAnimated = 0;
-  
+  let monthWorking =  monthDiff( new Date(2022, 2, 1), new Date()) ;
+
   // COLOR MODE
   $('.color-mode').click(function(){
     $('.color-mode-icon').toggleClass('active');
@@ -22,6 +23,8 @@ $(document).ready(function() {
   $(".edad").text(age);
   $(".anio").text(today.getFullYear());
   $(".txtAboutMe").hide();
+
+  $("#monthsWork").html(monthWorking == 1 ? monthWorking + " Mes" : monthWorking + " Meses");
 
   // PROJECT CAROUSEL
   $('.owl-carousel').owlCarousel({
@@ -77,6 +80,14 @@ $(document).ready(function() {
     $(".dropdown-toggle").removeClass("show");
     $(".dropdown-menu").removeClass("show");
   });
+
+  function monthDiff(d1, d2) {
+      let months;
+      months = (d2.getFullYear() - d1.getFullYear()) * 12;
+      months -= d1.getMonth();
+      months += d2.getMonth();
+      return months <= 0 ? 1 : months;
+  }
   
   function animateText(){
       setInterval(function(){ 

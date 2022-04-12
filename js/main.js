@@ -9,6 +9,9 @@ $(document).ready(function() {
   let contAnimated = 0;
   let monthWorking =  monthDiff( new Date(2022, 2, 1), new Date()) ;
 
+  $('body').toggleClass('dark-mode');
+  $("#switch").trigger("click");
+
   // COLOR MODE
   $('.color-mode').click(function(){
     $('.color-mode-icon').toggleClass('active');

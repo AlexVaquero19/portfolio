@@ -1,31 +1,26 @@
+// COLOR MODE
+$('.color-mode').click(function(){
+  $('.color-mode-icon').toggleClass('active');
+  $('body').toggleClass('dark-mode');
+
+  $('.mode').show();
+});
+
 $(document).ready(function() { 
     
-  let dob = new Date("1999/04/19");
-  let today = new Date();
-  let dayDiff = Math.ceil(today - dob) / (1000 * 60 * 60 * 24 * 365);
-  let age = parseInt(dayDiff);
-  let counter = 0;
   let animatedText = ["Programador", "Desarrollador Web"];
-  let contAnimated = 0;
-  let monthWorking =  monthDiff( new Date(2022, 2, 1), new Date()) ;
-
-  $("#switch").trigger("click");
-
-  // COLOR MODE
-  $('.color-mode').click(function(){
-    $('.color-mode-icon').toggleClass('active');
-    $('body').toggleClass('dark-mode');
-
-    $('.mode').show();
-  });
 
   // HEADER
   $(".navbar").headroom();
 
+  let dob = new Date("1999/04/19");
+  let today = new Date();
+  let dayDiff = Math.ceil(today - dob) / (1000 * 60 * 60 * 24 * 365);
+  let age = parseInt(dayDiff);
   $(".edad").text(age);
   $(".anio").text(today.getFullYear());
-  $(".txtAboutMe").hide();
 
+  let monthWorking =  monthDiff( new Date(2022, 2, 1), new Date());
   $("#monthsWork").html(monthWorking == 1 ? monthWorking + " Mes" : monthWorking + " Meses");
 
   // PROJECT CAROUSEL
@@ -62,6 +57,7 @@ $(document).ready(function() {
       $(".miSwitch").appendTo(".spanSwitchMobile");
   });
 
+  let counter = 0;
   $(".btnSobreMi").on("click", function(){
       if(counter % 2 == 0){
           $(".txtAboutMe").addClass("animate__animated animate__bounceInDown");
@@ -91,6 +87,7 @@ $(document).ready(function() {
       return months <= 0 ? 1 : months;
   }
   
+  let contAnimated = 0;
   function animateText(){
       setInterval(function(){ 
           $(".txtAnim").toggleClass("animate__fadeOutRight animate__fadeInLeft");

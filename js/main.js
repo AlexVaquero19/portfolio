@@ -7,6 +7,27 @@ $('.color-mode').click(function(){
 });
 
 $(document).ready(function() { 
+  // PROJECT CAROUSEL
+  $('.owl-carousel').owlCarousel({
+    items: 1,
+    loop:true,
+    margin:10,
+    nav:true
+  });
+
+  let swiper = new Swiper('.blog-slider', {
+    spaceBetween: 30,
+    effect: 'fade',
+    loop: true,
+    mousewheel: {
+      invert: false,
+    },
+    // autoHeight: true,
+    pagination: {
+      el: '.blog-slider__pagination',
+      clickable: true,
+    }
+  });
     
   let animatedText = ["Programador", "Desarrollador Web"];
 
@@ -22,14 +43,6 @@ $(document).ready(function() {
 
   let monthWorking =  monthDiff( new Date(2022, 2, 1), new Date());
   $("#monthsWork").html(monthWorking == 1 ? monthWorking + " Mes" : monthWorking + " Meses");
-
-  // PROJECT CAROUSEL
-  $('.owl-carousel').owlCarousel({
-    items: 1,
-    loop:true,
-    margin:10,
-    nav:true
-  });
 
   // SMOOTHSCROLL
   $('.nav-link, .custom-btn-link').on('click', function(event) {
@@ -95,7 +108,6 @@ $(document).ready(function() {
           
           setTimeout(function(){
               $('.txtAnim').toggleClass('animate__fadeInLeft animate__fadeOutRight');
-              //$(".txtAnim").removeClass("animate__animated animate__zoomIn");
           }, 2000);
 
           contAnimated++;
@@ -106,18 +118,4 @@ $(document).ready(function() {
   }
 
   animateText();
-
-  let swiper = new Swiper('.blog-slider', {
-    spaceBetween: 30,
-    effect: 'fade',
-    loop: true,
-    mousewheel: {
-      invert: false,
-    },
-    // autoHeight: true,
-    pagination: {
-      el: '.blog-slider__pagination',
-      clickable: true,
-    }
-  });
 });

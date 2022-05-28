@@ -41,9 +41,6 @@ $(document).ready(function() {
   $(".edad").text(age);
   $(".anio").text(today.getFullYear());
 
-  let monthWorking =  monthDiff( new Date(2022, 2, 1), new Date());
-  $("#monthsWork").html(monthWorking == 1 ? monthWorking + " Mes" : monthWorking + " Meses");
-
   // SMOOTHSCROLL
   $('.nav-link, .custom-btn-link').on('click', function(event) {
     let $anchor = $(this);

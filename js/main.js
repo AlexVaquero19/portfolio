@@ -53,17 +53,17 @@ $(document).ready(function() {
     }
   });
 
-  if($(window).width() <= 768) 
+  if($(window).width() <= 970) 
     $(".miSwitch").appendTo(".spanSwitchMobile");
   
-  if($(window).width() >= 768) 
+  if($(window).width() >= 975) 
     $(".miSwitch").appendTo(".spanSwitchPc");
   
   $(window).resize(function() {
-    if($(window).width() >= 768) 
+    if($(window).width() >= 975) 
       $(".miSwitch").appendTo(".spanSwitchPc");
     
-    if($(window).width() <= 768) 
+    if($(window).width() <= 970)
       $(".miSwitch").appendTo(".spanSwitchMobile");
   });
 

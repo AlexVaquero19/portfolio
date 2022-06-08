@@ -1,6 +1,6 @@
-{
-  "projects": {
-    "data": [
+[
+  {
+    "projects": [
       {
         "title": "Catálogo de Datos",
         "subtitle": "Enero de 2022",
@@ -39,8 +39,8 @@
       }
     ]
   },
-  "experience": {
-    "data": [
+  {
+    "experience": [
       {
         "title": "Programador C# .NET",
         "subtitle": "Oribital Critical Systems (Airbus)",
@@ -81,8 +81,8 @@
       }
     ]
   },
-  "education": {
-    "data": [
+  {
+    "education": [
       {
         "title": "DAW",
         "subtitle": "I.E.S Domenico Scarlatti",
@@ -125,134 +125,140 @@
       }
     ]
   },
-  "skills": [
-    {
-      "title": "Nivel Intermedio Alto",
-      "info": [
-        {
-          "skill": "HTML5",
-          "icon": "<svg>"
-        },
-        {
-          "skill": "CSS3",
-          "icon": ""
-        },
-        {
-          "skill": "SASS",
-          "icon": ""
-        },
-        {
-          "skill": "Bootstrap",
-          "icon": ""
-        },
-        {
-          "skill": "JavaScript",
-          "icon": ""
-        },
-        {
-          "skill": "jQuery",
-          "icon": ""
-        },
-        {
-          "skill": "PHP",
-          "icon": ""
-        },
-        {
-          "skill": "Symfony",
-          "icon": ""
-        },
-        {
-          "skill": "MySql",
-          "icon": ""
-        },
-        {
-          "skill": "GIT",
-          "icon": ""
-        },
-        {
-          "skill": "GitHub",
-          "icon": ""
-        }
-      ]
-    },
-    {
-      "title": "Nivel Intermedio Alto",
-      "info": [
-        {
-          "skill": "cSharp",
-          "icon": ""
-        },
-        {
-          "skill": "Java",
-          "icon": ""
-        },
-        {
-          "skill": ".NET",
-          "icon": ""
-        },
-        {
-          "skill": "Blazor",
-          "icon": ""
-        },
-        {
-          "skill": "Python",
-          "icon": ""
-        },
-        {
-          "skill": "SQLServer",
-          "icon": ""
-        },
-        {
-          "skill": "Postman",
-          "icon": ""
-        }
-      ]
-    }
-  ],
-  "others": [
-    {
-      "title": "Habilidades",
-      "ide": [
-        {
-          "skill": "VSCode",
-          "icon": ""
-        },
-        {
-          "skill": "VStudio",
-          "icon": ""
-        },
-        {
-          "skill": "DbEaver",
-          "icon": ""
-        },
-        {
-          "skill": "Sublime Text",
-          "icon": ""
-        },
-        {
-          "skill": "cSharp",
-          "icon": ""
-        }
-      ]
-    }
-  ],
-  "hobbies": [
-    {
-      "title": "Hobbies",
-      "ide": [
-        {
-          "skill": "Video Juegos",
-          "icon": ""
-        },
-        {
-          "skill": "Series / Pelis",
-          "icon": ""
-        },
-        {
-          "skill": "Baloncesto",
-          "icon": ""
-        }
-      ]
-    }
-  ]
-}
+  {
+    "skills": [
+      {
+        "title": "Nivel Intermedio Alto",
+        "info": [
+          {
+            "skill": "HTML5",
+            "icon": "<svg>"
+          },
+          {
+            "skill": "CSS3",
+            "icon": ""
+          },
+          {
+            "skill": "SASS",
+            "icon": ""
+          },
+          {
+            "skill": "Bootstrap",
+            "icon": ""
+          },
+          {
+            "skill": "JavaScript",
+            "icon": ""
+          },
+          {
+            "skill": "jQuery",
+            "icon": ""
+          },
+          {
+            "skill": "PHP",
+            "icon": ""
+          },
+          {
+            "skill": "Symfony",
+            "icon": ""
+          },
+          {
+            "skill": "MySql",
+            "icon": ""
+          },
+          {
+            "skill": "GIT",
+            "icon": ""
+          },
+          {
+            "skill": "GitHub",
+            "icon": ""
+          }
+        ]
+      },
+      {
+        "title": "Nivel Intermedio Alto",
+        "info": [
+          {
+            "skill": "cSharp",
+            "icon": ""
+          },
+          {
+            "skill": "Java",
+            "icon": ""
+          },
+          {
+            "skill": ".NET",
+            "icon": ""
+          },
+          {
+            "skill": "Blazor",
+            "icon": ""
+          },
+          {
+            "skill": "Python",
+            "icon": ""
+          },
+          {
+            "skill": "SQLServer",
+            "icon": ""
+          },
+          {
+            "skill": "Postman",
+            "icon": ""
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "others": [
+      {
+        "title": "Habilidades",
+        "ide": [
+          {
+            "skill": "VSCode",
+            "icon": ""
+          },
+          {
+            "skill": "VStudio",
+            "icon": ""
+          },
+          {
+            "skill": "DbEaver",
+            "icon": ""
+          },
+          {
+            "skill": "Sublime Text",
+            "icon": ""
+          },
+          {
+            "skill": "cSharp",
+            "icon": ""
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "hobbies": [
+      {
+        "title": "Hobbies",
+        "ide": [
+          {
+            "skill": "Video Juegos",
+            "icon": ""
+          },
+          {
+            "skill": "Series / Pelis",
+            "icon": ""
+          },
+          {
+            "skill": "Baloncesto",
+            "icon": ""
+          }
+        ]
+      }
+    ]
+  }
+]

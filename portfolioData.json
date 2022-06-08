@@ -1,42 +1,38 @@
 [
   {
-    "project_list": [
-      {
-        "title": "Catálogo de Datos",
-        "subtitle": "Enero de 2022",
-        "info": "Descarga de Datos de Emergencias de los últimos 3 años y el actual.",
-        "url": "https://datos.salvamentomaritimo.es/"
-      },
-      {
-        "title": "Casaminium / Administradores de Fincas",
-        "subtitle": "Junio de 2021",
-        "info": "Gestión de fincas en Madrid",
-        "url": "https://www.administradores-fincas.es/"
-      },
-      {
-        "title": "Mis Enlaces",
-        "subtitle": "Mayo de 2021",
-        "info": "Web donde crear tu tarjeta virtual de Negocio",
-        "url": "https://misenlaces.es/"
-      },
-      {
-        "title": "Leaflet JS",
-        "subtitle": "Febrero de 2022",
-        "info": "Ejemplo de uso de Leaflet JS a partir de los datos de un GeoJSON",
-        "url": "https://misenlaces.es/"
-      },
-      {
-        "title": "Chart JS",
-        "subtitle": "Febrero de 2022",
-        "info": "Ejemplo de uso de Chart JS a partir de los datos de un GeoJSON",
-        "url": "https://alexvaquero19.github.io/mapsCharts/chart.html"
-      },
-      {
-        "title": "Gestoclubs",
-        "subtitle": "Abril DE 2019",
-        "info": "Gestión de Clubs y Socios",
-        "url": "https://gestoclubs.com/"
-      }
-    ]
+    "title": "Catálogo de Datos",
+    "subtitle": "Enero de 2022",
+    "info": "Descarga de Datos de Emergencias de los últimos 3 años y el actual.",
+    "url": "https://datos.salvamentomaritimo.es/"
+  },
+  {
+    "title": "Casaminium / Administradores de Fincas",
+    "subtitle": "Junio de 2021",
+    "info": "Gestión de fincas en Madrid",
+    "url": "https://www.administradores-fincas.es/"
+  },
+  {
+    "title": "Mis Enlaces",
+    "subtitle": "Mayo de 2021",
+    "info": "Web donde crear tu tarjeta virtual de Negocio",
+    "url": "https://misenlaces.es/"
+  },
+  {
+    "title": "Leaflet JS",
+    "subtitle": "Febrero de 2022",
+    "info": "Ejemplo de uso de Leaflet JS a partir de los datos de un GeoJSON",
+    "url": "https://misenlaces.es/"
+  },
+  {
+    "title": "Chart JS",
+    "subtitle": "Febrero de 2022",
+    "info": "Ejemplo de uso de Chart JS a partir de los datos de un GeoJSON",
+    "url": "https://alexvaquero19.github.io/mapsCharts/chart.html"
+  },
+  {
+    "title": "Gestoclubs",
+    "subtitle": "Abril DE 2019",
+    "info": "Gestión de Clubs y Socios",
+    "url": "https://gestoclubs.com/"
   }
 ]

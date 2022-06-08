@@ -1,264 +1,44 @@
 [
   {
-    "projects": [
-      {
-        "title": "Catálogo de Datos",
-        "subtitle": "Enero de 2022",
-        "info": "Descarga de Datos de Emergencias de los últimos 3 años y el actual.",
-        "url": "https://datos.salvamentomaritimo.es/"
-      },
-      {
-        "title": "Casaminium / Administradores de Fincas",
-        "subtitle": "Junio de 2021",
-        "info": "Gestión de fincas en Madrid",
-        "url": "https://www.administradores-fincas.es/"
-      },
-      {
-        "title": "Mis Enlaces",
-        "subtitle": "Mayo de 2021",
-        "info": "Web donde crear tu tarjeta virtual de Negocio",
-        "url": "https://misenlaces.es/"
-      },
-      {
-        "title": "Leaflet JS",
-        "subtitle": "Febrero de 2022",
-        "info": "Ejemplo de uso de Leaflet JS a partir de los datos de un GeoJSON",
-        "url": "https://misenlaces.es/"
-      },
-      {
-        "title": "Chart JS",
-        "subtitle": "Febrero de 2022",
-        "info": "Ejemplo de uso de Chart JS a partir de los datos de un GeoJSON",
-        "url": "https://alexvaquero19.github.io/mapsCharts/chart.html"
-      },
-      {
-        "title": "Gestoclubs",
-        "subtitle": "Abril DE 2019",
-        "info": "Gestión de Clubs y Socios",
-        "url": "https://gestoclubs.com/"
-      }
-    ]
-  },
-  {
-    "experience": [
-      {
-        "title": "Programador C# .NET",
-        "subtitle": "Oribital Critical Systems (Airbus)",
-        "year": "2022",
-        "info": [
-          "- Creación de una aplicación de escritorio en C# .NET en WPF con .NET 5.",
-          "- Trabajo en metodología Agile.",
-          "- Uso de Material Design para diseño de la Aplicación y MVVM como patrón de diseño."
-        ]
-      },
-      {
-        "title": "Programador C# .NET",
-        "subtitle": "GMV",
-        "year": "2021-2022",
-        "info": [
-          "- Desarrollo y mantenimeinto de un proyecto para la Gestión de Barcos en España en el Departamento de Defensa usando C# .NET Framework 4.5, Visual Studio 2022 y TFS (Team Foundation Server) como control de Código Fuente.",
-          "- Uso de Python 3.10 y Selenium para realizar scraping y obtener información de buques e imágenes de disntinas páginas.",
-          "- Creación de una página web de la que se van a poder descargar los datos de emergencias del año actual y los 3 años anteriores, usando SOAP, AJAX y Web Services."
-        ]
-      },
-      {
-        "title": "Desarrollador WEB",
-        "subtitle": "Segundoplano",
-        "year": "2021",
-        "info": [
-          "- Desarrollo de un Proyecto desde 0 en PHP (Symfony 5) para gestión de Fincas y Clubs.",
-          "- Mantenimeinto de una página web con un formualario y parte de blog.",
-          "- Mantenimiento de un E-Commerce que se dedica a la venta de radiadores."
-        ]
-      },
-      {
-        "title": "Técnico Informático",
-        "subtitle": "Indra (Movistar +)",
-        "year": "2018",
-        "info": [
-          "- Montaje de estaciones de trabajo, intalación de Sistema Operativo y software."
-        ]
-      }
-    ]
-  },
-  {
-    "education": [
-      {
-        "title": "DAW",
-        "subtitle": "I.E.S Domenico Scarlatti",
-        "year": "2021",
-        "info": [
-          "- Desarrollo de Aplicaciones Web."
-        ]
-      },
-      {
-        "title": "Inglés",
-        "subtitle": "EOI",
-        "year": "2021",
-        "info": [
-          "- Escuela Oficial de Idiomas para Certifciación B1."
-        ]
-      },
-      {
-        "title": "SQL",
-        "subtitle": "Openwebinars",
-        "year": "2020",
-        "info": [
-          "- Curso de SQL desde 0."
-        ]
-      },
-      {
-        "title": "SMR",
-        "subtitle": "Centro Hease",
-        "year": "2018",
-        "info": [
-          "- Sistemas Microinformáticos y Redes."
-        ]
-      },
-      {
-        "title": "Html CSS JavaScript",
-        "subtitle": "Udemy",
-        "year": "2018",
-        "info": [
-          "- Curso completo de tecnologías Front."
-        ]
-      }
-    ]
-  },
-  {
-    "skills": [
-      {
-        "title": "Nivel Intermedio Alto",
-        "info": [
-          {
-            "skill": "HTML5",
-            "icon": "<svg>"
-          },
-          {
-            "skill": "CSS3",
-            "icon": ""
-          },
-          {
-            "skill": "SASS",
-            "icon": ""
-          },
-          {
-            "skill": "Bootstrap",
-            "icon": ""
-          },
-          {
-            "skill": "JavaScript",
-            "icon": ""
-          },
-          {
-            "skill": "jQuery",
-            "icon": ""
-          },
-          {
-            "skill": "PHP",
-            "icon": ""
-          },
-          {
-            "skill": "Symfony",
-            "icon": ""
-          },
-          {
-            "skill": "MySql",
-            "icon": ""
-          },
-          {
-            "skill": "GIT",
-            "icon": ""
-          },
-          {
-            "skill": "GitHub",
-            "icon": ""
-          }
-        ]
-      },
-      {
-        "title": "Nivel Intermedio Alto",
-        "info": [
-          {
-            "skill": "cSharp",
-            "icon": ""
-          },
-          {
-            "skill": "Java",
-            "icon": ""
-          },
-          {
-            "skill": ".NET",
-            "icon": ""
-          },
-          {
-            "skill": "Blazor",
-            "icon": ""
-          },
-          {
-            "skill": "Python",
-            "icon": ""
-          },
-          {
-            "skill": "SQLServer",
-            "icon": ""
-          },
-          {
-            "skill": "Postman",
-            "icon": ""
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "others": [
-      {
-        "title": "Habilidades",
-        "ide": [
-          {
-            "skill": "VSCode",
-            "icon": ""
-          },
-          {
-            "skill": "VStudio",
-            "icon": ""
-          },
-          {
-            "skill": "DbEaver",
-            "icon": ""
-          },
-          {
-            "skill": "Sublime Text",
-            "icon": ""
-          },
-          {
-            "skill": "cSharp",
-            "icon": ""
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "hobbies": [
-      {
-        "title": "Hobbies",
-        "ide": [
-          {
-            "skill": "Video Juegos",
-            "icon": ""
-          },
-          {
-            "skill": "Series / Pelis",
-            "icon": ""
-          },
-          {
-            "skill": "Baloncesto",
-            "icon": ""
-          }
-        ]
-      }
-    ]
+    "projects": {
+      "project_list": [
+        {
+          "title": "Catálogo de Datos",
+          "subtitle": "Enero de 2022",
+          "info": "Descarga de Datos de Emergencias de los últimos 3 años y el actual.",
+          "url": "https://datos.salvamentomaritimo.es/"
+        },
+        {
+          "title": "Casaminium / Administradores de Fincas",
+          "subtitle": "Junio de 2021",
+          "info": "Gestión de fincas en Madrid",
+          "url": "https://www.administradores-fincas.es/"
+        },
+        {
+          "title": "Mis Enlaces",
+          "subtitle": "Mayo de 2021",
+          "info": "Web donde crear tu tarjeta virtual de Negocio",
+          "url": "https://misenlaces.es/"
+        },
+        {
+          "title": "Leaflet JS",
+          "subtitle": "Febrero de 2022",
+          "info": "Ejemplo de uso de Leaflet JS a partir de los datos de un GeoJSON",
+          "url": "https://misenlaces.es/"
+        },
+        {
+          "title": "Chart JS",
+          "subtitle": "Febrero de 2022",
+          "info": "Ejemplo de uso de Chart JS a partir de los datos de un GeoJSON",
+          "url": "https://alexvaquero19.github.io/mapsCharts/chart.html"
+        },
+        {
+          "title": "Gestoclubs",
+          "subtitle": "Abril DE 2019",
+          "info": "Gestión de Clubs y Socios",
+          "url": "https://gestoclubs.com/"
+        }
+      ]
+    }
   }
 ]

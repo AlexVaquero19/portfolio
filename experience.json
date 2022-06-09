@@ -1,5 +1,6 @@
 [
   {
+    "id": "exp1",
     "title": "Programador C# .NET",
     "subtitle": "Oribital Critical Systems (Airbus)",
     "year": "2022",
@@ -10,6 +11,7 @@
     ]
   },
   {
+    "id": "exp2",
     "title": "Programador C# .NET",
     "subtitle": "GMV",
     "year": "2021-2022",
@@ -20,6 +22,7 @@
     ]
   },
   {
+    "id": "exp3",
     "title": "Desarrollador WEB",
     "subtitle": "Segundoplano",
     "year": "2021",
@@ -30,6 +33,7 @@
     ]
   },
   {
+    "id": "exp4",
     "title": "Técnico Informático",
     "subtitle": "Indra (Movistar +)",
     "year": "2018",

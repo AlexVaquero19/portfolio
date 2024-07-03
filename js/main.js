@@ -1,36 +1,12 @@
 // COLOR MODE
-$('.color-mode').click(function(){
+$('.color-mode').on("click", function(){
   $('.color-mode-icon').toggleClass('active');
   $('body').toggleClass('dark-mode');
 
   $('.mode').show();
 });
 
-$(document).ready(function() { 
-  // PROJECT CAROUSEL
-  $('.owl-carousel').owlCarousel({
-    items: 1,
-    loop:true,
-    margin:10,
-    nav:true
-  });
-
-  let swiper = new Swiper('.blog-slider', {
-    spaceBetween: 30,
-    effect: 'fade',
-    loop: true,
-    mousewheel: {
-      invert: false,
-    },
-    // autoHeight: true,
-    pagination: {
-      el: '.blog-slider__pagination',
-      clickable: true,
-    }
-  });
-    
-  let animatedText = ["Programador", "Desarrollador Web"];
-
+$(function() { 
   // HEADER
   $(".navbar").headroom();
 

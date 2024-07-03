@@ -1,4 +1,4 @@
-$(document).ready(function(){
+$(function(){
     let clicks = 0;
     let player1 = 'X';
     let player2 = 'O';
@@ -19,13 +19,18 @@ $(document).ready(function(){
         [2, 4, 6]
     ];
 
+    if(pageLanguage.match("en")) {
+        $("#mode1").attr("mode", "PC")
+        $("#mode2").attr("mode", "Friend ")
+    }
+
     $(".mode").on("click", function() {
         mode = $(this).attr("mode");
         let txtMode = mode.charAt(0).toUpperCase() + mode.slice(1);
         $(".gameModeSelected").html("<h4 class='my-1'>VS " + txtMode + "</h4>");
         $(".game").removeClass("d-none");
 
-        mode == "amigo" ? $("#turn").html("Turno de " + player1) : $("#turn").html('');
+        mode.match("amigo") ? $("#turn").html("Turno de " + player1) : mode.match("Friend") ? $("#turn").html("Turn of " + player1) : $("#turn").html('');
 
         $("#btnRestart").trigger("click");
     });
@@ -42,11 +47,12 @@ $(document).ready(function(){
             clicks++;
 
             player = selectPlayer(clicks, player1, player2);
-            mode == "amigo" ? $("#turn").html("Turno de " + player) : $("#turn").html("");
+            console.log(mode)
+            mode.match("amigo") ? $("#turn").html("Turno de " + player) : mode.match("Friend") ? $("#turn").html("Turn of " + player) : $("#turn").html("");
 
             let playerWinner = checkWinner();
 
-            if(mode == "maquina" && playerWinner == ''){
+            if((mode.match("maquina") || mode.match("PC")) && playerWinner == ''){
                 playerBoard.sort(() => Math.random() - 0.5);
                 player = selectPlayer(clicks, player1, player2);
 
@@ -61,7 +67,7 @@ $(document).ready(function(){
                 let result = parseInt($("."+playerWinner).text());
 
                 $("#turn").html("");
-                $("#message").html("Jugador " + playerWinner + " ha ganado!");
+                pageLanguage.match("en") ? $("#message").html("Player " + playerWinner + " Won!") : $("#message").html("Jugador " + playerWinner + " ha ganado!");
                 $("."+playerWinner).html(result + 1);
                 restartButton();
             }else if(compruebaEmpate()) {
@@ -94,7 +100,8 @@ $(document).ready(function(){
         $("#btnRestart").addClass("d-none");
 
         player = 'X';
-        mode == "amigo" ? $("#turn").html("Turno de " + player) : $("#turn").html("");
+        console.log(mode + "Friend")
+        mode.match("amigo") ? $("#turn").html("Turno de " + player) : mode.match("Friend") ? $("#turn").html("Turn of " + player) : $("#turn").html("");
         playerBoard = [0,1,2,3,4,5,6,7,8];
         winner = '';
         clicks = 0;

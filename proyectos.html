@@ -50,16 +50,16 @@
         <div class="collapse navbar-collapse ms-md-5" id="navbarNav">
           <ul class="navbar-nav align-items-center">
             <li class="nav-item m-2">
-              <a href="./#project" class="nav-link p-0"><span data-hover="Proyectos">Proyectos</span></a>
+              <a href="./#project" class="nav-link p-0"><span id="proHover" data-i18n="navbar.pro" data-hover="Proyectos">Proyectos</span></a>
             </li>
             <li class="nav-item m-2">
-              <a href="./#resume" class="nav-link p-0"><span data-hover="Resumen">Resumen</span></a>
+              <a href="./#resume" class="nav-link p-0"><span data-i18n="navbar.res" id="resHover" data-hover="Resumen">Resumen</span></a>
             </li>
             <li class="nav-item m-2">
-              <a href="./#skills" class="nav-link p-0"><span data-hover="Habilidades">Habilidades</span></a>
+              <a href="./#skills" class="nav-link p-0"><span data-i18n="navbar.hab" id="abiHover" data-hover="Habilidades">Habilidades</span></a>
             </li>
             <li class="nav-item m-2">
-              <a href="./#otros" class="nav-link p-0"><span data-hover="Otros">Otros</span></a>
+              <a href="./#others" class="nav-link p-0"><span data-i18n="navbar.oth" id="othHover" data-hover="Otros">Otros</span></a>
             </li>
 
             <!-- Social -->
@@ -79,6 +79,10 @@
             </section>
           </ul>
 
+          <div class="d-flex align-items-center justify-content-end">
+            <a class="text-white mx-3" href="./proyectos.html?lang=es">ES</a>
+            <a class="text-white" href="./proyectos.html?lang=en">EN</a>
+          </div>
           <ul class="navbar-nav switchMode ml-lg-auto d-sm-none d-md-block d-flex">
             <span class="spanSwitchPc">
               <input type="checkbox" id="switch" class="color-mode miSwitch" /><label for="switch" class="miSwitch">Toggle</label>
@@ -94,8 +98,8 @@
     </div>
 
     <div class="d-flex justify-content-evenly">
-      <a class="btn custom-btn custom-btn-bg ms-2 mode" mode="maquina"><i class="fa-solid fa-brain me-2"></i>VS Máquina</a>
-      <a class="btn custom-btn custom-btn-bg ms-2 mode" mode="amigo"><i class="fa-solid fa-user-group me-2"></i>VS Amigo/a</a>
+      <a class="btn custom-btn custom-btn-bg ms-2 mode" id="mode1" mode="maquina"><i class="fa-solid fa-brain me-2"></i><span data-i18n="machine">VS Máquina</span></a>
+      <a class="btn custom-btn custom-btn-bg ms-2 mode" id="mode2" mode="amigo"><i class="fa-solid fa-user-group me-2"></i><span data-i18n="friend">VS Amigo/a</span></a>
     </div>
     
     <div class="text-center gameModeSelected"></div>
@@ -116,10 +120,10 @@
                     <div class="cells" data-cell-index="7"></div>
                     <div class="cells" data-cell-index="8"></div>
                 </div>
-                <div><button class="btn custom-btn custom-btn-bg mt-4 d-none" id="btnRestart">Reiniciar</button></div>
+                <div><button class="btn custom-btn custom-btn-bg mt-4 d-none" id="btnRestart" data-i18n="restart">Reiniciar</button></div>
             </div>
             <div class="col-6 text-center">
-                <div class="fs-3 fw-bold">Resultados</div>
+                <div class="fs-3 fw-bold" data-i18n="score">Resultados</div>
                 <div class="d-flex justify-content-evenly fs-3">
                     <div>X</div>
                     <div>O</div>
@@ -136,7 +140,7 @@
     </section>
 
     <div class="d-flex justify-content-center mt-5">
-      <a href="./" class="btn custom-btn custom-btn-bg ms-2"><i class="fa-solid fa-arrow-left me-2"></i> Volver</a>
+      <a href="./" class="btn custom-btn custom-btn-bg ms-2"><i class="fa-solid fa-arrow-left me-2"></i> <span data-i18n="back">Volver</span></a>
     </div>
 
     <!-- Footer -->
@@ -147,15 +151,13 @@
     </footer>
 
     <!-- Scripts -->
-    <script src="js/jquery-3.6.0.min.js"></script>
-    <script src="js/popper.min.js"></script>
-    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/Headroom.js"></script>
-    <script src="js/jQuery.headroom.js"></script>
-    <script src="js/owl.carousel.min.js"></script>
-    <script src="js/smoothscroll.js"></script>
-    <script src="js/main.js"></script>
-    <script src="js/tictactoe.js"></script>
+    <script src="./js/jquery-3.7.1.min.js"></script>
+    <script src="./js/popper.min.js"></script>
+    <script src="./js/bootstrap.min.js"></script>
+    <script src="./js/jQuery.headroom.js"></script> 
+    <script src="./js/Headroom.js"></script>
+    <script src="./js/main.js"></script>
+    <script src="./js/tictactoe.js"></script>
+    <script src="./js/translate.js"></script>
   </body>
 </html>

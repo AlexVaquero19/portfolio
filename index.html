@@ -52,16 +52,16 @@
         <div class="collapse navbar-collapse ms-md-5" id="navbarNav">
           <ul class="navbar-nav align-items-center">
             <li class="nav-item m-2">
-              <a href="#project" class="nav-link p-0"><span data-hover="Proyectos">Proyectos</span></a>
+              <a href="#project" class="nav-link p-0"><span data-i18n="navbar.pro" id="proHover" data-hover="Proyectos">Proyectos</span></a>
             </li>
             <li class="nav-item m-2">
-              <a href="#resume" class="nav-link p-0"><span data-hover="Resumen">Resumen</span></a>
+              <a href="#resume" class="nav-link p-0"><span data-i18n="navbar.res" id="resHover" data-hover="Resumen">Resumen</span></a>
             </li>
             <li class="nav-item m-2">
-              <a href="#skills" class="nav-link p-0"><span data-hover="Habilidades">Habilidades</span></a>
+              <a href="#skills" class="nav-link p-0"><span data-i18n="navbar.hab" id="abiHover" data-hover="Habilidades">Habilidades</span></a>
             </li>
             <li class="nav-item m-2">
-              <a href="#others" class="nav-link p-0"><span data-hover="Otros">Otros</span></a>
+              <a href="#others" class="nav-link p-0"><span data-i18n="navbar.oth" id="othHover" data-hover="Otros">Otros</span></a>
             </li>
 
             <!-- Social -->
@@ -81,6 +81,10 @@
             </section>
           </ul>
 
+          <div class="d-flex align-items-center justify-content-end">
+            <a class="text-white mx-3" href="./?lang=es">ES</a>
+            <a class="text-white" href="./?lang=en">EN</a>
+          </div>
           <ul class="navbar-nav switchMode ml-lg-auto d-sm-none d-md-block">
             <span class="spanSwitchPc">
               <input type="checkbox" id="switch" class="color-mode miSwitch" /><label for="switch" class="miSwitch">Toggle</label>
@@ -96,7 +100,7 @@
         <div class="row">
           <div class="col-lg-5 col-md-12 col-12 d-flex align-items-center">
             <div class="about-text p-3">
-              <h2 class="subtitle main-color">Hola a todos!, Soy</h2>
+              <h2 data-i18n="hello" class="subtitle main-color">Hola a todos!, Soy</h2>
               <h1 class="animated animated-text mt-0 name">
                 <span class="mr-2">Alejandro Vaquero Toba</span>
                 <div class="animated-info">
@@ -107,11 +111,11 @@
               </h1>
               
               <div class="custom-btn-group mt-4">
-                <button class="btn custom-btn custom-btn-bg text-light btnSobreMi"><i class="fa-solid fa-address-card me-2"></i>Sobre Mí</button>
+                <button class="btn custom-btn custom-btn-bg text-light btnSobreMi"><i class="fa-solid fa-address-card me-2"></i><span data-i18n="about">Sobre Mí</span></button>
               </div>
               <div class="custom-btn-group mt-4">
-                <a href="./files/Curriculum_Alejandro_Vaquero_Toba_ES.pdf" class="btn custom-btn custom-btn-bg" target="_blank"><i class="fa-solid fa-file-pdf me-2"></i> CV Español</a>
-                <a href="./files/Curriculum_Alejandro_Vaquero_Toba_EN.pdf" class="btn custom-btn custom-btn-bg ms-sm-3 ms-md-3" target="_blank"><i class="fa-solid fa-file-pdf me-2"></i> CV Inglés</a>
+                <a href="./files/Curriculum_Alejandro_Vaquero_Toba_ES.pdf" class="btn custom-btn custom-btn-bg" target="_blank"><i class="fa-solid fa-file-pdf me-2"></i> <span data-i18n="CVES">CV Español</span></a>
+                <a href="./files/Curriculum_Alejandro_Vaquero_Toba_EN.pdf" class="btn custom-btn custom-btn-bg ms-sm-3 ms-md-3" target="_blank"><i class="fa-solid fa-file-pdf me-2"></i> <span data-i18n="CVEN">CV Inglés</span></a>
               </div>
             </div>
           </div>
@@ -127,11 +131,11 @@
                 </div>
                 <div class="col-md-7 col-sm-12">
                   <ul class="listaAboutMe">
-                    <li><i class="aboutMeTitles fa-solid fa-user me-2"></i>Nombre: </span>Alejandro Vaquero Toba</li>
-                    <li><i class="aboutMeTitles fa-solid fa-cake-candles me-2"></i>Edad: </span><span class="edad"></span> (19/04/1999)</li>
+                    <li><i class="aboutMeTitles fa-solid fa-user me-2"></i><span data-i18n="name">Nombre</span>: </span>Alejandro Vaquero Toba</li>
+                    <li><i class="aboutMeTitles fa-solid fa-cake-candles me-2"></i><span data-i18n="age">Edad</span>: </span><span class="edad"></span> (19/04/1999)</li>
                     <li><i class="aboutMeTitles fa-solid fa-envelope me-2"></i>Email: </span><small>vaquero.alejandro19@gmail.com</small></li>
                     <hr class="bg-dark"/>
-                    <li class="fs-6">
+                    <li class="fs-6" data-i18n="explanation">
                       Soy una persona con inquietudes que acaba de empezar su vida laboral, que está en busca de una empresa con la que poder crecer personal y laboralmente hablando.<br /> Lo que más busco es la formación continua y el uso de tecnologías punteras o que se me pueda dar acceso a estudiarlo por mi cuenta para poder reciclarme.
                     </li>
                   </ul>
@@ -149,7 +153,7 @@
           <div class="row">
             <div class="col-lg-11 text-center mx-auto col-12">
               <div class="col-lg-8 mx-auto">
-                <h4 class="mb-5">Estos son algunos de los proyectos en los que he participado</h4>
+                <h4 class="mb-5" data-i18n="projectsSection">Estos son algunos de los proyectos en los que he participado</h4>
               </div>
             </div>
           </div>
@@ -164,14 +168,14 @@
             <img src="./images/salvamento.png" alt="salvamentomaritimo">
           </div>
           <div class="blog-slider__content">
-            <span class="blog-slider__code">Enero de 2022</span>
-            <div class="blog-slider__title">Catálogo de Datos</div>
-            <div class="blog-slider__text">Descarga de Datos de Emergencias de los últimos 3 años y el actual.</div>
+            <span class="blog-slider__code"><span data-i18n="slider.months.jan">Enero de</span> 2022</span>
+            <div class="blog-slider__title" data-i18n="slider.dataCatalog.title">Catálogo de Datos</div>
+            <div class="blog-slider__text" data-i18n="slider.dataCatalog.desc">Descarga de Datos de Emergencias de los últimos 3 años y el actual.</div>
             <a class="learn-more" href="https://datos.salvamentomaritimo.es/" target="_blank">
               <span class="circle" aria-hidden="true">
                 <span class="icon arrow"></span>
               </span>
-              <span class="button-text">Ir a la Web</span>
+              <span class="button-text" data-i18n="slider.btnWeb">Ir a la Web</span>
             </a>
           </div>
         </div>
@@ -180,14 +184,14 @@
             <img src="./images/project-image02.png" alt="casaminium">
           </div>
           <div class="blog-slider__content">
-            <span class="blog-slider__code">Junio de 2021</span>
-            <div class="blog-slider__title">Casaminium / Administradores de Fincas</div>
-            <div class="blog-slider__text">Gestión de fincas en Madrid</div>
+            <span class="blog-slider__code"><span data-i18n="slider.months.jun">Junio de</span> 2021</span>
+            <div class="blog-slider__title" data-i18n="slider.casaminium.title">Casaminium / Administradores de Fincas</div>
+            <div class="blog-slider__text" data-i18n="slider.casaminium.desc">Gestión de fincas en Madrid</div>
             <a class="learn-more" href="https://www.administradores-fincas.es/" target="_blank">
               <span class="circle" aria-hidden="true">
                 <span class="icon arrow"></span>
               </span>
-              <span class="button-text">Ir a la Web</span>
+              <span class="button-text" data-i18n="slider.btnWeb">Ir a la Web</span>
             </a>
           </div>
         </div>
@@ -196,14 +200,14 @@
             <img src="./images/project-image03.png" alt="misenlaces">
           </div>
           <div class="blog-slider__content">
-            <span class="blog-slider__code">Mayo de 2021</span>
-            <div class="blog-slider__title">Mis Enlaces</div>
-            <div class="blog-slider__text">Web donde crear tu tarjeta virtual de Negocio</div>
+            <span class="blog-slider__code"><span data-i18n="slider.months.may">Mayo de</span> 2021</span>
+            <div class="blog-slider__title" data-i18n="slider.links.title">Mis Enlaces</div>
+            <div class="blog-slider__text" data-i18n="slider.links.desc">Web donde crear tu tarjeta virtual de Negocio</div>
             <a class="learn-more" href="https://misenlaces.es/" target="_blank">
               <span class="circle" aria-hidden="true">
                 <span class="icon arrow"></span>
               </span>
-              <span class="button-text">Ir a la Web</span>
+              <span class="button-text" data-i18n="slider.btnWeb">Ir a la Web</span>
             </a>
           </div>
         </div>
@@ -212,14 +216,14 @@
             <img src="./images/maps.png" alt="mapsjs">
           </div>
           <div class="blog-slider__content">
-            <span class="blog-slider__code">Febrero de 2022</span>
-            <div class="blog-slider__title">Leaflet JS</div>
-            <div class="blog-slider__text">Ejemplo de uso de Leaflet JS a partir de los datos de un GeoJSON</div>
+            <span class="blog-slider__code"><span data-i18n="slider.months.feb">Febrero de</span> 2022</span>
+            <div class="blog-slider__title" data-i18n="slider.maps.title">Leaflet JS</div>
+            <div class="blog-slider__text" data-i18n="slider.maps.desc">Ejemplo de uso de Leaflet JS a partir de los datos de un GeoJSON</div>
             <a class="learn-more" href="https://alexvaquero19.github.io/mapsCharts/" target="_blank">
               <span class="circle" aria-hidden="true">
                 <span class="icon arrow"></span>
               </span>
-              <span class="button-text">Ir a la Web</span>
+              <span class="button-text" data-i18n="slider.btnWeb">Ir a la Web</span>
             </a>
           </div>
         </div>
@@ -228,14 +232,14 @@
             <img src="./images/charts.png" alt="chartjs">
           </div>
           <div class="blog-slider__content">
-            <span class="blog-slider__code">Febrero de 2022</span>
-            <div class="blog-slider__title">Chart JS</div>
-            <div class="blog-slider__text">Ejemplo de uso de Chart JS a partir de los datos de un GeoJSON</div>
+            <span class="blog-slider__code"><span data-i18n="slider.months.feb">Febrero de</span> 2022</span>
+            <div class="blog-slider__title" data-i18n="slider.charts.title">Chart JS</div>
+            <div class="blog-slider__text" data-i18n="slider.charts.desc">Ejemplo de uso de Chart JS a partir de los datos de un GeoJSON</div>
             <a class="learn-more" href="https://alexvaquero19.github.io/mapsCharts/chart.html" target="_blank">
               <span class="circle" aria-hidden="true">
                 <span class="icon arrow"></span>
               </span>
-              <span class="button-text">Ir a la Web</span>
+              <span class="button-text" data-i18n="slider.btnWeb">Ir a la Web</span>
             </a>
           </div>
         </div>
@@ -244,14 +248,14 @@
             <img src="./images/gestoclubs.png" alt="gestoclubs">
           </div>
           <div class="blog-slider__content">
-            <span class="blog-slider__code">Abril de 2019</span>
-            <div class="blog-slider__title">Gestoclubs</div>
-            <div class="blog-slider__text">Gestión de Clubs y socios</div>
+            <span class="blog-slider__code"><span data-i18n="slider.months.apr">Abril de</span> 2019</span>
+            <div class="blog-slider__title" data-i18n="slider.gestoClub.title">Gestoclubs</div>
+            <div class="blog-slider__text" data-i18n="slider.gestoClub.desc">Gestión de Clubs y socios</div>
             <a class="learn-more" href="https://gestoclubs.com/" target="_blank">
               <span class="circle" aria-hidden="true">
                 <span class="icon arrow"></span>
               </span>
-              <span class="button-text">Ir a la Web</span>
+              <span class="button-text" data-i18n="slider.btnWeb">Ir a la Web</span>
             </a>
           </div>
         </div>
@@ -263,7 +267,7 @@
       <div class="container">
         <div class="row d-flex">
           <div class="justify-content-center d-flex">
-            <a href="./proyectos.html" class="btn custom-btn custom-btn-bg ms-2"><i class="uil uil-globe"></i> Ver Otros Proyectos</a>
+            <a href="./proyectos.html" class="btn custom-btn custom-btn-bg ms-2"><i class="uil uil-globe"></i> <span data-i18n="btnOtherProj">Ver Otros Proyectos</span></a>
             <a href="https://codepen.io/alexvaquero19/" class="btn custom-btn custom-btn-bg ms-2" target="_blank"><i class="uil uil-globe"></i> Code Pen</a>
           </div>
         </div>
@@ -275,23 +279,23 @@
       <div class="container">
         <div class="row">
           <div class="col-lg-7 col-12">
-            <h2 class="mb-4">Experiencia</h2>
+            <h2 class="mb-4" data-i18n="exp">Experiencia</h2>
             <div class="timeline">
               <div class="timeline-wrapper">
                 <div class="timeline-yr">
                   <span>2023</span>
                 </div>
                 <div class="timeline-info">
-                  <h3 class="mb-0"><span>Programador C# ASP .NET</span></h3>
+                  <h3 class="mb-0"><span data-i18n="fmExperience.rol">Programador C# ASP .NET</span></h3>
                   <h3><small class="ms-0"><a href="https://www.fmlogistic.es/" target="_blank">FM Logistic</a></small></h3>
-                  <p class="fs-6 my-2">- Mantenimiento web interna de la empresa en ASP.NET Framework.</p>
-                  <p class="fs-6 my-2">- Creación y mantenimiento de Servicios en .NET 6 y .NET Framework</p>
-                  <p class="fs-6 my-2">- Desarrollos para nuevos clientes en la web interna según las necesidades.</p>
-                  <p class="fs-6 my-2">- Desarrollo de Web Services y mantenimeinto de los ya existentes.</p>
-                  <p class="fs-6 my-2">- Uso de herramientas de Ticketing
+                  <p class="fs-6 my-2">- <span data-i18n="fmExperience.fm1">Mantenimiento web interna de la empresa en ASP.NET Framework.</span></p>
+                  <p class="fs-6 my-2">- <span data-i18n="fmExperience.fm2">Creación y mantenimiento de Servicios en .NET 6 y .NET Framework</span></p>
+                  <p class="fs-6 my-2">- <span data-i18n="fmExperience.fm3">Desarrollos para nuevos clientes en la web interna según las necesidades.</span></p>
+                  <p class="fs-6 my-2">- <span data-i18n="fmExperience.fm4">Desarrollo de Web Services y mantenimeinto de los ya existentes.</span></p>
+                  <p class="fs-6 my-2">- <span data-i18n="fmExperience.fm5">Uso de herramientas de Ticketing</span>
                     <small class="ms-0"><a href="https://www.servicenow.com/" target="_blank">(Servicenow)</a></small>
                   </p>
-                  <p class="fs-6 my-2">- Uso de herramientas de transporte 
+                  <p class="fs-6 my-2">- <span data-i18n="fmExperience.fm6">Uso de herramientas de transporte</span> 
                     <small class="ms-0"><a href="https://www.alerce-group.com/es/soluciones/gestion-integral-transporte.html" target="_blank">(Alertran)</a></small>
                   </p>
                 </div>
@@ -302,11 +306,11 @@
                   <span>2022-2023</span>
                 </div>
                 <div class="timeline-info">
-                  <h3 class="mb-0"><span>Programador C# .NET</span></h3>
+                  <h3 class="mb-0"><span data-i18n="orbitalExperience.rol">Programador C# .NET</span></h3>
                   <h3><small class="ms-0"><a href="https://www.orbitalcs.com/" target="_blank">Oribital Critical Systems</a> <a href="https://www.airbus.com/en" target="_blank">(Airbus)</a></small></h3>
-                  <p class="fs-6 my-2">- Creación de una aplicación de escritorio en C# .NET en WPF con .NET 5.</p>
-                  <p class="fs-6 my-2">- Trabajo en metodología Agile.</p>
-                  <p class="fs-6 my-2">- Uso de Material Design para diseño de la Aplicación y MVVM como patrón de diseño.</p>
+                  <p class="fs-6 my-2" data-i18n="orbitalExperience.orbital1">- Creación de una aplicación de escritorio en C# .NET en WPF con .NET 5.</p>
+                  <p class="fs-6 my-2" data-i18n="orbitalExperience.orbital2">- Trabajo en metodología Agile.</p>
+                  <p class="fs-6 my-2" data-i18n="orbitalExperience.orbital3">- Uso de Material Design para diseño de la Aplicación y MVVM como patrón de diseño.</p>
                 </div>
               </div>
               
@@ -315,18 +319,18 @@
                   <span>2021-2022</span>
                 </div>
                 <div class="timeline-info">
-                  <h3 class="mb-0"><span>Programador C# .NET</span></h3>
+                  <h3 class="mb-0"><span data-i18n="gmvExperience.rol">Programador C# .NET</span></h3>
                   <h3><small class="ms-0"><a href="https://www.gmv.com/es-es/" target="_blank">GMV</a></small></h3>
-                  <p class="fs-6 my-2">- Desarrollo y mantenimeinto de un proyecto para la Gestión de Barcos en España en el Departamento de Defensa usando C# .NET Framework 4.5, Visual Studio 2022 y TFS (Team Foundation Server) como control de Código Fuente.</p>
-                  <p class="fs-6 my-2">- Uso de Python 3.10 y Selenium para realizar scraping y obtener información de buques e imágenes de disntinas páginas.</p>
-                  <p class="fs-6 my-2">- Creación de una página web de la que se van a poder descargar los datos de emergencias del año actual y los 3 años anteriores, usando SOAP, AJAX y Web Services.</p>
+                  <p class="fs-6 my-2" data-i18n="gmvExperience.gmv1">- Desarrollo y mantenimeinto de un proyecto para la Gestión de Barcos en España en el Departamento de Defensa usando C# .NET Framework 4.5, Visual Studio 2022 y TFS (Team Foundation Server) como control de Código Fuente.</p>
+                  <p class="fs-6 my-2" data-i18n="gmvExperience.gmv2">- Uso de Python 3.10 y Selenium para realizar scraping y obtener información de buques e imágenes de disntinas páginas.</p>
+                  <p class="fs-6 my-2" data-i18n="gmvExperience.gmv3">- Creación de una página web de la que se van a poder descargar los datos de emergencias del año actual y los 3 años anteriores, usando SOAP, AJAX y Web Services.</p>
                 </div>
               </div>
             </div>
           </div>
 
           <div class="col-lg-5 col-12">
-            <h2 class="mb-4 mobile-mt-2">Educación</h2>
+            <h2 class="mb-4 mobile-mt-2" data-i18n="edu">Educación</h2>
             <div class="timeline">
               <div class="timeline-wrapper">
                 <div class="timeline-yr">
@@ -334,11 +338,11 @@
                 </div>
                 <div class="timeline-info">
                   <h3><span>DAW</span><small><a href="https://www.domenicoscarlatti.es/" target="_blank">I.E.S Domenico Scarlatti</a></small></h3>
-                  <p>Desarrollo de Aplicaciones Web.</p>
+                  <p data-i18n="eduInfo.daw">Desarrollo de Aplicaciones Web.</p>
                 </div>
                 <div class="timeline-info">
-                  <h3><span>Inglés</span><small><a href="https://centrodeingleselenagonzalo.com/" target="_blank">Egastiz</a></small></h3>
-                  <p>Nivel B2-C1</p>
+                  <h3><span data-i18n="eduInfo.enTitle">Inglés</span><small><a href="https://centrodeingleselenagonzalo.com/" target="_blank">Egastiz</a></small></h3>
+                  <p data-i18n="eduInfo.enDesc">Nivel B2-C1</p>
                 </div>
               </div>
               
@@ -348,7 +352,7 @@
                 </div>
                 <div class="timeline-info mb-5">
                   <h3><span>SQL</span><small><a href="https://openwebinars.net/" target="_blank">Openwebinars</a></small></h3>
-                  <p>Curso de SQL desde 0.</p>
+                  <p data-i18n="eduInfo.sqlDesc">Curso de SQL desde 0.</p>
                 </div>
               </div>
 
@@ -358,11 +362,11 @@
                 </div>
                 <div class="timeline-info">
                   <h3><span>SMR</span><small><a href="https://www.teideformacion.com/nuestros-centros/centro-hease" target="_blank">Centro Hease</a></small></h3>
-                  <p>Sistemas Microinformáticos y Redes.</p>
+                  <p data-i18n="eduInfo.smrDesc">Sistemas Microinformáticos y Redes.</p>
                 </div>
                 <div class="timeline-info">
                   <h3><span>Html CSS JavaScript</span><small><a href="https://www.udemy.com/" target="_blank">Udemy</a></small></h3>
-                  <p>Curso completo de tecnologías Front.</p>
+                  <p data-i18n="eduInfo.webDesc">Curso completo de tecnologías Front.</p>
                 </div>
               </div>
             </div>
@@ -375,11 +379,11 @@
     <section class="about d-lg-flex mb-5 justify-content-center align-items-center" id="skills">
       <div class="container">
         <div class="row justify-content-center">
-          <h2 class="text-center">Habilidades</h2>
+          <h2 class="text-center" data-i18n="habilities.title">Habilidades</h2>
         </div>
         <div class="row">
           <div class="col-md-6 col-sm-12 text-center">
-            <h3><small>Nivel Intermedio Alto</small></h3>
+            <h3><small data-i18n="habilities.high">Nivel Intermedio Alto</small></h3>
             <hr class="bg-dark" />
             <div class="habilities">
               <div class="border d-flex p-2 align-items-center fw-bold">
@@ -448,7 +452,7 @@
           </div>
 
           <div class="col-md-6 col-sm-12 text-center basic">
-            <h3><small>Nivel Básico</small></h3>
+            <h3><small data-i18n="habilities.basic">Nivel Básico</small></h3>
             <hr class="bg-dark"/>
             <div class="habilities">
               <div class="border d-flex p-2 align-items-center fw-bold">
@@ -487,7 +491,7 @@
     <section class="about d-lg-flex mb-5 justify-content-center align-items-center" id="others">
       <div class="container">
         <div class="row justify-content-center">
-          <h2 class="text-center">Otros Datos de Interés</h2>
+          <h2 class="text-center" data-i18n="interests.title">Otros Datos de Interés</h2>
         </div>
         <div class="row">
           <div class="col-md-6 col-sm-12 text-center">
@@ -522,15 +526,15 @@
                 <span class="bg-dark-mode-svg">
                   <img class="mx-1" src="./images/icons/gamepad.svg" alt="Video Juegos">
                 </span>
-                <div>Video Juegos</div>
+                <div data-i18n="interests.games">Video Juegos</div>
               </div>
               <div class="border d-flex p-2 align-items-center fw-bold">
                 <img class="mx-2" src="./images/icons/tv.svg" alt="Series / Pelis"> 
-                <div>Series / Pelis</div>
+                <div data-i18n="interests.seriesFilms">Series / Pelis</div>
               </div>
               <div class="border d-flex p-2 align-items-center fw-bold">
                 <img class="mx-2" src="./images/icons/basket.svg" alt="Baloncesto"> 
-                <div>Baloncesto</div>
+                <div data-i18n="interests.basket">Baloncesto</div>
               </div>
             </div>
           </div>
@@ -546,14 +550,16 @@
     </footer>
 
     <!-- Scripts -->
-    <script src="js/jquery-3.6.0.min.js"></script>
-    <script src="js/popper.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/Headroom.js"></script>
-    <script src="js/jQuery.headroom.js"></script>
-    <script src="js/owl.carousel.min.js"></script>
-    <script src="js/smoothscroll.js"></script>
-    <script src="js/main.js"></script>
+    <script src="./js/jquery-3.7.1.min.js"></script>
+    <script src="./js/popper.min.js"></script>
+    <script src="./js/bootstrap.min.js"></script>
+    <script src="./js/Headroom.js"></script>
+    <script src="./js/jQuery.headroom.js"></script>
+    <script src="./js/owl.carousel.min.js"></script>
+    <script src="./js/smoothscroll.js"></script>
+    <script src="./js/main.js"></script>
     <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+    <script src="./js/translate.js"></script>
+    <script src="./js/carousel.js"></script>
   </body>
 </html>

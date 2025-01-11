@@ -1,5 +1,5 @@
 // List of available locales
-const availableLocales = ['en', 'es'];
+const availableLocales = ['es', 'en'];
 
 // Default locale.
 const defaultLanguage = 'es';
@@ -86,14 +86,17 @@ const locales = {
     "btnOtherProj": "See Other Projects",
     "exp": "Experience",
     "edu": "Education",
+    "airbusExperience": {
+      "rol": "C# .NET Programmer",
+      "airbus1":"Developing applications in Blazor from .NET 6 and following versions.",
+      "airbus2":"Manintenance of existing applications.",
+    },
     "fmExperience": {
       "rol": "C# ASP.NET Programmer",
       "fm1": "Maintenance of the own web application in ASP.NET Framework.",
       "fm2": "Develop and maintenance of web services in .NET 6 and .NET Framework.",
-      "fm3": "New develops for new clients in the own web application.",
       "fm4": "Develop of new web services and maintenance of existing ones.",
       "fm5": "Usage of ticketing tools as ",
-      "fm6": "Usage of transport tools as ",
     },
     "orbitalExperience": {
       "rol": "C# .NET Programmer",
@@ -113,11 +116,12 @@ const locales = {
       "enDesc": "B2-C1 Level",
       "sqlDesc": "SQL From 0 Course",
       "smrDesc": "Network and Microinformatics System",
-      "webDesc": "Full Front technologies course"
+      "webDesc": "Full Front technologies course",
+      "enCourse": "Basic usage of Python with Django, Numpy, Pandas and Google Cloud",
     },
     "habilities": {
       "title": "Habilities",
-      "high": "High Intermidiet",
+      "high": "High / Intermidiet",
       "basic": "Basic"
     },
     "interests": {
@@ -142,33 +146,35 @@ const json = locales[pageLanguage];
 
 // On each element, found the translation from JSON file & update.
 elements.forEach((element, index) => {
-  const key = element.getAttribute('data-i18n');
-  let text = key.split('.').reduce((obj, i) => (obj ? obj[i] : null), json);
+  if(pageLanguage.match("en")) {
+    const key = element.getAttribute('data-i18n');
+    let text = key.split('.').reduce((obj, i) => (obj ? obj[i] : null), json);
 
-  // Does this text have any variables? (eg {something})
-  const variables = text.match(/{(.*?)}/g);
-  if (variables) {
+    // Does this text have any variables? (eg {something})
+    const variables = text.match(/{(.*?)}/g);
+    if (variables) {
 
-    // Iterate each variable in the text.
-    variables.forEach((variable) => {
+      // Iterate each variable in the text.
+      variables.forEach((variable) => {
 
-      // Filter all `data-*` attributes for this element to find the matching key.
-      Object.entries(element.dataset).filter(([key, value]) => {
-        if (`{${key}}` === variable) {
-          try {
-            // Attempt to run actual JavaScript code.
-            text = text.replace(`${variable}`, new Function(`return (${value})`)());
-          } catch (error) {
-            // Probably just static text replacement.
-            text = text.replace(`${variable}`, value);
+        // Filter all `data-*` attributes for this element to find the matching key.
+        Object.entries(element.dataset).filter(([key, value]) => {
+          if (`{${key}}` === variable) {
+            try {
+              // Attempt to run actual JavaScript code.
+              text = text.replace(`${variable}`, new Function(`return (${value})`)());
+            } catch (error) {
+              // Probably just static text replacement.
+              text = text.replace(`${variable}`, value);
+            }
           }
-        }
-      })
-    });
-  }
+        })
+      });
+    }
 
-  // Regular text replacement for given locale.
-  element.innerHTML = text;
+    // Regular text replacement for given locale.
+    element.innerHTML = text;
+  }
 });
 
 // Set <html> tag lang attribute.

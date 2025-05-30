@@ -120,7 +120,7 @@ const locales = {
       "enCourse": "Basic usage of Python with Django, Numpy, Pandas and Google Cloud",
     },
     "habilities": {
-      "title": "Habilities",
+      "title": "Skills",
       "high": "High / Intermidiet",
       "basic": "Basic"
     },

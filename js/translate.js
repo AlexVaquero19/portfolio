@@ -88,8 +88,11 @@ const locales = {
     "edu": "Education",
     "airbusExperience": {
       "rol": "C# .NET Programmer",
-      "airbus1":"Developing applications in Blazor from .NET 6 and following versions.",
-      "airbus2":"Manintenance of existing applications.",
+      "airbus1":"Maintenance of existing Applications.",
+      "airbus2":"Develop new Applications and taking requirements.",
+      "airbus3":"Develop Scripts in Python.",
+      "airbus4":"Develop from start to end Applications in Blazor and full use of MudBlazor Components Library and some components of Radzn.",
+      "airbus5":"Develop new components to razor pages.",
     },
     "fmExperience": {
       "rol": "C# ASP.NET Programmer",

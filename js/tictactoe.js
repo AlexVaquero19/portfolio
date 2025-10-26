@@ -1,133 +1,172 @@
-$(function(){
-    let clicks = 0;
-    let player1 = 'X';
-    let player2 = 'O';
-    let player = '';
-    let winner = '';
-    let mode = '';
-    let clickedPlayers = ["","","","","","","","",""];
-    let playerBoard = [0,1,2,3,4,5,6,7,8];
-    let automaticPlayerClick = 0;
-    const winningOptions = [
-        [0, 1, 2],
-        [3, 4, 5],
-        [6, 7, 8],
-        [0, 3, 6],
-        [1, 4, 7],
-        [2, 5, 8],
-        [0, 4, 8],
-        [2, 4, 6]
-    ];
-
-    if(pageLanguage.match("en")) {
-        $("#mode1").attr("mode", "PC")
-        $("#mode2").attr("mode", "Friend ")
+class Board {
+    constructor() {
+        this.board = Array(9).fill(null);
+        this.currentPlayer = 'X';
     }
 
-    $(".mode").on("click", function() {
-        mode = $(this).attr("mode");
-        let txtMode = mode.charAt(0).toUpperCase() + mode.slice(1);
-        $(".gameModeSelected").html("<h4 class='my-1'>VS " + txtMode + "</h4>");
-        $(".game").removeClass("d-none");
+    render() {
+        const boardElement = document.createElement('div');
+        boardElement.className = 'board';
 
-        mode.match("amigo") ? $("#turn").html("Turno de " + player1) : mode.match("Friend") ? $("#turn").html("Turn of " + player1) : $("#turn").html('');
+        this.board.forEach((cell, index) => {
+            const cellElement = document.createElement('div');
+            cellElement.className = 'cell';
+            cellElement.innerHTML = cell;
+            cellElement.addEventListener('click', () => this.handleClick(index));
+            boardElement.appendChild(cellElement);
+        });
 
-        $("#btnRestart").trigger("click");
-    });
+        return boardElement;
+    }
 
-    $(".cells").on("click", function(e){
-        if(e.target.innerHTML == "" && !winner) {
-            let boardClicked = parseInt($(this).attr("data-cell-index"));
-            player = selectPlayer(clicks, player1, player2);
+    handleClick(index) {
+        if (!this.board[index]) {
+            this.board[index] = this.currentPlayer;
+            this.currentPlayer = this.currentPlayer === 'X' ? 'O' : 'X';
+            this.render();
+        }
+    }
+}
 
-            $(e.target).html(player);
+class Game {
+    constructor() {
+        this.board = new Board();
+        this.currentPlayer = 'X';
+        this.gameOver = false;
+        this.isComputer = false;
+        this.xWins = 0;
+        this.oWins = 0;
+        this.draws = 0;
+        this.init();
+    }
 
-            clickedPlayers[boardClicked] = player;
-            playerBoard.splice(playerBoard.indexOf(boardClicked), 1);
-            clicks++;
+    init() {
+        document.getElementById('play-friend').addEventListener('click', () => this.startGame(false));
+        document.getElementById('play-computer').addEventListener('click', () => this.startGame(true));
+        this.startGame(false); // Set "Play with Friend" as default
+    }
 
-            player = selectPlayer(clicks, player1, player2);
-            console.log(mode)
-            mode.match("amigo") ? $("#turn").html("Turno de " + player) : mode.match("Friend") ? $("#turn").html("Turn of " + player) : $("#turn").html("");
+    startGame(isComputer) {
+        this.isComputer = isComputer;
+        this.resetGame();
+        this.board.render();
+        this.addEventListeners();
+        this.updateModeDisplay();
+        this.updateCurrentPlayerDisplay();
+    }
 
-            let playerWinner = checkWinner();
+    resetGame() {
+        this.board = new Board();
+        this.currentPlayer = 'X';
+        this.gameOver = false;
+        document.getElementById('message').textContent = '';
+        document.querySelectorAll('.cell').forEach(cell => cell.innerHTML = '');
+        this.updateCurrentPlayerDisplay();
+    }
 
-            if((mode.match("maquina") || mode.match("PC")) && playerWinner == ''){
-                playerBoard.sort(() => Math.random() - 0.5);
-                player = selectPlayer(clicks, player1, player2);
+    addEventListeners() {
+        const cells = document.querySelectorAll('.cell');
+        cells.forEach(cell => {
+            cell.addEventListener('click', (event) => this.handleCellClick(event));
+        });
+    }
 
-                if(!compruebaEmpate()) {
-                    automaticPlayerTurn(player);
-                    clicks++;
+    handleCellClick(event) {
+        if (this.gameOver) return;
+
+        const cell = event.target;
+        if (cell.innerHTML === '') {
+            cell.innerHTML = this.currentPlayer === 'X' ? '<i class="fas fa-times"></i>' : '<i class="far fa-circle"></i>';
+            if (this.checkWin()) {
+                this.showMessage(`${this.currentPlayer} wins!`, 'win');
+                this.updateScore(this.currentPlayer);
+                this.gameOver = true;
+            } else if (this.checkDraw()) {
+                this.showMessage("It's a draw!", 'draw');
+                this.updateScore('draw');
+                this.gameOver = true;
+            } else {
+                this.currentPlayer = this.currentPlayer === 'X' ? 'O' : 'X';
+                this.updateCurrentPlayerDisplay();
+                if (this.isComputer && this.currentPlayer === 'O') {
+                    this.computerMove();
                 }
             }
-
-            playerWinner = checkWinner();
-            if(playerWinner != '') {
-                let result = parseInt($("."+playerWinner).text());
-
-                $("#turn").html("");
-                pageLanguage.match("en") ? $("#message").html("Player " + playerWinner + " Won!") : $("#message").html("Jugador " + playerWinner + " ha ganado!");
-                $("."+playerWinner).html(result + 1);
-                restartButton();
-            }else if(compruebaEmpate()) {
-                $("#turn").html("");
-                $("#message").html("Empate!");
-                restartButton();
-            }
         }
-    });
-
-    function selectPlayer(clicks, player1, player2) {
-        return clicks % 2 == 0 ? player1 : player2;
     }
 
-    function automaticPlayerTurn(player) {
-        automaticPlayerClick = playerBoard[0];
-        clickedPlayers[automaticPlayerClick] = player;
-
-        $(".board").find(".cells")[automaticPlayerClick].innerHTML = player;
-        playerBoard.splice(playerBoard.indexOf(automaticPlayerClick), 1);
-    }
-
-    $("#btnRestart").on("click", function() {
-        for (let i = 0; i < 9; i++) {
-            clickedPlayers[i] = "";
+    computerMove() {
+        const emptyCells = Array.from(document.querySelectorAll('.cell')).filter(cell => cell.innerHTML === '');
+        const randomCell = emptyCells[Math.floor(Math.random() * emptyCells.length)];
+        randomCell.innerHTML = this.currentPlayer === 'X' ? '<i class="fas fa-times"></i>' : '<i class="far fa-circle"></i>';
+        if (this.checkWin()) {
+            this.showMessage(`${this.currentPlayer} wins!`, 'win');
+            this.updateScore(this.currentPlayer);
+            this.gameOver = true;
+        } else if (this.checkDraw()) {
+            this.showMessage("It's a draw!", 'draw');
+            this.updateScore('draw');
+            this.gameOver = true;
+        } else {
+            this.currentPlayer = 'X';
+            this.updateCurrentPlayerDisplay();
         }
-        
-        $(".cells").html("");
-        $("#message").html("");
-        $("#btnRestart").addClass("d-none");
+    }
 
-        player = 'X';
-        console.log(mode + "Friend")
-        mode.match("amigo") ? $("#turn").html("Turno de " + player) : mode.match("Friend") ? $("#turn").html("Turn of " + player) : $("#turn").html("");
-        playerBoard = [0,1,2,3,4,5,6,7,8];
-        winner = '';
-        clicks = 0;
-    });
+    showMessage(message, type) {
+        const messageElement = document.getElementById('message');
+        messageElement.textContent = message;
+        messageElement.className = `mt-6 text-xl font-semibold ${type === 'win' ? 'text-green-500' : type === 'lose' ? 'text-red-500' : 'text-gray-800'}`;
+    }
 
-    function checkWinner() {
-        winningOptions.forEach(options => {
-            if(clickedPlayers[options[0]] == 'X' && clickedPlayers[options[1]] == 'X' && clickedPlayers[options[2]] == 'X')
-                winner = 'X';
-            else if(clickedPlayers[options[0]] == 'O' && clickedPlayers[options[1]] == 'O' && clickedPlayers[options[2]] == 'O' && !winner)
-                winner = 'O';
+    updateModeDisplay() {
+        const modeElement = document.getElementById('mode');
+        modeElement.textContent = `Mode: ${this.isComputer ? 'Play with Computer' : 'Play with Friend'}`;
+        document.getElementById('play-friend').classList.toggle('bg-blue-700', !this.isComputer);
+        document.getElementById('play-computer').classList.toggle('bg-green-700', this.isComputer);
+    }
+
+    updateCurrentPlayerDisplay() {
+        const currentPlayerElement = document.getElementById('current-player');
+        currentPlayerElement.textContent = `Current Player: ${this.currentPlayer}`;
+    }
+
+    updateScore(winner) {
+        if (winner === 'X') {
+            this.xWins++;
+            document.getElementById('x-wins').textContent = `X Wins: ${this.xWins}`;
+        } else if (winner === 'O') {
+            this.oWins++;
+            document.getElementById('o-wins').textContent = `O Wins: ${this.oWins}`;
+        } else {
+            this.draws++;
+            document.getElementById('draws').textContent = `Draws: ${this.draws}`;
+        }
+    }
+
+    checkWin() {
+        const winningCombinations = [
+            [0, 1, 2],
+            [3, 4, 5],
+            [6, 7, 8],
+            [0, 3, 6],
+            [1, 4, 7],
+            [2, 5, 8],
+            [0, 4, 8],
+            [2, 4, 6]
+        ];
+        const cells = Array.from(document.querySelectorAll('.cell')).map(cell => cell.innerHTML);
+        return winningCombinations.some(combination => {
+            return combination.every(index => cells[index].includes(this.currentPlayer === 'X' ? 'fa-times' : 'fa-circle'));
         });
-        return winner;
     }
 
-    function compruebaEmpate() {
-        let filled = true;
-
-        clickedPlayers.forEach(value => {
-            if(value == "")
-                filled = false;
-        });
-        return filled;
+    checkDraw() {
+        const cells = Array.from(document.querySelectorAll('.cell')).map(cell => cell.innerHTML);
+        return cells.every(cell => cell !== '');
     }
+}
 
-    function restartButton() {
-        $("#btnRestart").removeClass("d-none");
-    }
+document.addEventListener('DOMContentLoaded', () => {
+    new Game();
 });

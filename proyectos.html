@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="./css/theme.min.css">
 
     <!-- Main Style -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link rel="stylesheet" href="./css/tictactoe.min.css">
     <link rel="stylesheet" href="./css/main.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
@@ -93,58 +94,49 @@
     </nav>
 
     <!--Tic Tac Toe-->
-    <div class="container d-flex justify-content-center mt-5 mb-3">
-      <img src="./images/icons/tictactoe.svg" class="img-fluid me-3 bg-dark-mode-svg-tictactoe" width="50px" alt="TicTacToe Img SVG"> <h1 class="mb-0">Tic Tac Toe</h1>
-    </div>
-
-    <div class="d-flex justify-content-evenly">
-      <a class="btn custom-btn custom-btn-bg ms-2 mode" id="mode1" mode="maquina"><i class="fa-solid fa-brain me-2"></i><span data-i18n="machine">VS Máquina</span></a>
-      <a class="btn custom-btn custom-btn-bg ms-2 mode" id="mode2" mode="amigo"><i class="fa-solid fa-user-group me-2"></i><span data-i18n="friend">VS Amigo/a</span></a>
-    </div>
-    
-    <div class="text-center gameModeSelected"></div>
-
-    <section class="container mb-3 game animate__animated animate__fadeInDown d-none">
-        <div class="row">
-            <div class="col-6 d-flex flex-column align-items-center">
-                <div><h2 id="turn"></h2></div>
-                <div><h1 id="message"></h1></div>
-                <div class="board">
-                    <div class="cells" data-cell-index="0"></div>
-                    <div class="cells" data-cell-index="1"></div>
-                    <div class="cells" data-cell-index="2"></div>
-                    <div class="cells" data-cell-index="3"></div>
-                    <div class="cells" data-cell-index="4"></div>
-                    <div class="cells" data-cell-index="5"></div>
-                    <div class="cells" data-cell-index="6"></div>
-                    <div class="cells" data-cell-index="7"></div>
-                    <div class="cells" data-cell-index="8"></div>
+    <div class="text-center board-center">
+        <h1 class="text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-green-500 mb-2 animate-pulse mt-2">
+            Tic Tac Toe
+        </h1>
+        <div class="mb-6">
+            <button id="play-friend" class="btn custom-btn custom-btn-bg rounded-lg mr-4 transition-transform transform hover:scale-105 active:scale-95 fw-bold">Play with Friend</button>
+            <button id="play-computer" class="btn custom-btn custom-btn-bg rounded-lg transition-transform transform hover:scale-105 active:scale-95 fw-bold">Play with Computer</button>
+        </div>
+        <div id="mode" class="mb-2 text-xl font-semibold">Mode: Play with Friend</div>
+        <div id="current-player" class="mb-3 text-xl font-semibold">Current Player: X</div>
+        <div class="grid grid-cols-3 gap-3 p-4 bg-white dark:bg-gray-800 rounded-lg shadow-lg board-bg">
+            <div class="cell flex items-center justify-center bg-blue-500 text-white text-4xl font-bold cursor-pointer transition-transform transform hover:scale-110 rounded-lg w-24 h-24 bg-button-color" data-cell></div>
+            <div class="cell flex items-center justify-center bg-blue-500 text-white text-4xl font-bold cursor-pointer transition-transform transform hover:scale-110 rounded-lg w-24 h-24 bg-button-color" data-cell></div>
+            <div class="cell flex items-center justify-center bg-blue-500 text-white text-4xl font-bold cursor-pointer transition-transform transform hover:scale-110 rounded-lg w-24 h-24 bg-button-color" data-cell></div>
+            <div class="cell flex items-center justify-center bg-blue-500 text-white text-4xl font-bold cursor-pointer transition-transform transform hover:scale-110 rounded-lg w-24 h-24 bg-button-color" data-cell></div>
+            <div class="cell flex items-center justify-center bg-blue-500 text-white text-4xl font-bold cursor-pointer transition-transform transform hover:scale-110 rounded-lg w-24 h-24 bg-button-color" data-cell></div>
+            <div class="cell flex items-center justify-center bg-blue-500 text-white text-4xl font-bold cursor-pointer transition-transform transform hover:scale-110 rounded-lg w-24 h-24 bg-button-color" data-cell></div>
+            <div class="cell flex items-center justify-center bg-blue-500 text-white text-4xl font-bold cursor-pointer transition-transform transform hover:scale-110 rounded-lg w-24 h-24 bg-button-color" data-cell></div>
+            <div class="cell flex items-center justify-center bg-blue-500 text-white text-4xl font-bold cursor-pointer transition-transform transform hover:scale-110 rounded-lg w-24 h-24 bg-button-color" data-cell></div>
+            <div class="cell flex items-center justify-center bg-blue-500 text-white text-4xl font-bold cursor-pointer transition-transform transform hover:scale-110 rounded-lg w-24 h-24 bg-button-color" data-cell></div>
+        </div>
+        <div id="message" class="mt-6 text-xl font-semibold text-gray-800 dark:text-gray-200"></div>
+        <div class="mt-6 text-xl font-semibold text-gray-800 dark:text-gray-200">
+            <div class="flex justify-center items-center space-x-4 flex-wrap gap-3">
+                <div class="bg-blue-500 text-white px-4 py-2 rounded-lg shadow-lg bg-button-color">
+                    <p id="x-wins" class="text-2xl font-bold">X Wins: 0</p>
                 </div>
-                <div><button class="btn custom-btn custom-btn-bg mt-4 d-none" id="btnRestart" data-i18n="restart">Reiniciar</button></div>
-            </div>
-            <div class="col-6 text-center">
-                <div class="fs-3 fw-bold" data-i18n="score">Resultados</div>
-                <div class="d-flex justify-content-evenly fs-3">
-                    <div>X</div>
-                    <div>O</div>
+                <div class="bg-green-500 text-white px-4 py-2 rounded-lg shadow-lg bg-button-color">
+                    <p id="o-wins" class="text-2xl font-bold">O Wins: 0</p>
                 </div>
-                <div class="d-flex justify-content-center">
-                    <hr class="w-50"/>
-                </div>
-                <div class="d-flex justify-content-evenly fs-5">
-                    <div class="X">0</div>
-                    <div class="O">0</div>
+                <div class="bg-gray-500 text-white px-4 py-2 rounded-lg shadow-lg bg-button-color">
+                    <p id="draws" class="text-2xl font-bold">Draws: 0</p>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
 
-    <div class="d-flex justify-content-center mt-5">
+    <div class="d-flex justify-content-center mt-4 mb-4">
       <a href="./" class="btn custom-btn custom-btn-bg ms-2"><i class="fa-solid fa-arrow-left me-2"></i> <span data-i18n="back">Volver</span></a>
     </div>
 
     <!-- Footer -->
-    <footer class="footer-projects">
+    <footer class="footer">
       <div class="container d-flex align-items-center copyright-text justify-content-center fw-bold py-3">                            
         <i class="fa-solid fa-copyright me-2"></i> <span class="anio me-2"></span> Alejandro Vaquero Toba
       </div>

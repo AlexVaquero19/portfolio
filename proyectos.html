@@ -98,9 +98,10 @@
         <h1 class="text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-green-500 mb-2 animate-pulse mt-2">
             Tic Tac Toe
         </h1>
-        <div class="mb-6">
+        <div id="controls" class="mb-6">
             <button id="play-friend" class="btn custom-btn custom-btn-bg rounded-lg mr-4 transition-transform transform hover:scale-105 active:scale-95 fw-bold">Play with Friend</button>
             <button id="play-computer" class="btn custom-btn custom-btn-bg rounded-lg transition-transform transform hover:scale-105 active:scale-95 fw-bold">Play with Computer</button>
+            <!-- reset button (hidden until game end) -->
         </div>
         <div id="mode" class="mb-2 text-xl font-semibold">Mode: Play with Friend</div>
         <div id="current-player" class="mb-3 text-xl font-semibold">Current Player: X</div>
@@ -116,6 +117,11 @@
             <div class="cell flex items-center justify-center bg-blue-500 text-white text-4xl font-bold cursor-pointer transition-transform transform hover:scale-110 rounded-lg w-24 h-24 bg-button-color" data-cell></div>
         </div>
         <div id="message" class="mt-6 text-xl font-semibold text-gray-800 dark:text-gray-200"></div>
+
+        <div class="mt-4 mb-2">
+            <button id="reset-button" style="display:none;" class="btn custom-btn custom-btn-bg rounded-lg transition-transform transform hover:scale-105 active:scale-95 fw-bold">Restart Game</button>
+        </div>
+
         <div class="mt-6 text-xl font-semibold text-gray-800 dark:text-gray-200">
             <div class="flex justify-center items-center space-x-4 flex-wrap gap-3">
                 <div class="bg-blue-500 text-white px-4 py-2 rounded-lg shadow-lg bg-button-color">

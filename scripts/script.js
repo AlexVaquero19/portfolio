@@ -28,6 +28,10 @@ function syncIcon() {
 
 syncIcon();
 
+if(localStorage.theme === 'light') {
+    document.documentElement.classList.toggle('dark');
+}
+
 themeBtn.addEventListener('click', () => {
     document.documentElement.classList.toggle('dark');
     if (document.documentElement.classList.contains('dark')) {

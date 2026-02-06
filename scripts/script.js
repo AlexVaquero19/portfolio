@@ -1,5 +1,3 @@
-// Enhanced Portfolio JavaScript with Modern Interactions
-
 // Theme Toggle Logic
 const themeBtn = document.getElementById('theme-toggle');
 const themeIcon = document.getElementById('theme-icon');
@@ -234,33 +232,6 @@ document.querySelectorAll('.bento-card, .card-3d').forEach(card => {
     });
 });
 
-// Copy Email to Clipboard
-document.querySelectorAll('a[href^="mailto:"]').forEach(emailLink => {
-    emailLink.addEventListener('click', (e) => {
-        if (e.shiftKey) {
-            e.preventDefault();
-            const email = emailLink.href.replace('mailto:', '');
-            navigator.clipboard.writeText(email).then(() => {
-                // Show copied notification
-                showNotification('Email copied to clipboard!');
-            });
-        }
-    });
-});
-
-// Notification System
-function showNotification(message, duration = 3000) {
-    const notification = document.createElement('div');
-    notification.className = 'fixed bottom-8 right-8 bg-brand-500 text-white px-6 py-4 rounded-full shadow-lg z-50 transition-all transform translate-y-0 opacity-100';
-    notification.textContent = message;
-    document.body.appendChild(notification);
-    
-    setTimeout(() => {
-        notification.classList.add('translate-y-4', 'opacity-0');
-        setTimeout(() => notification.remove(), 300);
-    }, duration);
-}
-
 // Skill Progress Bars Animation
 function animateSkillBars() {
     const skillBars = document.querySelectorAll('.skill-progress');
@@ -274,20 +245,6 @@ function animateSkillBars() {
         }, 100);
     });
 }
-
-// Easter Egg: Konami Code
-let konamiCode = [];
-const konamiPattern = ['ArrowUp', 'ArrowUp', 'ArrowDown', 'ArrowDown', 'ArrowLeft', 'ArrowRight', 'ArrowLeft', 'ArrowRight', 'b', 'a'];
-
-document.addEventListener('keydown', (e) => {
-    konamiCode.push(e.key);
-    konamiCode = konamiCode.slice(-10);
-    
-    if (konamiCode.join(',') === konamiPattern.join(',')) {
-        document.body.style.animation = 'rainbow 2s linear infinite';
-        showNotification('🎉 You found the secret! 🎉', 5000);
-    }
-});
 
 // Performance Optimization: Debounce Scroll Events
 function debounce(func, wait = 10) {

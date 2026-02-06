@@ -21,6 +21,10 @@
     animation: gradient-shift 3s ease infinite;
 }
 
+.tracking-tight {
+    letter-spacing: -0.015em !important;
+}
+
 @keyframes gradient-shift {
     0%, 100% { background-position: 0% center; }
     50% { background-position: 100% center; }

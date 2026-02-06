@@ -114,7 +114,7 @@
 
                     <!-- Value Proposition -->
                     <p class="text-xl text-slate-600 dark:text-slate-400 max-w-2xl leading-relaxed">
-                        I'm a Software Engineer with <strong class="text-brand-500">4+ years</strong> of experience building mission-critical applications for <strong class="text-brand-500">aerospace and logistics</strong> industries. I transform complex requirements into scalable, high-performance solutions.
+                        I'm a Software Engineer with <strong class="text-brand-500" id="hero-years"> years</strong> of experience building mission-critical applications for <strong class="text-brand-500">aerospace and logistics</strong> industries. I transform complex requirements into scalable, high-performance solutions.
                     </p>
 
                     <!-- Contact Info -->
@@ -163,28 +163,11 @@
                 <div class="relative group">
                     <div class="absolute -inset-4 bg-gradient-to-r from-brand-500 to-cyan-500 rounded-full opacity-20 group-hover:opacity-30 blur-2xl transition-opacity"></div>
                     <img src="./img/me.jpg" alt="Alejandro Vaquero Toba" class="relative w-72 h-72 md:w-96 md:h-96 rounded-full object-cover border-4 border-white dark:border-slate-800 shadow-2xl">
-                </div>
-            </div>
-        </section>
 
-        <!-- Stats Section - NEW -->
-        <section class="max-w-7xl mx-auto px-6 mb-32">
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
-                <div class="text-center p-8 bg-white dark:bg-slate-900 rounded-3xl border border-slate-200 dark:border-slate-800 hover:scale-105 transition-transform">
-                    <div class="text-4xl md:text-5xl font-bold text-brand-500 mb-2">4+</div>
-                    <div class="text-sm text-slate-500 dark:text-slate-400 uppercase tracking-wider">Years Experience</div>
-                </div>
-                <div class="text-center p-8 bg-white dark:bg-slate-900 rounded-3xl border border-slate-200 dark:border-slate-800 hover:scale-105 transition-transform">
-                    <div class="text-4xl md:text-5xl font-bold text-brand-500 mb-2">4</div>
-                    <div class="text-sm text-slate-500 dark:text-slate-400 uppercase tracking-wider">Companies</div>
-                </div>
-                <div class="text-center p-8 bg-white dark:bg-slate-900 rounded-3xl border border-slate-200 dark:border-slate-800 hover:scale-105 transition-transform">
-                    <div class="text-4xl md:text-5xl font-bold text-brand-500 mb-2">15+</div>
-                    <div class="text-sm text-slate-500 dark:text-slate-400 uppercase tracking-wider">Projects Delivered</div>
-                </div>
-                <div class="text-center p-8 bg-white dark:bg-slate-900 rounded-3xl border border-slate-200 dark:border-slate-800 hover:scale-105 transition-transform">
-                    <div class="text-4xl md:text-5xl font-bold text-brand-500 mb-2">100%</div>
-                    <div class="text-sm text-slate-500 dark:text-slate-400 uppercase tracking-wider">Commitment</div>
+                    <div class="text-center p-8 mt-2 bg-white dark:bg-slate-900 rounded-3xl border border-slate-200 dark:border-slate-800 hover:scale-105 transition-transform">
+                        <div class="text-4xl md:text-5xl font-bold text-brand-500 mb-2" id="years-count"></div>
+                        <div class="text-sm text-slate-500 dark:text-slate-400 uppercase tracking-wider">Years Experience</div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -293,23 +276,23 @@
                             <div class="p-6 bg-white dark:bg-slate-900 rounded-2xl border border-slate-200 dark:border-slate-800 hover:scale-105 transition-transform">
                                 <ul class="space-y-3 text-slate-600 dark:text-slate-400">
                                     <li class="flex items-start gap-3">
-                                        <i class="fas fa-check-circle text-brand-500 mt-1"></i>
+                                        <i class="fa-solid fa-satellite text-brand-500 mt-1"></i>
                                         <span>Building <strong class="text-slate-900 dark:text-white">modern web applications with Blazor and .NET 8</strong> for internal aerospace systems</span>
                                     </li>
                                     <li class="flex items-start gap-3">
-                                        <i class="fas fa-check-circle text-brand-500 mt-1"></i>
+                                        <i class="fa-solid fa-satellite text-brand-500 mt-1"></i>
                                         <span>Implementing <strong class="text-slate-900 dark:text-white">MudBlazor and Radzen component libraries</strong> for enhanced UX</span>
                                     </li>
                                     <li class="flex items-start gap-3">
-                                        <i class="fas fa-check-circle text-brand-500 mt-1"></i>
+                                        <i class="fa-solid fa-satellite text-brand-500 mt-1"></i>
                                         <span>Managing and optimizing <strong class="text-slate-900 dark:text-white">SQL Server databases</strong> for mission-critical applications</span>
                                     </li>
                                 </ul>
                                 <div class="flex flex-wrap gap-2 mt-4">
-                                    <span class="px-3 py-1 bg-brand-100 dark:bg-brand-900/30 text-brand-700 dark:text-brand-400 rounded-full text-xs font-bold">Blazor</span>
-                                    <span class="px-3 py-1 bg-brand-100 dark:bg-brand-900/30 text-brand-700 dark:text-brand-400 rounded-full text-xs font-bold">.NET 8</span>
-                                    <span class="px-3 py-1 bg-brand-100 dark:bg-brand-900/30 text-brand-700 dark:text-brand-400 rounded-full text-xs font-bold">SQL Server</span>
-                                    <span class="px-3 py-1 bg-brand-100 dark:bg-brand-900/30 text-brand-700 dark:text-brand-400 rounded-full text-xs font-bold">MudBlazor</span>
+                                    <span class="px-3 py-1 bg-brand-500 text-white dark:bg-brand-800 rounded-full text-xs font-bold">Blazor</span>
+                                    <span class="px-3 py-1 bg-brand-500 text-white dark:bg-brand-800 rounded-full text-xs font-bold">.NET 8</span>
+                                    <span class="px-3 py-1 bg-slate-100 dark:bg-slate-800 rounded-full text-xs font-bold">SQL Server</span>
+                                    <span class="px-3 py-1 bg-slate-100 dark:bg-slate-800 rounded-full text-xs font-bold">MudBlazor</span>
                                 </div>
                             </div>
                         </div>
@@ -327,21 +310,21 @@
                             <div class="p-6 bg-white dark:bg-slate-900 rounded-2xl border border-slate-200 dark:border-slate-800 hover:scale-105 transition-transform">
                                 <ul class="space-y-3 text-slate-600 dark:text-slate-400">
                                     <li class="flex items-start gap-3">
-                                        <i class="fas fa-trophy text-amber-500 mt-1"></i>
+                                        <i class="fa-solid fa-truck text-amber-500 mt-1"></i>
                                         <span>Maintained internal ASP.NET Framework application <strong class="text-slate-900 dark:text-white">serving 500+ daily users</strong></span>
                                     </li>
                                     <li class="flex items-start gap-3">
-                                        <i class="fas fa-trophy text-amber-500 mt-1"></i>
+                                        <i class="fa-solid fa-truck text-amber-500 mt-1"></i>
                                         <span>Developed and maintained <strong class="text-slate-900 dark:text-white">RESTful web services in .NET 6</strong> and .NET Framework</span>
                                     </li>
                                     <li class="flex items-start gap-3">
-                                        <i class="fas fa-trophy text-amber-500 mt-1"></i>
+                                        <i class="fa-solid fa-truck text-amber-500 mt-1"></i>
                                         <span>Created custom features for new clients, <strong class="text-slate-900 dark:text-white">improving operational efficiency by 30%</strong></span>
                                     </li>
                                 </ul>
                                 <div class="flex flex-wrap gap-2 mt-4">
                                     <span class="px-3 py-1 bg-slate-100 dark:bg-slate-800 rounded-full text-xs font-bold">ASP.NET</span>
-                                    <span class="px-3 py-1 bg-slate-100 dark:bg-slate-800 rounded-full text-xs font-bold">.NET 6</span>
+                                    <span class="px-3 py-1 bg-brand-500 text-white dark:bg-brand-800 rounded-full text-xs font-bold">.NET 6</span>
                                     <span class="px-3 py-1 bg-slate-100 dark:bg-slate-800 rounded-full text-xs font-bold">Web Services</span>
                                 </div>
                             </div>
@@ -374,7 +357,7 @@
                                 </ul>
                                 <div class="flex flex-wrap gap-2 mt-4">
                                     <span class="px-3 py-1 bg-slate-100 dark:bg-slate-800 rounded-full text-xs font-bold">WPF</span>
-                                    <span class="px-3 py-1 bg-slate-100 dark:bg-slate-800 rounded-full text-xs font-bold">.NET 5</span>
+                                    <span class="px-3 py-1 bg-brand-500 text-white dark:bg-brand-800 rounded-full text-xs font-bold">.NET 6</span>
                                     <span class="px-3 py-1 bg-slate-100 dark:bg-slate-800 rounded-full text-xs font-bold">MVVM</span>
                                     <span class="px-3 py-1 bg-slate-100 dark:bg-slate-800 rounded-full text-xs font-bold">Agile</span>
                                 </div>
@@ -407,7 +390,7 @@
                                     </li>
                                 </ul>
                                 <div class="flex flex-wrap gap-2 mt-4">
-                                    <span class="px-3 py-1 bg-slate-100 dark:bg-slate-800 rounded-full text-xs font-bold">C# .NET</span>
+                                    <span class="px-3 py-1 bg-brand-500 text-white dark:bg-brand-800 rounded-full text-xs font-bold">C# .NET</span>
                                     <span class="px-3 py-1 bg-slate-100 dark:bg-slate-800 rounded-full text-xs font-bold">Python</span>
                                     <span class="px-3 py-1 bg-slate-100 dark:bg-slate-800 rounded-full text-xs font-bold">SQL Server</span>
                                     <span class="px-3 py-1 bg-slate-100 dark:bg-slate-800 rounded-full text-xs font-bold">SOAP</span>
@@ -725,11 +708,11 @@
                         </div>
                         
                         <div class="flex flex-wrap gap-2 pt-4">
-                            <span class="px-4 py-2 bg-brand-500 text-white rounded-full text-sm font-bold">ASP.NET</span>
-                            <span class="px-4 py-2 bg-slate-200 dark:bg-slate-800 rounded-full text-sm font-bold">SOAP API</span>
-                            <span class="px-4 py-2 bg-slate-200 dark:bg-slate-800 rounded-full text-sm font-bold">SQL Server</span>
-                            <span class="px-4 py-2 bg-slate-200 dark:bg-slate-800 rounded-full text-sm font-bold">Python</span>
-                            <span class="px-4 py-2 bg-slate-200 dark:bg-slate-800 rounded-full text-sm font-bold">Selenium</span>
+                            <span class="px-3 py-1 bg-brand-500 text-white dark:bg-brand-800 rounded-full text-xs font-bold">ASP.NET</span>
+                            <span class="px-3 py-1 bg-slate-200 dark:bg-slate-800 rounded-full text-xs font-bold">SOAP API</span>
+                            <span class="px-3 py-1 bg-slate-200 dark:bg-slate-800 rounded-full text-xs font-bold">SQL Server</span>
+                            <span class="px-3 py-1 bg-slate-200 dark:bg-slate-800 rounded-full text-xs font-bold">Python</span>
+                            <span class="px-3 py-1 bg-slate-200 dark:bg-slate-800 rounded-full text-xs font-bold">Selenium</span>
                         </div>
                     </div>
                 </div>

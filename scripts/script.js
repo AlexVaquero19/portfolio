@@ -10,6 +10,15 @@ const menuClose = document.getElementById('menu-close');
 const mobileMenu = document.getElementById('mobile-menu');
 const mobileLinks = document.querySelectorAll('.mobile-link');
 
+// Dynamic Years of Experience Calculation
+const yearsElement = document.getElementById('years-count');
+const heroElement = document.getElementById('hero-years');
+const startYear = 2021;
+const currentYear = new Date().getFullYear()-1;
+const experience = currentYear - startYear;
+yearsElement.innerText = `${experience}+`;
+heroElement.innerText = `${experience}+`;
+
 // Toggle Mobile Menu
 function toggleMenu() {
     mobileMenu.classList.toggle('active');

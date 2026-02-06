@@ -1,6 +1,12 @@
 const themeBtn = document.getElementById('theme-toggle');
 const themeIcon = document.getElementById('theme-icon');
 
+if (document.documentElement.classList.contains('dark')) {
+    themeIcon.classList.replace('fa-moon', 'fa-sun');
+} else {
+    themeIcon.classList.replace('fa-sun', 'fa-moon');
+}
+
 if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
     document.documentElement.classList.add('dark');
     themeIcon.classList.replace('fa-moon', 'fa-sun');

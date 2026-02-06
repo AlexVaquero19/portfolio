@@ -1,26 +1,41 @@
+// Theme Toggle Logic
 const themeBtn = document.getElementById('theme-toggle');
 const themeIcon = document.getElementById('theme-icon');
 
-if (document.documentElement.classList.contains('dark')) {
-    themeIcon.classList.replace('fa-moon', 'fa-sun');
-} else {
-    themeIcon.classList.replace('fa-sun', 'fa-moon');
+// Mobile Menu Logic
+const menuOpen = document.getElementById('menu-open');
+const menuClose = document.getElementById('menu-close');
+const mobileMenu = document.getElementById('mobile-menu');
+const mobileLinks = document.querySelectorAll('.mobile-link');
+
+function toggleMenu() {
+    mobileMenu.classList.toggle('active');
+    document.body.classList.toggle('overflow-hidden');
 }
 
-if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-    document.documentElement.classList.add('dark');
-    themeIcon.classList.replace('fa-moon', 'fa-sun');
+menuOpen.addEventListener('click', toggleMenu);
+menuClose.addEventListener('click', toggleMenu);
+mobileLinks.forEach(link => link.addEventListener('click', toggleMenu));
+
+// Sync Icon on Load
+function syncIcon() {
+    if (document.documentElement.classList.contains('dark')) {
+        themeIcon.classList.replace('fa-moon', 'fa-sun');
+    } else {
+        themeIcon.classList.replace('fa-sun', 'fa-moon');
+    }
 }
+
+syncIcon();
 
 themeBtn.addEventListener('click', () => {
     document.documentElement.classList.toggle('dark');
     if (document.documentElement.classList.contains('dark')) {
-        themeIcon.classList.replace('fa-moon', 'fa-sun');
         localStorage.theme = 'dark';
     } else {
-        themeIcon.classList.replace('fa-sun', 'fa-moon');
         localStorage.theme = 'light';
     }
+    syncIcon();
 });
 
 // Simple Fade In Animation

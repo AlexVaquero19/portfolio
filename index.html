@@ -19,24 +19,61 @@
 
 <body class="bg-slate-50 dark:bg-brand-950 text-slate-900 dark:text-slate-300 transition-colors duration-300">
     <!-- Header -->
-    <nav class="fixed top-0 w-full z-50 border-b border-slate-200 dark:border-slate-800 bg-white/70 dark:bg-brand-950/70 backdrop-blur-xl">
+    <nav class="fixed top-0 w-full z-[100] border-b border-slate-200 dark:border-slate-800 bg-white/70 dark:bg-brand-950/70 backdrop-blur-xl">
         <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
-            <div class="font-display font-bold text-2xl tracking-tighter">
+            <div class="font-display font-bold text-2xl tracking-tighter text-slate-900 dark:text-white">
                 ALEJANDRO<span class="text-brand-500">.</span>
             </div>
             
-            <div class="hidden md:flex items-center space-x-10 text-sm font-semibold uppercase tracking-widest">
-                <a href="#about" class="hover:text-brand-500 transition-colors">About</a>
-                <a href="#experience" class="hover:text-brand-500 transition-colors">Experience</a>
-                <a href="#skills" class="hover:text-brand-500 transition-colors">Skills</a>
-                <a href="#projects" class="hover:text-brand-500 transition-colors">Work</a>
+            <!-- Desktop & Functional Nav -->
+            <div class="flex items-center gap-4 md:gap-8">
+                <div class="hidden md:flex items-center space-x-10 text-sm font-semibold uppercase tracking-widest">
+                    <a href="#about" class="hover:text-brand-500 transition-colors">About</a>
+                    <a href="#experience" class="hover:text-brand-500 transition-colors">Experience</a>
+                    <a href="#education" class="hover:text-brand-500 transition-colors">Education</a>
+                    <a href="#skills" class="hover:text-brand-500 transition-colors">Skills</a>
+                </div>
+                
+                <div class="flex items-center gap-2">
+                    <button id="theme-toggle" class="w-10 h-10 rounded-full bg-slate-100 dark:bg-slate-800 flex items-center justify-center transition-transform hover:scale-110 active:scale-95" aria-label="Toggle Theme">
+                        <i id="theme-icon" class="fas fa-sun text-slate-600 dark:text-brand-500"></i>
+                    </button>
+                    
+                    <!-- Mobile Menu Button -->
+                    <button id="menu-open" class="md:hidden w-10 h-10 rounded-full flex items-center justify-center text-slate-900 dark:text-white text-xl">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
             </div>
-
-            <button id="theme-toggle" class="w-10 h-10 rounded-full bg-slate-100 dark:bg-slate-800 flex items-center justify-center">
-                <i id="theme-icon" class="fas fa-moon"></i>
-            </button>
         </div>
     </nav>
+
+    <!-- Mobile Menu Overlay -->
+    <div id="mobile-menu" class="fixed inset-0 z-[110] bg-white dark:bg-brand-950 md:hidden flex flex-col p-8">
+        <div class="flex items-center justify-between mb-12">
+            <div class="font-display font-bold text-2xl tracking-tighter text-slate-900 dark:text-white">
+                MENU<span class="text-brand-500">.</span>
+            </div>
+            <button id="menu-close" class="w-10 h-10 rounded-full bg-slate-100 dark:bg-slate-800 flex items-center justify-center text-xl">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        
+        <div class="flex flex-col space-y-8 text-3xl font-display font-bold">
+            <a href="#about" class="mobile-link hover:text-brand-500 transition-colors">About</a>
+            <a href="#experience" class="mobile-link hover:text-brand-500 transition-colors">Experience</a>
+            <a href="#education" class="mobile-link hover:text-brand-500 transition-colors">Education</a>
+            <a href="#skills" class="mobile-link hover:text-brand-500 transition-colors">Skills</a>
+        </div>
+
+        <div class="mt-auto pb-8 border-t border-slate-100 dark:border-slate-800 pt-8">
+            <p class="text-xs font-bold uppercase tracking-widest text-slate-400 mb-6">Social Connections</p>
+            <div class="flex gap-4">
+                <a href="https://github.com/AlexVaquero19" target="_blank" class="w-12 h-12 rounded-full bg-slate-100 dark:bg-slate-800 flex items-center justify-center text-xl"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/alexvaquero19/" target="_blank" class="w-12 h-12 rounded-full bg-slate-100 dark:bg-slate-800 flex items-center justify-center text-xl"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+        </div>
+    </div>
 
     <main class="pt-32">
         <!-- Hero Section -->
@@ -56,7 +93,7 @@
                     <p class="text-xl text-slate-600 dark:text-slate-400 max-w-2xl leading-relaxed">
                         Software Engineer specializing in C# .NET. Expert in building industrial-grade web apps, high-performance web solutions, and automation scripts for aerospace and logistics.
                     </p>
-                    <div class="text-sm md:text-lg flex items-center gap-6">
+                    <div class="hidden sm:flex text-sm md:text-lg items-center gap-6">
                         <a href="./files/Curriculum_Alejandro_Vaquero_Toba_ES.pdf" target="_blank" class="px-5 py-4 rounded-full bg-brand-500 hover:bg-brand-600 text-white font-bold transition-all shadow-lg shadow-brand-500/25">
                             <i class="fa-solid fa-file-pdf"></i> CV Spanish
                         </a>
@@ -64,6 +101,21 @@
                             <i class="fa-solid fa-file-pdf"></i> CV English
                         </a>
 
+                        <div class="flex gap-4">
+                            <a href="https://github.com/AlexVaquero19" target="_blank" class="w-12 h-12 rounded-full border border-slate-200 dark:border-slate-800 flex items-center justify-center hover:bg-slate-100 dark:hover:bg-slate-800 transition-all text-xl"><i class="fab fa-github"></i></a>
+                            <a href="https://www.linkedin.com/in/alexvaquero19/" target="_blank" class="w-12 h-12 rounded-full border border-slate-200 dark:border-slate-800 flex items-center justify-center hover:bg-slate-100 dark:hover:bg-slate-800 transition-all text-xl"><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                    
+                    <div class="sm:hidden text-sm md:text-lg flex flex-col items-start gap-6">
+                        <div class="flex gap-4">
+                            <a href="./files/Curriculum_Alejandro_Vaquero_Toba_ES.pdf" target="_blank" class="px-5 py-4 rounded-full bg-brand-500 hover:bg-brand-600 text-white font-bold transition-all shadow-lg shadow-brand-500/25">
+                                <i class="fa-solid fa-file-pdf"></i> CV Spanish
+                            </a>
+                            <a href="./files/Curriculum_Alejandro_Vaquero_Toba_EN.pdf" target="_blank" class="px-5 py-4 rounded-full bg-brand-500 hover:bg-brand-600 text-white font-bold transition-all shadow-lg shadow-brand-500/25">
+                                <i class="fa-solid fa-file-pdf"></i> CV English
+                            </a>
+                        </div>
                         <div class="flex gap-4">
                             <a href="https://github.com/AlexVaquero19" target="_blank" class="w-12 h-12 rounded-full border border-slate-200 dark:border-slate-800 flex items-center justify-center hover:bg-slate-100 dark:hover:bg-slate-800 transition-all text-xl"><i class="fab fa-github"></i></a>
                             <a href="https://www.linkedin.com/in/alexvaquero19/" target="_blank" class="w-12 h-12 rounded-full border border-slate-200 dark:border-slate-800 flex items-center justify-center hover:bg-slate-100 dark:hover:bg-slate-800 transition-all text-xl"><i class="fab fa-linkedin-in"></i></a>
@@ -320,19 +372,19 @@
                         <i class="fas fa-tools text-brand-500"></i> Preferred IDEs
                     </h3>
                     <div class="space-y-4">
-                        <div class="flex items-center justify-between p-4 bg-white dark:bg-slate-800 rounded-2xl shadow-sm">
+                        <div class="flex items-center justify-between p-4 bg-white dark:bg-slate-800 rounded-2xl shadow-sm hover:scale-[1.05] transition-transform">
                             <span class="font-bold">Visual Studio</span>
                             <span class="text-xs font-bold text-slate-400 uppercase tracking-widest">Main</span>
                         </div>
-                        <div class="flex items-center justify-between p-4 bg-white dark:bg-slate-800 rounded-2xl shadow-sm">
+                        <div class="flex items-center justify-between p-4 bg-white dark:bg-slate-800 rounded-2xl shadow-sm hover:scale-[1.05] transition-transform">
                             <span class="font-bold">Visual Studio Code</span>
                             <span class="text-xs font-bold text-slate-400 uppercase tracking-widest">Scripting</span>
                         </div>
-                        <div class="flex items-center justify-between p-4 bg-white dark:bg-slate-800 rounded-2xl shadow-sm">
+                        <div class="flex items-center justify-between p-4 bg-white dark:bg-slate-800 rounded-2xl shadow-sm hover:scale-[1.05] transition-transform">
                             <span class="font-bold">DBeaver</span>
                             <span class="text-xs font-bold text-slate-400 uppercase tracking-widest">Database</span>
                         </div>
-                        <div class="flex items-center justify-between p-4 bg-white dark:bg-slate-800 rounded-2xl shadow-sm">
+                        <div class="flex items-center justify-between p-4 bg-white dark:bg-slate-800 rounded-2xl shadow-sm hover:scale-[1.05] transition-transform">
                             <span class="font-bold">Sublime Text</span>
                             <span class="text-xs font-bold text-slate-400 uppercase tracking-widest">Code</span>
                         </div>
@@ -342,19 +394,19 @@
                 <div class="bento-card p-10 rounded-[32px] bg-brand-500 text-white flex flex-col justify-center items-center text-center">
                     <h3 class="text-3xl font-display font-bold mb-12"><i class="fa-solid fa-code"></i> Beyond Coding</h3>
                     <div class="grid grid-cols-2 gap-4 w-full">
-                        <div class="p-4 bg-white/10 backdrop-blur-md rounded-2xl">
+                        <div class="p-4 bg-white/10 backdrop-blur-md rounded-2xl hover:scale-[1.05] transition-transform">
                             <i class="fas fa-gamepad text-2xl mb-2"></i>
                             <p class="font-bold">Video Games</p>
                         </div>
-                        <div class="p-4 bg-white/10 backdrop-blur-md rounded-2xl">
+                        <div class="p-4 bg-white/10 backdrop-blur-md rounded-2xl hover:scale-[1.05] transition-transform">
                             <i class="fas fa-tv text-2xl mb-2"></i>
                             <p class="font-bold">Series & Films</p>
                         </div>
-                        <div class="p-4 bg-white/10 backdrop-blur-md rounded-2xl">
+                        <div class="p-4 bg-white/10 backdrop-blur-md rounded-2xl hover:scale-[1.05] transition-transform">
                             <i class="fas fa-basketball-ball text-2xl mb-2"></i>
                             <p class="font-bold">Basketball</p>
                         </div>
-                        <div class="p-4 bg-white/10 backdrop-blur-md rounded-2xl">
+                        <div class="p-4 bg-white/10 backdrop-blur-md rounded-2xl hover:scale-[1.05] transition-transform">
                             <i class="fa-solid fa-chalkboard-user text-2xl mb-2"></i>   
                             <p class="font-bold italic">Always Learning</p>
                         </div>
@@ -375,8 +427,8 @@
                         </div>
                         <p class="text-slate-500 dark:text-slate-400">Advanced Python automation tool using Selenium for high-res wallpaper synchronization.</p>
                         <div class="flex gap-2 pt-4">
-                            <span class="px-3 py-1 bg-slate-200 dark:bg-slate-800 rounded-full text-[10px] font-bold uppercase">Python</span>
-                            <span class="px-3 py-1 bg-slate-200 dark:bg-slate-800 rounded-full text-[10px] font-bold uppercase">Selenium</span>
+                            <span class="px-3 py-1 bg-slate-200 dark:bg-slate-800 rounded-full text-[10px] font-bold uppercase hover:scale-[1.1] transition-transform">Python</span>
+                            <span class="px-3 py-1 bg-slate-200 dark:bg-slate-800 rounded-full text-[10px] font-bold uppercase hover:scale-[1.1] transition-transform">Selenium</span>
                         </div>
                     </div>
                 </div>
@@ -388,16 +440,13 @@
                         </div>
                         <p class="text-slate-500 dark:text-slate-400">Python application Development course.</p>
                         <div class="flex gap-2 pt-4">
-                            <span class="px-3 py-1 bg-slate-200 dark:bg-slate-800 rounded-full text-[10px] font-bold uppercase">Python</span>
-                            <span class="px-3 py-1 bg-slate-200 dark:bg-slate-800 rounded-full text-[10px] font-bold uppercase">JavaScript</span>
-                            <span class="px-3 py-1 bg-slate-200 dark:bg-slate-800 rounded-full text-[10px] font-bold uppercase">Jupyter Notebook</span>
-                            <span class="px-3 py-1 bg-slate-200 dark:bg-slate-800 rounded-full text-[10px] font-bold uppercase">HTML</span>
-                            <span class="px-3 py-1 bg-slate-200 dark:bg-slate-800 rounded-full text-[10px] font-bold uppercase">CSS</span>
-                            <span class="px-3 py-1 bg-slate-200 dark:bg-slate-800 rounded-full text-[10px] font-bold uppercase">Docker</span>
+                            <span class="px-3 py-1 bg-slate-200 dark:bg-slate-800 rounded-full text-[10px] font-bold uppercase hover:scale-[1.1] transition-transform">Python</span>
+                            <span class="px-3 py-1 bg-slate-200 dark:bg-slate-800 rounded-full text-[10px] font-bold uppercase hover:scale-[1.1] transition-transform">JavaScript</span>
+                            <span class="px-3 py-1 bg-slate-200 dark:bg-slate-800 rounded-full text-[10px] font-bold uppercase hover:scale-[1.1] transition-transform">Jupyter Notebook</span>
+                            <span class="px-3 py-1 bg-slate-200 dark:bg-slate-800 rounded-full text-[10px] font-bold uppercase hover:scale-[1.1] transition-transform">HTML</span>
+                            <span class="px-3 py-1 bg-slate-200 dark:bg-slate-800 rounded-full text-[10px] font-bold uppercase hover:scale-[1.1] transition-transform">CSS</span>
+                            <span class="px-3 py-1 bg-slate-200 dark:bg-slate-800 rounded-full text-[10px] font-bold uppercase hover:scale-[1.1] transition-transform">Docker</span>
                         </div>
-                        <!--div class="pt-4 text-xs font-bold text-slate-400 uppercase tracking-widest flex items-center gap-2">
-                            <i class="fas fa-lock"></i> Proprietary Project
-                        </div-->
                     </div>
                 </div>
                 <div class="group relative bg-slate-100 dark:bg-slate-900 rounded-[40px] overflow-hidden border border-slate-200 dark:border-slate-800">
@@ -408,14 +457,11 @@
                         </div>
                         <p class="text-slate-500 dark:text-slate-400">Download all Emergencies and Rescues from last 6 years in different doc types.</p>
                         <div class="flex gap-2 pt-4">
-                            <span class="px-3 py-1 bg-slate-200 dark:bg-slate-800 rounded-full text-[10px] font-bold uppercase">HTML</span>
-                            <span class="px-3 py-1 bg-slate-200 dark:bg-slate-800 rounded-full text-[10px] font-bold uppercase">CSS</span>
-                            <span class="px-3 py-1 bg-slate-200 dark:bg-slate-800 rounded-full text-[10px] font-bold uppercase">ASP.NET</span>
-                            <span class="px-3 py-1 bg-slate-200 dark:bg-slate-800 rounded-full text-[10px] font-bold uppercase">SOAP</span>
+                            <span class="px-3 py-1 bg-slate-200 dark:bg-slate-800 rounded-full text-[10px] font-bold uppercase hover:scale-[1.1] transition-transform">HTML</span>
+                            <span class="px-3 py-1 bg-slate-200 dark:bg-slate-800 rounded-full text-[10px] font-bold uppercase hover:scale-[1.1] transition-transform">CSS</span>
+                            <span class="px-3 py-1 bg-slate-200 dark:bg-slate-800 rounded-full text-[10px] font-bold uppercase hover:scale-[1.1] transition-transform">ASP.NET</span>
+                            <span class="px-3 py-1 bg-slate-200 dark:bg-slate-800 rounded-full text-[10px] font-bold uppercase hover:scale-[1.1] transition-transform">SOAP</span>
                         </div>
-                        <!--div class="pt-4 text-xs font-bold text-slate-400 uppercase tracking-widest flex items-center gap-2">
-                            <i class="fas fa-lock"></i> Proprietary Project
-                        </div-->
                     </div>
                 </div>
             </div>
@@ -423,9 +469,9 @@
     </main>
 
     <!-- Footer / Contact -->
-    <footer id="contact" class="bg-white dark:bg-slate-900 pb-16 border-t border-slate-200 dark:border-slate-800">
+    <footer id="contact" class="bg-white dark:bg-slate-900 pb-8 dark:border-slate-800">
         <div class="max-w-7xl mx-auto px-6 text-center">
-            <div class="flex flex-col md:flex-row justify-between items-center gap-8 border-t border-slate-100 dark:border-slate-800 pt-16">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-8 dark:border-slate-800 pt-8">
                 <p class="text-slate-400 text-sm">
                     &copy; <script>document.write(/\d{4}/.exec(Date())[0])</script> Alejandro Vaquero Toba
                 </p>

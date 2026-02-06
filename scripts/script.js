@@ -201,13 +201,6 @@ window.addEventListener('scroll', () => {
         navbar.classList.add('shadow-lg');
     }
     
-    // Hide/show navbar on scroll
-    if (currentScroll > lastScroll && currentScroll > 100) {
-        navbar.style.transform = 'translateY(-100%)';
-    } else {
-        navbar.style.transform = 'translateY(0)';
-    }
-    
     lastScroll = currentScroll;
 });
 

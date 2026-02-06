@@ -1,578 +1,441 @@
-<!doctype html>
-<html lang="es">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="Portfolio personal">
-    <meta name="author" content="Alejandro Vaquero Toba">
-    <meta description="Portfolio personal con toda la información	sobre mi vida profesional">
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alejandro Vaquero Toba | Software Engineer</title>
+    
+    <!-- Fonts & Icons -->
+    <script src="./css/tailwind.css"></script>
 
-    <title>Portfolio - Alejandro</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="./css/style.css">
 
-    <!-- Styles -->
-    <link rel="stylesheet" href="./css/buttons.min.css">
-    <link rel="stylesheet" href="./css/bootstrap.min.css">
-    <link rel="stylesheet" href="./css/carousel.min.css">
-    <link rel="stylesheet" href="./css/unicons.css">
-    <link rel="stylesheet" href="./css/theme.min.css">
+    <link rel="shortcut icon" href="./img/icon.svg" type="image/x-icon">
+</head>
 
-    <!-- Main Style -->
-    <link rel="stylesheet" href="./css/main.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
-    <link rel="stylesheet" href="./css/slider.min.css">
-    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"/>
-    <link rel="stylesheet" href="./css/social.min.css">
-    <link rel="stylesheet" href="./css/toggle.min.css">
-
-    <!-- Icon Page -->
-    <link rel="shortcut icon" href="./images/icons/icon.svg" type="image/x-icon">
-  </head>
-
-  <body class="dark-mode">
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-light animate__animated animate__fadeIn">
-      <div class="container d-flex">
-
-        <a class="navbar-brand d-flex align-items-center animationBackground" href="./">
-          <div class="meImg me-3"> </div> 
-        </a>
-
-        <!-- Dark/Light Mode Mobile -->
-        <div class="d-sm-flex justify-content-center">
-          <span class="spanSwitchMobile"></span>
+<body class="bg-slate-50 dark:bg-brand-950 text-slate-900 dark:text-slate-300 transition-colors duration-300">
+    <!-- Header -->
+    <nav class="fixed top-0 w-full z-50 border-b border-slate-200 dark:border-slate-800 bg-white/70 dark:bg-brand-950/70 backdrop-blur-xl">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+            <div class="font-display font-bold text-2xl tracking-tighter">
+                ALEJANDRO<span class="text-brand-500">.</span>
+            </div>
+            
+            <div class="hidden md:flex items-center space-x-10 text-sm font-semibold uppercase tracking-widest">
+                <a href="#about" class="hover:text-brand-500 transition-colors">About</a>
+                <a href="#experience" class="hover:text-brand-500 transition-colors">Experience</a>
+                <a href="#skills" class="hover:text-brand-500 transition-colors">Skills</a>
+                <a href="#projects" class="hover:text-brand-500 transition-colors">Work</a>
+                <button id="theme-toggle" class="w-10 h-10 rounded-full bg-slate-100 dark:bg-slate-800 flex items-center justify-center">
+                    <i id="theme-icon" class="fas fa-moon"></i>
+                </button>
+            </div>
         </div>
-
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-          <span class="navbar-toggler-icon"></span>
-          <span class="navbar-toggler-icon"></span>
-        </button>
-
-        <div class="collapse navbar-collapse ms-md-5" id="navbarNav">
-          <ul class="navbar-nav align-items-center">
-            <li class="nav-item m-2">
-              <a href="#project" class="nav-link p-0"><span data-i18n="navbar.pro" id="proHover" data-hover="Proyectos">Proyectos</span></a>
-            </li>
-            <li class="nav-item m-2">
-              <a href="#resume" class="nav-link p-0"><span data-i18n="navbar.res" id="resHover" data-hover="Resumen">Resumen</span></a>
-            </li>
-            <li class="nav-item m-2">
-              <a href="#skills" class="nav-link p-0"><span data-i18n="navbar.hab" id="abiHover" data-hover="Habilidades">Habilidades</span></a>
-            </li>
-            <li class="nav-item m-2">
-              <a href="#others" class="nav-link p-0"><span data-i18n="navbar.oth" id="othHover" data-hover="Otros">Otros</span></a>
-            </li>
-
-            <!-- Social -->
-            <section class="wrapper">
-              <a href="https://github.com/AlexVaquero19" target="_blank" class="social-space">
-                <div class="icon github">
-                  <div class="tooltip">Github</div>
-                  <span><i class="fab fa-github fa-lg"></i></span>
-                </div>
-              </a>
-              <a href="https://www.linkedin.com/in/alexvaquero19/" target="_blank" class="social-space">
-                <div class="icon linkedin">
-                  <div class="tooltip">LinkedIn</div>
-                  <span><i class="fab fa-linkedin fa-lg"></i></span>
-                </div>
-              </a>
-            </section>
-          </ul>
-
-          <div class="d-flex align-items-center justify-content-end">
-            <a class="text-language mx-3" href="./?lang=es">ES</a>
-            <a class="text-language" href="./?lang=en">EN</a>
-          </div>
-          <ul class="navbar-nav switchMode ml-lg-auto d-sm-none d-md-block">
-            <span class="spanSwitchPc">
-              <input type="checkbox" id="switch" class="color-mode miSwitch" /><label for="switch" class="miSwitch">Toggle</label>
-            </span>
-          </ul>
-        </div>
-      </div>
     </nav>
 
-    <!-- ABOUT -->
-    <section class="about full-screen d-lg-flex justify-content-center align-items-center animate__animated animate__fadeInDown overflow-hidden" id="about">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-5 col-md-12 col-12 d-flex align-items-center">
-            <div class="about-text p-3">
-              <h2 data-i18n="hello" class="subtitle main-color">Hola a todos!, Soy</h2>
-              <h1 class="animated animated-text mt-0 name">
-                <span class="mr-2">Alejandro Vaquero Toba</span>
-                <div class="animated-info">
-                    <span class="animated-item txtAnim animate__animated animate__fadeOutRight">
-                      <span class='delete'></span>
-                    </span>
-                </div>
-              </h1>
-              
-              <div class="custom-btn-group mt-4">
-                <button class="btn custom-btn custom-btn-bg text-light btnSobreMi"><i class="fa-solid fa-address-card me-2"></i><span data-i18n="about">Sobre Mí</span></button>
-              </div>
-              <div class="custom-btn-group mt-4">
-                <a href="./files/Curriculum_Alejandro_Vaquero_Toba_ES.pdf" class="btn custom-btn custom-btn-bg" target="_blank"><i class="fa-solid fa-file-pdf me-2"></i> <span data-i18n="CVES">CV Español</span></a>
-                <a href="./files/Curriculum_Alejandro_Vaquero_Toba_EN.pdf" class="btn custom-btn custom-btn-bg ms-sm-3 ms-md-3" target="_blank"><i class="fa-solid fa-file-pdf me-2"></i> <span data-i18n="CVEN">CV Inglés</span></a>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-7 col-md-12 col-12 d-flex justify-content-center">
-            <div class="about-image svg imgDivPrincipal">
-              <img src="./images/principal.png" class="img-fluid imgPrincipal" alt="svg image">
-            </div>
-            <div class="modal-body txtAboutMe" style="display: none;">
-              <div class="row px-3">
-                <div class="col-md-5 col-sm-12 justify-content-center text-center">
-                  <img src="./images/me.jpg" class="img-responsive rounded" width="250px" alt="Yo">
-                </div>
-                <div class="col-md-7 col-sm-12">
-                  <ul class="listaAboutMe">
-                    <li><i class="aboutMeTitles fa-solid fa-user me-2"></i><span data-i18n="name">Nombre</span>: </span>Alejandro Vaquero Toba</li>
-                    <li><i class="aboutMeTitles fa-solid fa-cake-candles me-2"></i><span data-i18n="age">Edad</span>: </span><span class="edad"></span> (19/04/1999)</li>
-                    <li><i class="aboutMeTitles fa-solid fa-envelope me-2"></i>Email: </span><small><a href="mailto:vaquero.alejandro19@gmail.com">vaquero.alejandro19@gmail.com</a></small></li>
-                    <hr class="bg-dark"/>
-                    <li class="fs-6" data-i18n="explanation">
-                      Soy una persona con inquietudes que acaba de empezar su vida laboral, que está en busca de una empresa con la que poder crecer personal y laboralmente hablando.<br /> Lo que más busco es la formación continua y el uso de tecnologías punteras o que se me pueda dar acceso a estudiarlo por mi cuenta para poder reciclarme.
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Projects -->
-    <section class="project pt-5 pb-2 animate__animated animate__fadeInDown" id="project">
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-11 text-center mx-auto col-12">
-              <div class="col-lg-8 mx-auto">
-                <h4 class="mb-5" data-i18n="projectsSection">Estos son algunos de los proyectos en los que he participado</h4>
-              </div>
-            </div>
-          </div>
-        </div>
-    </section>
-
-    <!--Slider-->
-    <div class="blog-slider">
-      <div class="blog-slider__wrp swiper-wrapper">
-        <div class="blog-slider__item swiper-slide">
-          <div class="blog-slider__img">
-            <img src="./images/salvamento.png" alt="salvamentomaritimo">
-          </div>
-          <div class="blog-slider__content">
-            <span class="blog-slider__code"><span data-i18n="slider.months.jan">Enero de</span> 2022</span>
-            <div class="blog-slider__title" data-i18n="slider.dataCatalog.title">Catálogo de Datos</div>
-            <div class="blog-slider__text" data-i18n="slider.dataCatalog.desc">Descarga de Datos de Emergencias de los últimos 3 años y el actual.</div>
-            <a class="learn-more" href="https://datos.salvamentomaritimo.es/" target="_blank">
-              <span class="circle" aria-hidden="true">
-                <span class="icon arrow"></span>
-              </span>
-              <span class="button-text" data-i18n="slider.btnWeb">Ir a la Web</span>
-            </a>
-          </div>
-        </div>
-        <div class="blog-slider__item swiper-slide">
-          <div class="blog-slider__img">
-            <img src="./images/project-image02.png" alt="casaminium">
-          </div>
-          <div class="blog-slider__content">
-            <span class="blog-slider__code"><span data-i18n="slider.months.jun">Junio de</span> 2021</span>
-            <div class="blog-slider__title" data-i18n="slider.casaminium.title">Casaminium / Administradores de Fincas</div>
-            <div class="blog-slider__text" data-i18n="slider.casaminium.desc">Gestión de fincas en Madrid</div>
-            <a class="learn-more" href="https://www.administradores-fincas.es/" target="_blank">
-              <span class="circle" aria-hidden="true">
-                <span class="icon arrow"></span>
-              </span>
-              <span class="button-text" data-i18n="slider.btnWeb">Ir a la Web</span>
-            </a>
-          </div>
-        </div>
-        <div class="blog-slider__item swiper-slide">
-          <div class="blog-slider__img">
-            <img src="./images/project-image03.png" alt="misenlaces">
-          </div>
-          <div class="blog-slider__content">
-            <span class="blog-slider__code"><span data-i18n="slider.months.may">Mayo de</span> 2021</span>
-            <div class="blog-slider__title" data-i18n="slider.links.title">Mis Enlaces</div>
-            <div class="blog-slider__text" data-i18n="slider.links.desc">Web donde crear tu tarjeta virtual de Negocio</div>
-            <a class="learn-more" href="https://misenlaces.es/" target="_blank">
-              <span class="circle" aria-hidden="true">
-                <span class="icon arrow"></span>
-              </span>
-              <span class="button-text" data-i18n="slider.btnWeb">Ir a la Web</span>
-            </a>
-          </div>
-        </div>
-        <div class="blog-slider__item swiper-slide">
-          <div class="blog-slider__img">
-            <img src="./images/maps.png" alt="mapsjs">
-          </div>
-          <div class="blog-slider__content">
-            <span class="blog-slider__code"><span data-i18n="slider.months.feb">Febrero de</span> 2022</span>
-            <div class="blog-slider__title" data-i18n="slider.maps.title">Leaflet JS</div>
-            <div class="blog-slider__text" data-i18n="slider.maps.desc">Ejemplo de uso de Leaflet JS a partir de los datos de un GeoJSON</div>
-            <a class="learn-more" href="https://alexvaquero19.github.io/mapsCharts/" target="_blank">
-              <span class="circle" aria-hidden="true">
-                <span class="icon arrow"></span>
-              </span>
-              <span class="button-text" data-i18n="slider.btnWeb">Ir a la Web</span>
-            </a>
-          </div>
-        </div>
-        <div class="blog-slider__item swiper-slide">
-          <div class="blog-slider__img">
-            <img src="./images/charts.png" alt="chartjs">
-          </div>
-          <div class="blog-slider__content">
-            <span class="blog-slider__code"><span data-i18n="slider.months.feb">Febrero de</span> 2022</span>
-            <div class="blog-slider__title" data-i18n="slider.charts.title">Chart JS</div>
-            <div class="blog-slider__text" data-i18n="slider.charts.desc">Ejemplo de uso de Chart JS a partir de los datos de un GeoJSON</div>
-            <a class="learn-more" href="https://alexvaquero19.github.io/mapsCharts/chart.html" target="_blank">
-              <span class="circle" aria-hidden="true">
-                <span class="icon arrow"></span>
-              </span>
-              <span class="button-text" data-i18n="slider.btnWeb">Ir a la Web</span>
-            </a>
-          </div>
-        </div>
-        <div class="blog-slider__item swiper-slide">
-          <div class="blog-slider__img">
-            <img src="./images/gestoclubs.png" alt="gestoclubs">
-          </div>
-          <div class="blog-slider__content">
-            <span class="blog-slider__code"><span data-i18n="slider.months.apr">Abril de</span> 2019</span>
-            <div class="blog-slider__title" data-i18n="slider.gestoClub.title">Gestoclubs</div>
-            <div class="blog-slider__text" data-i18n="slider.gestoClub.desc">Gestión de Clubs y socios</div>
-            <a class="learn-more" href="https://gestoclubs.com/" target="_blank">
-              <span class="circle" aria-hidden="true">
-                <span class="icon arrow"></span>
-              </span>
-              <span class="button-text" data-i18n="slider.btnWeb">Ir a la Web</span>
-            </a>
-          </div>
-        </div>
-      </div>
-      <div class="blog-slider__pagination"></div>
-    </div>
-
-    <section class="project py-5 animate__animated animate__fadeInDown" id="project">
-      <div class="container">
-        <div class="row d-flex">
-          <div class="justify-content-center d-flex">
-            <a href="./proyectos.html" class="btn custom-btn custom-btn-bg ms-2"><i class="uil uil-globe"></i> <span data-i18n="btnOtherProj">Ver Otros Proyectos</span></a>
-            <a href="https://codepen.io/alexvaquero19/" class="btn custom-btn custom-btn-bg ms-2" target="_blank"><i class="uil uil-globe"></i> Code Pen</a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Features -->
-    <section class="resume py-5 d-lg-flex justify-content-center align-items-center" id="resume">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-7 col-12">
-            <h2 class="mb-4" data-i18n="exp">Experiencia</h2>
-            <div class="timeline">
-              <div class="timeline-wrapper">
-                <div class="timeline-yr">
-                  <span>2024</span>
-                </div>
-                <div class="timeline-info">
-                  <h3 class="mb-0"><span data-i18n="airbusExperience.rol">Programador C# ASP .NET</span></h3>
-                  <h3><small class="ms-0"><a href="https://crisa.airbus.com/en" target="_blank">Airbus Crisa</a></small></h3>
-                  <div class="card card-body py-0" style="min-width: 300px;">
-                    <p class="fs-6 my-2">- <span data-i18n="airbusExperience.airbus1">Mantenimiento de Aplicaciones existentes.</span></p>
-                    <p class="fs-6 my-2">- <span data-i18n="airbusExperience.airbus2">Creación de nuevas aplicaciones y toma de requisitos.</span></p>
-                    <p class="fs-6 my-2">- <span data-i18n="airbusExperience.airbus3">Desarrollo de Aplicaciones en Python.</span></p>
-                    <p class="fs-6 my-2">- <span data-i18n="airbusExperience.airbus4">Desarrollo de aplicaciones desde cero en Blazor y uso de biblioteca de componentes como MudBlazor y Radzn.</span></p>
-                    <p class="fs-6 my-2">- <span data-i18n="airbusExperience.airbus5">Creación de nuevos componentes Razor.</span></p>
-                  </div>
-                </div>
-              </div>
-
-              <div class="timeline-wrapper">
-                <div class="timeline-yr">
-                  <span>2023</span>
-                </div>
-                <div class="timeline-info">
-                  <h3 class="mb-0"><span data-i18n="fmExperience.rol">Programador C# ASP .NET</span></h3>
-                  <h3><small class="ms-0"><a href="https://www.fmlogistic.es/" target="_blank">FM Logistic</a></small></h3>
-                  <div class="card card-body py-0" style="min-width: 300px;">
-                    <p class="fs-6 my-2">- <span data-i18n="fmExperience.fm1">Mantenimiento web interna de la empresa en ASP.NET Framework.</span></p>
-                    <p class="fs-6 my-2">- <span data-i18n="fmExperience.fm2">Creación y mantenimiento de Servicios en .NET 6 y .NET Framework</span></p>
-                    <p class="fs-6 my-2">- <span data-i18n="fmExperience.fm4">Desarrollo de Web Services y mantenimeinto de los ya existentes.</span></p>
-                    <p class="fs-6 my-2">- <span data-i18n="fmExperience.fm5">Uso de herramientas de Ticketing</span>
-                      <small class="ms-0"><a href="https://www.servicenow.com/" target="_blank">(Servicenow)</a></small>
+    <main class="pt-32">
+        <!-- Hero Section -->
+        <section class="max-w-7xl mx-auto px-6 mb-32">
+            <div class="flex flex-col md:flex-row items-center gap-16">
+                <div class="flex-1 space-y-8">
+                    <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-50 dark:bg-brand-500/10 border border-brand-500/20 text-brand-600 dark:text-brand-500 text-xs font-bold uppercase tracking-widest">
+                        <span class="relative flex h-2 w-2">
+                            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-brand-400 opacity-75"></span>
+                            <span class="relative inline-flex rounded-full h-2 w-2 bg-brand-500"></span>
+                        </span>
+                        Welcome to my Portfolio
+                    </div>
+                    <h1 class="text-6xl md:text-8xl font-display font-bold leading-[0.9] tracking-tight text-slate-900 dark:text-white">
+                        Building the <br> <span class="text-gradient">Future of .NET</span>
+                    </h1>
+                    <p class="text-xl text-slate-600 dark:text-slate-400 max-w-2xl leading-relaxed">
+                        Software Engineer specializing in C# .NET. Expert in building industrial-grade web apps, high-performance web solutions, and automation scripts for aerospace and logistics.
                     </p>
-                  </div>
-                </div>
-              </div>
+                    <div class="flex items-center gap-6">
+                        <a href="./files/Curriculum_Alejandro_Vaquero_Toba_ES.pdf" target="_blank" class="px-8 py-4 rounded-full bg-brand-500 hover:bg-brand-600 text-white font-bold transition-all shadow-lg shadow-brand-500/25">
+                            <i class="fa-solid fa-file-pdf"></i> CV Spanish
+                        </a>
+                        <a href="./files/Curriculum_Alejandro_Vaquero_Toba_EN.pdf" target="_blank" class="px-8 py-4 rounded-full bg-brand-500 hover:bg-brand-600 text-white font-bold transition-all shadow-lg shadow-brand-500/25">
+                            <i class="fa-solid fa-file-pdf"></i> CV English
+                        </a>
 
-              <div class="timeline-wrapper">
-                <div class="timeline-yr">
-                  <span>2022-2023</span>
+                        <div class="flex gap-4">
+                            <a href="https://github.com/AlexVaquero19" target="_blank" class="w-12 h-12 rounded-full border border-slate-200 dark:border-slate-800 flex items-center justify-center hover:bg-slate-100 dark:hover:bg-slate-800 transition-all text-xl"><i class="fab fa-github"></i></a>
+                            <a href="https://www.linkedin.com/in/alexvaquero19/" target="_blank" class="w-12 h-12 rounded-full border border-slate-200 dark:border-slate-800 flex items-center justify-center hover:bg-slate-100 dark:hover:bg-slate-800 transition-all text-xl"><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
                 </div>
-                <div class="timeline-info">
-                  <h3 class="mb-0"><span data-i18n="orbitalExperience.rol">Programador C# .NET</span></h3>
-                  <h3><small class="ms-0"><a href="https://www.orbitalcs.com/" target="_blank">Oribital Critical Systems</a> <a href="https://www.airbus.com/en" target="_blank">(Airbus)</a></small></h3>
-                  <div class="card card-body py-0" style="min-width: 300px;">
-                    <p class="fs-6 my-2" data-i18n="orbitalExperience.orbital1">- Creación de una aplicación de escritorio en C# .NET en WPF con .NET 5.</p>
-                    <p class="fs-6 my-2" data-i18n="orbitalExperience.orbital2">- Trabajo en metodología Agile.</p>
-                    <p class="fs-6 my-2" data-i18n="orbitalExperience.orbital3">- Uso de Material Design para diseño de la Aplicación y MVVM como patrón de diseño.</p>
-                  </div>
+                <div class="hidden lg:block w-96 h-96 relative">
+                    <div class="absolute inset-0 bg-brand-500 rounded-full blur-[80px] opacity-20 animate-pulse"></div>
+                    <img src="./img/me.jpg" class="relative w-full h-full rounded-[40px] object-cover transition-all duration-700 shadow-2xl" alt="Alejandro Vaquero">
                 </div>
-              </div>
-              
-              <div class="timeline-wrapper">
-                <div class="timeline-yr">
-                  <span>2021-2022</span>
-                </div>
-                <div class="timeline-info">
-                  <h3 class="mb-0"><span data-i18n="gmvExperience.rol">Programador C# .NET</span></h3>
-                  <h3><small class="ms-0"><a href="https://www.gmv.com/es-es/" target="_blank">GMV</a></small></h3>
-                  <div class="card card-body py-0" style="min-width: 300px;">
-                    <p class="fs-6 my-2" data-i18n="gmvExperience.gmv1">- Desarrollo y mantenimeinto de un proyecto para la Gestión de Barcos en España en el Departamento de Defensa usando C# .NET Framework 4.5, Visual Studio 2022 y TFS (Team Foundation Server) como control de Código Fuente.</p>
-                    <p class="fs-6 my-2" data-i18n="gmvExperience.gmv2">- Uso de Python 3.10 y Selenium para realizar scraping y obtener información de buques e imágenes de disntinas páginas.</p>
-                    <p class="fs-6 my-2" data-i18n="gmvExperience.gmv3">- Creación de una página web de la que se van a poder descargar los datos de emergencias del año actual y los 3 años anteriores, usando SOAP, AJAX y Web Services.</p>
-                  </div>
-                </div>
-              </div>
             </div>
-          </div>
+        </section>
 
-          <div class="col-lg-5 col-12">
-            <h2 class="mb-4 mobile-mt-2" data-i18n="edu">Educación</h2>
-            <div class="timeline">
-              <div class="timeline-wrapper">
-                <div class="timeline-yr">
-                  <span>2024</span>
+        <!-- Bento Stats / About -->
+        <section id="about" class="max-w-7xl mx-auto px-6 mb-32">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="md:col-span-2 bento-card p-10 rounded-[32px] bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 flex flex-col justify-between">
+                    <div>
+                        <h2 class="text-3xl font-display font-bold mb-6">The Journey</h2>
+                        <p class="text-slate-600 dark:text-slate-400 leading-relaxed text-lg">
+                            I am a person with concerns who has just started his working life, who is looking for a company with which to grow personally and professionally speaking.
+                            What I am most looking for is continuous training and the use of cutting-edge technologies or that I can be given access to study it on my own in order to be able to recycle myself.
+                        </p>
+                    </div>
+                    <div class="mt-12 flex gap-12">
+                        <div>
+                            <div class="text-4xl font-display font-bold text-brand-500">4+</div>
+                            <div class="text-xs uppercase tracking-widest font-bold text-slate-400">Years Experience</div>
+                        </div>
+                    </div>
                 </div>
-                <div class="timeline-info">
-                  <h3><span>Python</span><small><a href="https://github.com/AlexVaquero19/Python_Course/" target="_blank">Github</a></small></h3>
-                  <div class="card card-body py-0" style="min-width: 300px;">
-                    <p data-i18n="eduInfo.enCourse">Uso básico de python con Django Numpy Pandas y Google Cloud</p>
-                  </div>
+                <div class="bento-card p-10 rounded-[32px] bg-brand-500 text-white flex flex-col justify-between overflow-hidden relative">
+                    <i class="fas fa-quote-left text-8xl absolute -right-4 -top-4 opacity-20"></i>
+                    <h3 class="text-2xl font-bold relative z-10">"Focused on high-performance architecture and solving complex problems with the latest .NET tech."</h3>
+                    <div class="relative z-10">
+                        <p class="font-bold">Alejandro Vaquero Toba</p>
+                        <p class="text-brand-100 text-sm">Software Engineer</p>
+                    </div>
                 </div>
-              </div>
-
-              <div class="timeline-wrapper">
-                <div class="timeline-yr">
-                  <span>2021</span>
-                </div>
-                <div class="timeline-info">
-                  <h3><span>DAW</span><small><a href="https://www.domenicoscarlatti.es/" target="_blank">I.E.S Domenico Scarlatti</a></small></h3>
-                  <div class="card card-body py-0" style="min-width: 300px;">
-                    <p data-i18n="eduInfo.daw">Desarrollo de Aplicaciones Web.</p>
-                  </div>
-                </div>
-                <div class="timeline-info">
-                  <h3><span data-i18n="eduInfo.enTitle">Inglés</span><small><a href="https://centrodeingleselenagonzalo.com/" target="_blank">Egastiz</a></small></h3>
-                  <div class="card card-body py-0" style="min-width: 300px;">
-                    <p data-i18n="eduInfo.enDesc">Nivel B2-C1</p>
-                  </div>
-                </div>
-              </div>
-              
-              <div class="timeline-wrapper">
-                <div class="timeline-yr">
-                  <span>2020</span>
-                </div>
-                <div class="timeline-info mb-5">
-                  <h3><span>SQL</span><small><a href="https://openwebinars.net/" target="_blank">Openwebinars</a></small></h3>
-                  <div class="card card-body py-0" style="min-width: 300px;">
-                    <p data-i18n="eduInfo.sqlDesc">Curso de SQL desde 0.</p>
-                  </div>
-                </div>
-              </div>
-
-              <div class="timeline-wrapper">
-                <div class="timeline-yr">
-                  <span>2018</span>
-                </div>
-                <div class="timeline-info">
-                  <h3><span>SMR</span><small><a href="https://www.teideformacion.com/nuestros-centros/centro-hease" target="_blank">Centro Hease</a></small></h3>
-                  <div class="card card-body py-0" style="min-width: 300px;">
-                    <p data-i18n="eduInfo.smrDesc">Sistemas Microinformáticos y Redes.</p>
-                  </div>
-                </div>
-                <div class="timeline-info">
-                  <h3><span>Html CSS JavaScript</span><small><a href="https://www.udemy.com/" target="_blank">Udemy</a></small></h3>
-                  <div class="card card-body py-0" style="min-width: 300px;">
-                    <p data-i18n="eduInfo.webDesc">Curso completo de tecnologías Front.</p>
-                  </div>
-                </div>
-              </div>
             </div>
-          </div>
-        </div>
-      </div>
-    </section>
+        </section>
 
-    <!-- Skills -->
-    <section class="about d-lg-flex mb-5 justify-content-center align-items-center" id="skills">
-      <div class="container">
-        <div class="row justify-content-center">
-          <h2 class="text-center" data-i18n="habilities.title">Habilidades</h2>
-        </div>
-        <div class="row">
-          <div class="col-md-12 col-sm-12 text-center">
-            <hr class="bg-dark mt-0 pt-0" />
-            <div class="habilities-skills">
-              <div class="border d-flex p-2 align-items-center fw-bold">
-                <img class="mx-2" src="./images/icons/html5.svg" alt="HTML5"> 
-                <div>HTML5</div>
-              </div>
-              <div class="border d-flex p-2 align-items-center fw-bold">
-                <img class="mx-2" src="./images/icons/css3.svg" alt="CSS3"> 
-                <div>CSS3</div>
-              </div>
-              <div class="border d-flex p-2 align-items-center fw-bold">
-                <span class="bg-dark-mode-svg">
-                  <img class="mx-1" src="./images/icons/sass.svg" alt="SASS">
-                </span> 
-                <div>SASS</div>
-              </div>
-              <div class="border d-flex p-2 align-items-center fw-bold">
-                <img class="mx-2" src="./images/icons/bootstrap.svg" alt="Bootstrap"> 
-                <div>Bootstrap</div>
-              </div>
-              <div class="border d-flex p-2 align-items-center fw-bold">
-                <img class="mx-2" src="./images/icons/js.svg" alt="JavaScript"> 
-                <div>JavaScript</div>
-              </div>
-              <div class="border d-flex p-2 align-items-center fw-bold">
-                <span class="bg-dark-mode-svg">
-                  <img class="mx-1" src="./images/icons/jQuery.svg" alt="jQuery">
-                </span> 
-                <div>jQuery</div>
-              </div>
-              <div class="border d-flex p-2 align-items-center fw-bold">
-                <img class="mx-2" src="./images/icons/cSharp.svg" alt="cSharp"> 
-                <div>cSharp</div>
-              </div>
-              <div class="border d-flex p-2 align-items-center fw-bold">
-                <img class="mx-2" src="./images/icons/net.svg" alt=".NET"> 
-                <div>.NET</div>
-              </div>
-              <div class="border d-flex p-2 align-items-center fw-bold">
-                <span class="bg-dark-mode-svg">
-                  <img class="mx-2" src="./images/icons/mysql.svg" alt="MySql">
-                </span>
-                <div>MySql</div>
-              </div>
-              <div class="border d-flex p-2 align-items-center fw-bold">
-                <span class="bg-dark-mode-svg">
-                  <img class="mx-1" src="./images/icons/sqlServer.svg" alt="SQLServer">
-                </span>
-                <div>SQLServer</div>
-              </div>
-              <div class="border d-flex p-2 align-items-center fw-bold">
-                <span class="bg-dark-mode-svg">
-                  <img class="mx-1" src="./images/icons/git.svg" alt="GIT">
-                </span> 
-                <div>GIT</div>
-              </div>
-              <div class="border d-flex p-2 align-items-center fw-bold">
-                <img class="mx-2 bg-dark-mode-svg-rounded" src="./images/icons/github.svg" alt="GitHub"> 
-                <div>GitHub</div>
-              </div>
-              <div class="border d-flex p-2 align-items-center fw-bold">
-                <span class="bg-dark-mode-svg">
-                  <img class="mx-1" src="./images/icons/blazor.svg" alt="Blazor">
-                </span>
-                <div>Blazor</div>
-              </div>
-              <div class="border d-flex p-2 align-items-center fw-bold">
-                <img class="mx-2" src="./images/icons/python.svg" alt="Python"> 
-                <div>Python</div>
-              </div>
+        <!-- Experience Section -->
+        <section id="experience" class="max-w-7xl mx-auto px-6 mb-32">
+            <div class="flex flex-col md:flex-row gap-16">
+                <div class="md:w-1/3">
+                    <h2 class="text-4xl font-display font-bold sticky top-32">Professional<br><span class="text-brand-500">Experience</span></h2>
+                </div>
+                <div class="md:w-2/3 space-y-16">
+                    <!-- Airbus Crisa -->
+                    <div class="relative pl-12 timeline-item">
+                        <div class="absolute left-0 top-0 w-10 h-10 rounded-full bg-white dark:bg-slate-900 border-2 border-brand-500 z-10 flex items-center justify-center shadow-lg">
+                            <i class="fas fa-rocket text-brand-500 text-xs"></i>
+                        </div>
+                        <div class="space-y-4">
+                            <div class="flex flex-wrap items-center justify-between gap-4">
+                                <h3 class="text-2xl font-bold">C# .NET Programmer</h3>
+                                <span class="px-4 py-1 rounded-full bg-slate-100 dark:bg-slate-800 text-xs font-bold uppercase tracking-widest">2024 — Present</span>
+                            </div>
+                            <p class="text-brand-500 font-bold uppercase text-sm tracking-widest">Airbus Crisa</p>
+                            <ul class="space-y-3 text-slate-600 dark:text-slate-400 list-none">
+                                <li class="flex items-start gap-3"><span class="text-brand-500 mt-1.5 w-1.5 h-1.5 rounded-full bg-brand-500 shrink-0"></span> Maintenance of critical applications and requirements gathering.</li>
+                                <li class="flex items-start gap-3"><span class="text-brand-500 mt-1.5 w-1.5 h-1.5 rounded-full bg-brand-500 shrink-0"></span> Python script development for specialized data tasks.</li>
+                                <li class="flex items-start gap-3"><span class="text-brand-500 mt-1.5 w-1.5 h-1.5 rounded-full bg-brand-500 shrink-0"></span> Full-cycle Blazor development using MudBlazor and Radzen.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- FM Logistic -->
+                    <div class="relative pl-12 timeline-item">
+                        <div class="absolute left-0 top-0 w-10 h-10 rounded-full bg-white dark:bg-slate-900 border-2 border-slate-200 dark:border-slate-800 z-10 flex items-center justify-center">
+                            <i class="fas fa-truck text-slate-400 text-xs"></i>
+                        </div>
+                        <div class="space-y-4">
+                            <div class="flex flex-wrap items-center justify-between gap-4">
+                                <h3 class="text-2xl font-bold">C# ASP.NET Programmer</h3>
+                                <span class="px-4 py-1 rounded-full bg-slate-100 dark:bg-slate-800 text-xs font-bold uppercase tracking-widest">2023</span>
+                            </div>
+                            <p class="text-slate-500 font-bold uppercase text-sm tracking-widest">FM Logistic</p>
+                            <ul class="space-y-3 text-slate-600 dark:text-slate-400">
+                                <li class="flex items-start gap-3"><span class="text-brand-500 mt-1.5 w-1.5 h-1.5 rounded-full bg-brand-500 shrink-0"></span> Managed legacy ASP.NET systems and modern .NET 6 Web Services.</li>
+                                <li class="flex items-start gap-3"><span class="text-brand-500 mt-1.5 w-1.5 h-1.5 rounded-full bg-brand-500 shrink-0"></span> ServiceNow integration for efficient ticketing and tracking.</li>
+                                <li class="flex items-start gap-3"><span class="text-brand-500 mt-1.5 w-1.5 h-1.5 rounded-full bg-brand-500 shrink-0"></span> Develop of new web services and maintenance of existing ones.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Orbital -->
+                    <div class="relative pl-12 timeline-item">
+                        <div class="absolute left-0 top-0 w-10 h-10 rounded-full bg-white dark:bg-slate-900 border-2 border-slate-200 dark:border-slate-800 z-10 flex items-center justify-center">
+                            <i class="fas fa-plane text-slate-400 text-xs"></i>
+                        </div>
+                        <div class="space-y-4">
+                            <div class="flex flex-wrap items-center justify-between gap-4">
+                                <h3 class="text-2xl font-bold">C# .NET (WPF) Developer</h3>
+                                <span class="px-4 py-1 rounded-full bg-slate-100 dark:bg-slate-800 text-xs font-bold uppercase tracking-widest">2022 — 2023</span>
+                            </div>
+                            <p class="text-slate-500 font-bold uppercase text-sm tracking-widest">Orbital Critical Systems (Airbus)</p>
+                            <ul class="space-y-3 text-slate-600 dark:text-slate-400">
+                                <li class="flex items-start gap-3"><span class="text-brand-500 mt-1.5 w-1.5 h-1.5 rounded-full bg-brand-500 shrink-0"></span> Desktop development with WPF and .NET 5 using MVVM patterns.</li>
+                                <li class="flex items-start gap-3"><span class="text-brand-500 mt-1.5 w-1.5 h-1.5 rounded-full bg-brand-500 shrink-0"></span> Implementation of Material Design for high-end UI components.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- GMV -->
+                    <div class="relative pl-12">
+                        <div class="absolute left-0 top-0 w-10 h-10 rounded-full bg-white dark:bg-slate-900 border-2 border-slate-200 dark:border-slate-800 z-10 flex items-center justify-center">
+                            <i class="fas fa-anchor text-slate-400 text-xs"></i>
+                        </div>
+                        <div class="space-y-4">
+                            <div class="flex flex-wrap items-center justify-between gap-4">
+                                <h3 class="text-2xl font-bold">C# .NET Programmer</h3>
+                                <span class="px-4 py-1 rounded-full bg-slate-100 dark:bg-slate-800 text-xs font-bold uppercase tracking-widest">2021 — 2022</span>
+                            </div>
+                            <p class="text-slate-500 font-bold uppercase text-sm tracking-widest">GMV</p>
+                            <ul class="space-y-3 text-slate-600 dark:text-slate-400">
+                                <li class="flex items-start gap-3"><span class="text-brand-500 mt-1.5 w-1.5 h-1.5 rounded-full bg-brand-500 shrink-0"></span> Built vessel management tools for the Spanish Defence Dept.</li>
+                                <li class="flex items-start gap-3"><span class="text-brand-500 mt-1.5 w-1.5 h-1.5 rounded-full bg-brand-500 shrink-0"></span> Automated data cross-referencing using Python and Selenium.</li>
+                                <li class="flex items-start gap-3"><span class="text-brand-500 mt-1.5 w-1.5 h-1.5 rounded-full bg-brand-500 shrink-0"></span> Developed historical emergency tracking dashboards.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
             </div>
-          </div>
-        </div>
-      </div>
-    </section>
+        </section>
 
-    <!-- Otros Datos -->
-    <section class="about d-lg-flex mb-5 justify-content-center align-items-center" id="others">
-      <div class="container">
-        <div class="row justify-content-center">
-          <h2 class="text-center" data-i18n="interests.title">Otros Datos de Interés</h2>
-        </div>
-        <div class="row">
-          <div class="col-md-6 col-sm-12 text-center">
-            <h3><small>IDE</small></h3>
-            <hr class="bg-dark" />
+        <!-- Education Section -->
+        <section id="education" class="max-w-7xl mx-auto px-6 mb-32">
+            <div class="flex flex-col md:flex-row gap-16">
+                <div class="md:w-1/3">
+                    <h2 class="text-4xl font-display font-bold sticky top-32">Education &<br><span class="text-brand-500">Learning</span></h2>
+                </div>
+                <div class="md:w-2/3 space-y-12">
+                    
+                    <!-- 2024 -->
+                    <div class="grid grid-cols-1 lg:grid-cols-4 gap-4 pb-8 border-b border-slate-200 dark:border-slate-800">
+                        <div class="text-brand-500 font-bold font-display text-xl">2024</div>
+                        <div class="lg:col-span-3 space-y-4">
+                            <div>
+                                <h3 class="text-xl font-bold">Python & Github</h3>
+                                <p class="text-sm text-slate-500">Self-taught / Specialized Training</p>
+                                <p class="mt-2 text-slate-600 dark:text-slate-400">Basic usage of Python with Django, Numpy, Pandas and Google Cloud deployment.</p>
+                            </div>
+                        </div>
+                    </div>
 
-            <div class="habilities">
-              <div class="border d-flex p-2 align-items-center fw-bold">
-                <img class="mx-2" src="./images/icons/vscode.svg" alt="VSCode"> 
-                <div>VSCode</div>
-              </div>
-              <div class="border d-flex p-2 align-items-center fw-bold">
-                <img class="mx-2" src="./images/icons/vstudio.svg" alt="VStudio"> 
-                <div>VStudio</div>
-              </div>
-              <div class="border d-flex p-2 align-items-center fw-bold">
-                <img class="mx-2" src="./images/icons/dbeaver.svg" alt="DbEaver"> 
-                <div>DbEaver</div>
-              </div>
-              <div class="border d-flex p-2 align-items-center fw-bold">
-                <img class="mx-2" src="./images/icons/sublimetext.svg" alt="Sublimetext">
-                <div>Sublime Text</div>
-              </div>
+                    <!-- 2021 -->
+                    <div class="grid grid-cols-1 lg:grid-cols-4 gap-4 pb-8 border-b border-slate-200 dark:border-slate-800">
+                        <div class="text-brand-500 font-bold font-display text-xl">2021</div>
+                        <div class="lg:col-span-3 space-y-6">
+                            <div>
+                                <h3 class="text-xl font-bold uppercase">DAW - Web Application Developer</h3>
+                                <p class="text-sm text-slate-500 font-semibold">I.E.S Domenico Scarlatti</p>
+                                <p class="mt-2 text-slate-600 dark:text-slate-400">Higher Degree (Ciclo Formativo de Grado Superior) specializing in full-stack web development.</p>
+                            </div>
+                            <div class="p-4 rounded-2xl bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800">
+                                <h4 class="font-bold flex items-center gap-2"><i class="fas fa-language text-brand-500"></i> English Certification</h4>
+                                <p class="text-sm text-slate-500">Egastiz</p>
+                                <p class="font-display font-bold text-brand-500">B2-C1 Proficiency Level</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 2020 -->
+                    <div class="grid grid-cols-1 lg:grid-cols-4 gap-4 pb-8 border-b border-slate-200 dark:border-slate-800">
+                        <div class="text-brand-500 font-bold font-display text-xl">2020</div>
+                        <div class="lg:col-span-3 space-y-4">
+                            <div>
+                                <h3 class="text-xl font-bold">SQL From 0</h3>
+                                <p class="text-sm text-slate-500">Openwebinars</p>
+                                <p class="mt-2 text-slate-600 dark:text-slate-400">Foundational database management and query optimization.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 2018 -->
+                    <div class="grid grid-cols-1 lg:grid-cols-4 gap-4 pb-8">
+                        <div class="text-brand-500 font-bold font-display text-xl">2018</div>
+                        <div class="lg:col-span-3 space-y-6">
+                            <div>
+                                <h3 class="text-xl font-bold uppercase">SMR - Network and Microinformatics Systems</h3>
+                                <p class="text-sm text-slate-500 font-semibold">Centro Hease</p>
+                                <p class="mt-2 text-slate-600 dark:text-slate-400">Technical Degree (Ciclo Formativo de Grado Medio) in infrastructure and hardware systems.</p>
+                            </div>
+                            <div class="p-4 rounded-2xl bg-brand-500/5 border border-brand-500/10">
+                                <h4 class="font-bold flex items-center gap-2">Full Front Technologies</h4>
+                                <p class="text-sm text-slate-500">Udemy</p>
+                                <p class="text-slate-600 dark:text-slate-400 text-sm italic">Intensive HTML, CSS, and JavaScript training.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
             </div>
-          </div>
+        </section>
 
-          <div class="col-md-6 col-sm-12 text-center">
-            <h3><small>Hobbies</small></h3>
-            <hr class="bg-dark" />
-            <div class="habilities hab-hobbies">
-              <div class="border d-flex p-2 align-items-center fw-bold">
-                <span class="bg-dark-mode-svg">
-                  <img class="mx-1" src="./images/icons/gamepad.svg" alt="Video Juegos">
-                </span>
-                <div data-i18n="interests.games">Video Juegos</div>
-              </div>
-              <div class="border d-flex p-2 align-items-center fw-bold">
-                <img class="mx-2" src="./images/icons/tv.svg" alt="Series / Pelis"> 
-                <div data-i18n="interests.seriesFilms">Series / Pelis</div>
-              </div>
-              <div class="border d-flex p-2 align-items-center fw-bold">
-                <img class="mx-2" src="./images/icons/basket.svg" alt="Baloncesto"> 
-                <div data-i18n="interests.basket">Baloncesto</div>
-              </div>
+        <!-- Skills Section -->
+        <section id="skills" class="max-w-7xl mx-auto px-6 mb-32">
+            <h2 class="text-4xl font-display font-bold mb-12 text-center">Skills & <span class="text-brand-500">Tech Stack</span></h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- Frontend -->
+                <div class="bento-card p-8 rounded-[32px] bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800">
+                    <h3 class="text-xl font-bold mb-6 flex items-center gap-3">
+                        <i class="fas fa-desktop text-brand-500"></i> Frontend
+                    </h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-4 py-2 rounded-xl bg-slate-100 dark:bg-slate-800 text-sm font-semibold">HTML5</span>
+                        <span class="px-4 py-2 rounded-xl bg-slate-100 dark:bg-slate-800 text-sm font-semibold">CSS3</span>
+                        <span class="px-4 py-2 rounded-xl bg-slate-100 dark:bg-slate-800 text-sm font-semibold">SASS</span>
+                        <span class="px-4 py-2 rounded-xl bg-slate-100 dark:bg-slate-800 text-sm font-semibold">Bootstrap</span>
+                        <span class="px-4 py-2 rounded-xl bg-slate-100 dark:bg-slate-800 text-sm font-semibold">JavaScript</span>
+                        <span class="px-4 py-2 rounded-xl bg-slate-100 dark:bg-slate-800 text-sm font-semibold">jQuery</span>
+                        <span class="px-4 py-2 rounded-xl bg-brand-500/10 text-brand-500 text-sm font-bold border border-brand-500/20">Blazor</span>
+                    </div>
+                </div>
+                <!-- Backend & Logic -->
+                <div class="bento-card p-8 rounded-[32px] bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800">
+                    <h3 class="text-xl font-bold mb-6 flex items-center gap-3">
+                        <i class="fas fa-code-branch text-brand-500"></i> Backend & Scripting
+                    </h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-4 py-2 rounded-xl bg-brand-500/10 text-brand-500 text-sm font-bold border border-brand-500/20">C#</span>
+                        <span class="px-4 py-2 rounded-xl bg-brand-500/10 text-brand-500 text-sm font-bold border border-brand-500/20">.NET</span>
+                        <span class="px-4 py-2 rounded-xl bg-brand-500/10 text-brand-500 text-sm font-bold border border-brand-500/20">Blazor</span>
+                        <span class="px-4 py-2 rounded-xl bg-slate-100 dark:bg-slate-800 text-sm font-semibold">Python</span>
+                        <span class="px-4 py-2 rounded-xl bg-slate-100 dark:bg-slate-800 text-sm font-semibold">Selenium</span>
+                        <span class="px-4 py-2 rounded-xl bg-slate-100 dark:bg-slate-800 text-sm font-semibold">MVVM</span>
+                        <span class="px-4 py-2 rounded-xl bg-slate-100 dark:bg-slate-800 text-sm font-semibold">MVC </span>
+                    </div>
+                </div>
+                <!-- Data & Tools -->
+                <div class="bento-card p-8 rounded-[32px] bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800">
+                    <h3 class="text-xl font-bold mb-6 flex items-center gap-3">
+                        <i class="fas fa-database text-brand-500"></i> Data & DevOps
+                    </h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-4 py-2 rounded-xl bg-slate-100 dark:bg-slate-800 text-sm font-semibold">MySQL</span>
+                        <span class="px-4 py-2 rounded-xl bg-slate-100 dark:bg-slate-800 text-sm font-semibold">SQL Server</span>
+                        <span class="px-4 py-2 rounded-xl bg-slate-100 dark:bg-slate-800 text-sm font-semibold">GIT</span>
+                        <span class="px-4 py-2 rounded-xl bg-slate-100 dark:bg-slate-800 text-sm font-semibold">GitHub</span>
+                        <span class="px-4 py-2 rounded-xl bg-slate-100 dark:bg-slate-800 text-sm font-semibold">TFS</span>
+                    </div>
+                </div>
             </div>
-          </div>
-        </div>
-      </div>
-    </section>
+        </section>
 
-    <!-- Footer -->
-    <footer class="footer">
-      <div class="container d-flex align-items-center copyright-text justify-content-center fw-bold py-3">                            
-        <i class="fa-solid fa-copyright me-2"></i> <span class="anio me-2"></span> Alejandro Vaquero Toba
-      </div>
+        <!-- Other Interests Bento -->
+        <section id="interests" class="max-w-7xl mx-auto px-6 mb-32">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <!-- IDEs -->
+                <div class="bento-card p-10 rounded-[32px] bg-slate-100 dark:bg-slate-900/50 border border-slate-200 dark:border-slate-800">
+                    <h3 class="text-2xl font-display font-bold mb-8 flex items-center gap-3">
+                        <i class="fas fa-tools text-brand-500"></i> Preferred IDEs
+                    </h3>
+                    <div class="space-y-4">
+                        <div class="flex items-center justify-between p-4 bg-white dark:bg-slate-800 rounded-2xl shadow-sm">
+                            <span class="font-bold">Visual Studio</span>
+                            <span class="text-xs font-bold text-slate-400 uppercase tracking-widest">Main</span>
+                        </div>
+                        <div class="flex items-center justify-between p-4 bg-white dark:bg-slate-800 rounded-2xl shadow-sm">
+                            <span class="font-bold">Visual Studio Code</span>
+                            <span class="text-xs font-bold text-slate-400 uppercase tracking-widest">Scripting</span>
+                        </div>
+                        <div class="flex items-center justify-between p-4 bg-white dark:bg-slate-800 rounded-2xl shadow-sm">
+                            <span class="font-bold">DBeaver</span>
+                            <span class="text-xs font-bold text-slate-400 uppercase tracking-widest">Database</span>
+                        </div>
+                        <div class="flex items-center justify-between p-4 bg-white dark:bg-slate-800 rounded-2xl shadow-sm">
+                            <span class="font-bold">Sublime Text</span>
+                            <span class="text-xs font-bold text-slate-400 uppercase tracking-widest">Code</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Hobbies -->
+                <div class="bento-card p-10 rounded-[32px] bg-brand-500 text-white flex flex-col justify-center items-center text-center">
+                    <h3 class="text-3xl font-display font-bold mb-12"><i class="fa-solid fa-code"></i> Beyond Coding</h3>
+                    <div class="grid grid-cols-2 gap-4 w-full">
+                        <div class="p-4 bg-white/10 backdrop-blur-md rounded-2xl">
+                            <i class="fas fa-gamepad text-2xl mb-2"></i>
+                            <p class="font-bold">Video Games</p>
+                        </div>
+                        <div class="p-4 bg-white/10 backdrop-blur-md rounded-2xl">
+                            <i class="fas fa-tv text-2xl mb-2"></i>
+                            <p class="font-bold">Series & Films</p>
+                        </div>
+                        <div class="p-4 bg-white/10 backdrop-blur-md rounded-2xl">
+                            <i class="fas fa-basketball-ball text-2xl mb-2"></i>
+                            <p class="font-bold">Basketball</p>
+                        </div>
+                        <div class="p-4 bg-white/10 backdrop-blur-md rounded-2xl">
+                            <i class="fa-solid fa-chalkboard-user text-2xl mb-2"></i>   
+                            <p class="font-bold italic">Always Learning</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects -->
+        <section id="projects" class="max-w-7xl mx-auto px-6 mb-32">
+            <h2 class="text-4xl font-display font-bold mb-12 text-center">Featured <span class="text-brand-500">Work</span></h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="group relative bg-slate-100 dark:bg-slate-900 rounded-[40px] overflow-hidden border border-slate-200 dark:border-slate-800">
+                    <div class="p-10 space-y-4">
+                        <div class="flex justify-between items-start">
+                            <h3 class="text-2xl font-bold">Scraping Wallpapers</h3>
+                            <a href="https://github.com/AlexVaquero19/ScrapingWallpapers" target="_blank" class="text-brand-500 text-2xl"><i class="fab fa-github"></i></a>
+                        </div>
+                        <p class="text-slate-500 dark:text-slate-400">Advanced Python automation tool using Selenium for high-res wallpaper synchronization.</p>
+                        <div class="flex gap-2 pt-4">
+                            <span class="px-3 py-1 bg-slate-200 dark:bg-slate-800 rounded-full text-[10px] font-bold uppercase">Python</span>
+                            <span class="px-3 py-1 bg-slate-200 dark:bg-slate-800 rounded-full text-[10px] font-bold uppercase">Selenium</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="group relative bg-slate-100 dark:bg-slate-900 rounded-[40px] overflow-hidden border border-slate-200 dark:border-slate-800">
+                    <div class="p-10 space-y-4">
+                        <div class="flex justify-between items-start">
+                            <h3 class="text-2xl font-bold">Python Course</h3>
+                            <a href="https://github.com/AlexVaquero19/Python_Course" target="_blank" class="text-brand-500 text-2xl"><i class="fab fa-github"></i></a>
+                        </div>
+                        <p class="text-slate-500 dark:text-slate-400">Python application Development course.</p>
+                        <div class="flex gap-2 pt-4">
+                            <span class="px-3 py-1 bg-slate-200 dark:bg-slate-800 rounded-full text-[10px] font-bold uppercase">Python</span>
+                            <span class="px-3 py-1 bg-slate-200 dark:bg-slate-800 rounded-full text-[10px] font-bold uppercase">JavaScript</span>
+                            <span class="px-3 py-1 bg-slate-200 dark:bg-slate-800 rounded-full text-[10px] font-bold uppercase">Jupyter Notebook</span>
+                            <span class="px-3 py-1 bg-slate-200 dark:bg-slate-800 rounded-full text-[10px] font-bold uppercase">HTML</span>
+                            <span class="px-3 py-1 bg-slate-200 dark:bg-slate-800 rounded-full text-[10px] font-bold uppercase">CSS</span>
+                            <span class="px-3 py-1 bg-slate-200 dark:bg-slate-800 rounded-full text-[10px] font-bold uppercase">Docker</span>
+                        </div>
+                        <!--div class="pt-4 text-xs font-bold text-slate-400 uppercase tracking-widest flex items-center gap-2">
+                            <i class="fas fa-lock"></i> Proprietary Project
+                        </div-->
+                    </div>
+                </div>
+                <div class="group relative bg-slate-100 dark:bg-slate-900 rounded-[40px] overflow-hidden border border-slate-200 dark:border-slate-800">
+                    <div class="p-10 space-y-4">
+                        <div class="flex justify-between items-start">
+                            <h3 class="text-2xl font-bold">Data Catalog</h3>
+                            <a href="https://datos.salvamentomaritimo.es/Emergencias" target="_blank" class="text-brand-500 text-2xl"><i class="fa-solid fa-link"></i></a>
+                        </div>
+                        <p class="text-slate-500 dark:text-slate-400">Download all Emergencies and Rescues from last 6 years in different doc types.</p>
+                        <div class="flex gap-2 pt-4">
+                            <span class="px-3 py-1 bg-slate-200 dark:bg-slate-800 rounded-full text-[10px] font-bold uppercase">HTML</span>
+                            <span class="px-3 py-1 bg-slate-200 dark:bg-slate-800 rounded-full text-[10px] font-bold uppercase">CSS</span>
+                            <span class="px-3 py-1 bg-slate-200 dark:bg-slate-800 rounded-full text-[10px] font-bold uppercase">ASP.NET</span>
+                            <span class="px-3 py-1 bg-slate-200 dark:bg-slate-800 rounded-full text-[10px] font-bold uppercase">SOAP</span>
+                        </div>
+                        <!--div class="pt-4 text-xs font-bold text-slate-400 uppercase tracking-widest flex items-center gap-2">
+                            <i class="fas fa-lock"></i> Proprietary Project
+                        </div-->
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer / Contact -->
+    <footer id="contact" class="bg-white dark:bg-slate-900 pb-16 border-t border-slate-200 dark:border-slate-800">
+        <div class="max-w-7xl mx-auto px-6 text-center">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-8 border-t border-slate-100 dark:border-slate-800 pt-16">
+                <p class="text-slate-400 text-sm">
+                    &copy; <script>document.write(/\d{4}/.exec(Date())[0])</script> Alejandro Vaquero Toba
+                </p>
+                <div class="flex gap-8 text-sm font-bold uppercase tracking-widest text-slate-400">
+                    <a href="https://github.com/AlexVaquero19" target="_blank" class="hover:text-brand-500">Github</a>
+                    <a href="https://www.linkedin.com/in/alexvaquero19/" target="_blank" class="hover:text-brand-500">Linkedin</a>
+                </div>
+            </div>
+        </div>
     </footer>
 
-    <!-- Scripts -->
-    <script src="./js/jquery-3.7.1.min.js"></script>
-    <script src="./js/popper.min.js"></script>
-    <script src="./js/bootstrap.min.js"></script>
-    <script src="./js/Headroom.js"></script>
-    <script src="./js/jQuery.headroom.js"></script>
-    <script src="./js/owl.carousel.min.js"></script>
-    <script src="./js/smoothscroll.js"></script>
-    <script src="./js/main.js"></script>
-    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
-    <script src="./js/translate.js"></script>
-    <script src="./js/carousel.js"></script>
-  </body>
+    <script src="./scripts/script.js"></script>
+</body>
 </html>

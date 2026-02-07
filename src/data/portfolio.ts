@@ -1,6 +1,6 @@
 export const personalInfo = {
   name: "Alejandro Vaquero Toba",
-  title: "Software Engineer",
+  title: "Software Developer",
   email: "vaquero.alejandro19@gmail.com",
   phone: "+34 607 882 218",
   location: "Madrid, Spain",
@@ -12,7 +12,7 @@ export const personalInfo = {
 
 export const about = {
   tagline: "Crafting Robust with .NET",
-  description: "I'm a Software Engineer with 4+ years of experience building mission-critical applications for aerospace and logistics industries. I transform complex requirements into scalable, high-performance solutions.",
+  description: "I'm a Software Developer with 4+ years of experience building mission-critical applications for aerospace and logistics industries. I transform complex requirements into scalable, high-performance solutions.",
   story: [
     "I fell in love with programming during my vocational training, where I discovered that <strong class='text-slate-900 dark:text-white'>solving complex problems with elegant code</strong>.",
     "What drives me? The challenge of taking messy, real-world requirements and transforming them into <strong class='text-slate-900 dark:text-white'>clean, scalable, and maintainable solutions</strong>. I've built emergency management systems for maritime rescue, desktop applications for Airbus aerospace systems, and logistics platforms handling thousands of daily transactions.",

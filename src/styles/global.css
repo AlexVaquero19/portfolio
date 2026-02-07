@@ -87,12 +87,12 @@
 
 /* Smooth Scroll Behavior */
 html {
-    height: 100dvh;
+    height: 100svh;
     scroll-behavior: smooth;
 }
 
 body {
-    height: 100dvh;
+    height: 100svh;
 }
 
 /* Custom Scrollbar */

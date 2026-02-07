@@ -1,0 +1,66 @@
+---
+---
+
+<nav class="fixed top-0 w-full z-[100] border-b border-slate-200 dark:border-slate-800 bg-white/70 dark:bg-brand-950/70 backdrop-blur-xl">
+  <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+    <div class="font-display font-bold text-2xl tracking-tighter text-slate-900 dark:text-white">
+      ALEJANDRO<span class="text-brand-500">.</span>
+    </div>
+    
+    <!-- Desktop & Functional Nav -->
+    <div class="flex items-center gap-4 md:gap-8">
+      <div class="hidden md:flex items-center space-x-10 text-sm font-semibold uppercase tracking-widest">
+        <a href="#about" class="hover:text-brand-500 transition-colors">About</a>
+        <a href="#experience" class="hover:text-brand-500 transition-colors">Experience</a>
+        <a href="#skills" class="hover:text-brand-500 transition-colors">Skills</a>
+        <a href="#projects" class="hover:text-brand-500 transition-colors">Projects</a>
+      </div>
+      
+      <div class="flex items-center gap-2">
+        <button id="theme-toggle" class="w-10 h-10 rounded-full bg-slate-100 dark:bg-slate-800 flex items-center justify-center transition-transform hover:scale-110 active:scale-95" aria-label="Toggle Theme">
+          <i id="theme-icon" class="fas fa-sun text-slate-600 dark:text-brand-500"></i>
+        </button>
+        
+        <!-- Mobile Menu Button -->
+        <button id="menu-open" class="md:hidden w-10 h-10 rounded-full flex items-center justify-center text-slate-900 dark:text-white text-xl">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<!-- Mobile Menu Overlay -->
+<div id="mobile-menu" class="fixed inset-0 z-[110] bg-white dark:bg-brand-950 md:hidden flex flex-col p-8">
+  <div class="flex items-center justify-between mb-12">
+    <div class="font-display font-bold text-2xl tracking-tighter text-slate-900 dark:text-white">
+      MENU<span class="text-brand-500">.</span>
+    </div>
+    <button id="menu-close" class="w-10 h-10 rounded-full bg-slate-100 dark:bg-slate-800 flex items-center justify-center text-xl">
+      <i class="fas fa-times"></i>
+    </button>
+  </div>
+  
+  <div class="flex flex-col space-y-8 text-3xl font-display font-bold">
+    <a href="#about" class="mobile-link hover:text-brand-500 transition-colors">About</a>
+    <a href="#experience" class="mobile-link hover:text-brand-500 transition-colors">Experience</a>
+    <a href="#skills" class="mobile-link hover:text-brand-500 transition-colors">Skills</a>
+    <a href="#projects" class="mobile-link hover:text-brand-500 transition-colors">Projects</a>
+    <a href="#contact" class="mobile-link hover:text-brand-500 transition-colors">Contact</a>
+  </div>
+
+  <div class="mt-auto pb-8 border-t border-slate-100 dark:border-slate-800 pt-8">
+    <p class="text-xs font-bold uppercase tracking-widest text-slate-400 mb-6">Connect</p>
+    <div class="flex gap-4">
+      <a href="https://github.com/AlexVaquero19" target="_blank" class="w-12 h-12 rounded-full bg-slate-100 dark:bg-slate-800 flex items-center justify-center text-xl hover:scale-110 transition-transform">
+        <i class="fab fa-github"></i>
+      </a>
+      <a href="https://www.linkedin.com/in/alexvaquero19/" target="_blank" class="w-12 h-12 rounded-full bg-slate-100 dark:bg-slate-800 flex items-center justify-center text-xl hover:scale-110 transition-transform">
+        <i class="fab fa-linkedin-in"></i>
+      </a>
+      <a href="mailto:vaquero.alejandro19@gmail.com" class="w-12 h-12 rounded-full bg-slate-100 dark:bg-slate-800 flex items-center justify-center text-xl hover:scale-110 transition-transform">
+        <i class="fas fa-envelope"></i>
+      </a>
+    </div>
+  </div>
+</div>

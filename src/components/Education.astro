@@ -1,0 +1,38 @@
+---
+import { education, courses } from '../data/portfolio';
+---
+
+<section id="education" class="max-w-7xl mx-auto px-6 mb-32">
+  <h2 class="text-4xl font-display font-bold mb-12 text-center">
+    Education & <span class="text-brand-500">Certifications</span>
+  </h2>
+  
+  <div class="grid md:grid-cols-3 gap-6">
+    {education.map((edu) => (
+      <div class="p-6 bg-white dark:bg-slate-900 rounded-2xl border border-slate-200 dark:border-slate-800 hover:scale-105 transition-transform">
+        <div class={`w-12 h-12 ${edu.color} rounded-xl flex items-center justify-center text-white text-2xl mb-4`}>
+          <i class={edu.icon}></i>
+        </div>
+        <h3 class="font-bold text-lg mb-2">{edu.degree}</h3>
+        <p class="text-slate-500 dark:text-slate-400 text-sm mb-2">{edu.type}</p>
+        <p class="text-brand-500 font-bold text-sm">{edu.institution} • {edu.year}</p>
+      </div>
+    ))}
+  </div>
+
+  <!-- Courses -->
+  <div class="mt-12">
+    <h3 class="text-2xl font-bold mb-6 text-center">Continuous Learning</h3>
+    <div class="grid md:grid-cols-2 gap-4">
+      {courses.map((course) => (
+        <div class="flex items-center gap-4 p-4 bg-slate-100 dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-800">
+          <i class={`${course.icon} text-2xl text-brand-500`}></i>
+          <div>
+            <p class="font-bold">{course.name}</p>
+            <p class="text-sm text-slate-500 dark:text-slate-400">{course.platform}</p>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

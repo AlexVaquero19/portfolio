@@ -1,0 +1,53 @@
+---
+import { experience } from '../data/portfolio';
+---
+
+<section id="experience" class="max-w-7xl mx-auto px-6 mb-32">
+  <h2 class="text-4xl md:text-5xl font-display font-bold mb-16 text-center">
+    Professional <span class="text-brand-500">Journey</span>
+  </h2>
+  
+  <div class="relative">
+    <!-- Timeline Line -->
+    <div class="hidden md:block absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-gradient-to-b from-brand-500 to-cyan-500 opacity-20"></div>
+    
+    <div class="space-y-12">
+      {experience.map((job, index) => (
+        <div class={`relative md:grid md:grid-cols-2 md:gap-12 ${index % 2 === 1 ? 'md:flex-row-reverse' : ''}`}>
+          <div class={`md:pr-12 flex flex-col items-end ${index % 2 === 1 ? 'md:text-right md:order-2' : ''}`}>
+            {job.current && (
+              <div class="inline-block px-4 py-1 bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-400 rounded-full text-sm font-bold mb-4">
+                CURRENT
+              </div>
+            )}
+            <h3 class="text-2xl font-bold mb-2">{job.position}</h3>
+            <p class="text-brand-500 font-bold mb-2">{job.company}</p>
+            <p class="text-slate-500 dark:text-slate-400 text-sm mb-4">{job.period} • {job.location}</p>
+          </div>
+          
+          <div class={`relative mt-4 md:mt-0 ${index % 2 === 1 ? 'md:order-1' : 'md:pl-2'}`}>
+            <div class={`absolute ${index % 2 === 1 ? 'md:left-auto md:right-0 md:translate-x-1/2' : 'left-1/2 md:left-0 md:translate-x-0'} transform -translate-x-1/2 w-4 h-4 bg-brand-500 rounded-full border-4 border-white dark:border-brand-950 z-10 hidden md:block`}></div>
+            
+            <div class="p-6 bg-white dark:bg-slate-900 rounded-2xl border border-slate-200 dark:border-slate-800 hover:scale-105 transition-transform">
+              <ul class="space-y-3 text-slate-600 dark:text-slate-400">
+                {job.achievements.map((achievement) => (
+                  <li class="flex items-start gap-3">
+                    <i class={`${job.icon} ${job.iconColor} mt-1`}></i>
+                    <span set:html={achievement.replace(/\*\*(.*?)\*\*/g, '<strong class="text-slate-900 dark:text-white">$1</strong>')} />
+                  </li>
+                ))}
+              </ul>
+              <div class="flex flex-wrap gap-2 mt-4">
+                {job.technologies.map((tech) => (
+                  <span class={`px-3 py-1 bg-slate-100 dark:bg-slate-800 rounded-full text-xs font-bold`}>
+                    {tech}
+                  </span>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

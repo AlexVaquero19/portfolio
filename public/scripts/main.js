@@ -9,13 +9,9 @@ const mobileMenu = document.getElementById('mobile-menu');
 const mobileLinks = document.querySelectorAll('.mobile-link');
 
 // Dynamic Years of Experience Calculation
-const yearsElement = document.getElementById('years-count');
-const heroElement = document.getElementById('hero-years');
 const startYear = 2021;
 const currentYear = new Date().getFullYear()-1;
 const experience = currentYear - startYear;
-yearsElement.innerText = `${experience}+`;
-heroElement.innerText = `${experience}+`;
 
 // Toggle Mobile Menu
 function toggleMenu() {
@@ -261,39 +257,6 @@ function debounce(func, wait = 10) {
 
 // Apply debounce to scroll handlers
 window.addEventListener('scroll', debounce(highlightNavigation, 50));
-
-// Tailwind Config
-tailwind.config = {
-    darkMode: 'class',
-    theme: {
-        extend: {
-            fontFamily: {
-                sans: ['Archivo', 'sans-serif'],
-                display: ['DM Serif Display', 'serif'],
-            },
-            colors: {
-                brand: {
-                    50: '#f0fdf4',
-                    100: '#dcfce7',
-                    200: '#bbf7d0',
-                    300: '#86efac',
-                    400: '#4ade80',
-                    500: '#4c979b',
-                    600: '#366a7f',
-                    700: '#2d5a6b',
-                    800: '#1e3a4a',
-                    900: '#0f1d2a',
-                    950: '#020617',
-                }
-            },
-            animation: {
-                'gradient-shift': 'gradient-shift 3s ease infinite',
-                'float': 'float 3s ease-in-out infinite',
-                'ripple': 'ripple 0.6s ease-out',
-            }
-        }
-    }
-};
 
 // Initialize
 document.addEventListener('DOMContentLoaded', () => {

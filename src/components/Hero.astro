@@ -1,0 +1,80 @@
+---
+import { personalInfo, about } from '../data/portfolio';
+import Stats from '../components/Stats.astro';
+
+const startYear = 2021;
+const currentYear = new Date().getFullYear() - 1;
+const yearsExperience = currentYear - startYear;
+---
+
+<section class="max-w-7xl mx-auto px-6 mb-32">
+  <div class="flex flex-col md:flex-row items-center gap-16">
+    <div class="flex-1 space-y-8">
+      <!-- Status Badge -->
+      <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-green-50 dark:bg-green-500/10 border border-green-500/20 text-green-600 dark:text-green-400 text-xs font-bold uppercase tracking-widest">
+          <span class="relative flex h-2 w-2">
+              <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
+              <span class="relative inline-flex rounded-full h-2 w-2 bg-green-500"></span>
+          </span>
+          Welcome
+      </div>
+
+      <!-- Hero Title -->
+      <h1 class="text-5xl md:text-7xl font-display font-bold leading-[1.1] tracking-tight text-slate-900 dark:text-white">
+        {about.tagline.split('with .NET')[0]}<br />
+        <span class="text-gradient">Enterprise Solutions</span><br />
+        with .NET
+      </h1>
+
+      <!-- Value Proposition -->
+      <p class="text-xl text-slate-600 dark:text-slate-400 max-w-2xl leading-relaxed">
+        I'm a Software Engineer with <strong class="text-brand-500">{yearsExperience}+  </strong> of experience building mission-critical applications for <strong class="text-brand-500">aerospace and logistics</strong> industries. I transform complex requirements into scalable, high-performance solutions.
+      </p>
+
+      <!-- Contact Info -->
+      <div class="flex flex-col sm:flex-row gap-3 text-sm items-start sm:items-center">
+        <a href={`mailto:${personalInfo.email}`} class="flex items-center gap-2 text-slate-600 dark:text-slate-400 hover:text-brand-500 transition-colors group">
+          <i class="fas fa-envelope group-hover:scale-110 transition-transform"></i>
+          {personalInfo.email}
+        </a>
+        <span class="hidden sm:block text-slate-300 dark:text-slate-700">•</span>
+        <a href={`tel:${personalInfo.phone.replace(/\s/g, '')}`} class="flex items-center gap-2 text-slate-600 dark:text-slate-400 hover:text-brand-500 transition-colors group">
+          <i class="fas fa-phone group-hover:scale-110 transition-transform"></i>
+          {personalInfo.phone}
+        </a>
+        <span class="hidden sm:block text-slate-300 dark:text-slate-700">•</span>
+        <span class="flex items-center gap-2 text-slate-600 dark:text-slate-400">
+          <i class="fas fa-map-marker-alt"></i>
+          {personalInfo.location}
+        </span>
+      </div>
+
+      <!-- CTAs -->
+      <div class="flex flex-wrap items-center gap-4 pt-4">
+        <a href="/portfolio/files/Curriculum_Alejandro_Vaquero_Toba_EN.pdf" target="_blank" class="px-6 py-4 rounded-full border-2 border-slate-300 dark:border-slate-700 hover:border-brand-500 dark:hover:border-brand-500 font-bold transition-all hover:scale-105">
+          <i class="fa-solid fa-file-pdf"></i> Resume (EN)
+        </a>
+        <a href="/portfolio/files/Curriculum_Alejandro_Vaquero_Toba_ES.pdf" target="_blank" class="px-6 py-4 rounded-full border-2 border-slate-300 dark:border-slate-700 hover:border-brand-500 dark:hover:border-brand-500 font-bold transition-all hover:scale-105">
+          <i class="fa-solid fa-file-pdf"></i> CV (ES)
+        </a>
+      </div>
+
+      <!-- Social Links -->
+      <div class="flex gap-4 pt-2">
+        <a href={personalInfo.github} target="_blank" class="w-12 h-12 rounded-full border border-slate-200 dark:border-slate-800 flex items-center dark:hover:border-brand-500 justify-center hover:bg-slate-100 dark:hover:bg-slate-800 transition-all text-xl hover:scale-110 hover:border-brand-500">
+          <i class="fab fa-github"></i>
+        </a>
+        <a href={personalInfo.linkedin} target="_blank" class="w-12 h-12 rounded-full border border-slate-200 dark:border-slate-800 flex items-center dark:hover:border-brand-500 justify-center hover:bg-slate-100 dark:hover:bg-slate-800 transition-all text-xl hover:scale-110 hover:border-brand-500">
+          <i class="fab fa-linkedin-in"></i>
+        </a>
+      </div>
+    </div>
+    
+    <!-- Profile Image -->
+    <div class="relative group">
+      <div class="absolute -inset-4 bg-gradient-to-r from-brand-500 to-cyan-500 rounded-full opacity-20 group-hover:opacity-30 blur-2xl transition-opacity"></div>
+      <img src="/portfolio/img/me.jpg" alt={personalInfo.name} class="relative w-72 h-72 md:w-96 md:h-96 rounded-full object-cover border-4 border-white dark:border-slate-800 shadow-2xl">
+      <Stats />
+    </div>
+  </div>
+</section>

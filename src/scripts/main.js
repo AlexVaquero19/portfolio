@@ -291,7 +291,7 @@ function initScrollAnimations() {
     const sections = document.querySelectorAll('section');
     sections.forEach((section, index) => {
         section.classList.add('opacity-0', 'translate-y-10', 'transition-all', 'duration-1000');
-        section.style.transitionDelay = `${index * 100}ms`;
+        section.style.transitionDelay = `${index * 10}ms`;
         observer.observe(section);
     });
 }

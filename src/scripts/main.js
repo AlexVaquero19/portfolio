@@ -266,3 +266,43 @@ document.addEventListener('DOMContentLoaded', () => {
     // Trigger initial animations
     highlightNavigation();
 });
+
+// Function to initialize scroll animations
+function initScrollAnimations() {
+    const observerOptions = { 
+        threshold: 0.1,
+        rootMargin: '0px 0px -100px 0px'
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('opacity-100', 'translate-y-0');
+                entry.target.classList.remove('opacity-0', 'translate-y-10');
+                
+                if (entry.target.classList.contains('stat-number')) {
+                    animateCounter(entry.target);
+                }
+            }
+        });
+    }, observerOptions);
+
+    // Select all sections and apply initial hidden states
+    const sections = document.querySelectorAll('section');
+    sections.forEach((section, index) => {
+        section.classList.add('opacity-0', 'translate-y-10', 'transition-all', 'duration-1000');
+        section.style.transitionDelay = `${index * 100}ms`;
+        observer.observe(section);
+    });
+}
+
+// Ensure it runs after the DOM is ready
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initScrollAnimations);
+} else {
+    initScrollAnimations();
+}
+
+document.addEventListener('astro:page-load', () => {
+    initScrollAnimations();
+});

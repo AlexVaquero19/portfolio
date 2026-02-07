@@ -29,7 +29,7 @@ const statusColors = {
               <h3 class="text-3xl font-bold mb-2">{featured.title}</h3>
               <p class="text-slate-500 dark:text-slate-400 mb-4">{featured.description}</p>
             </div>
-            <a href={featured.link} target="_blank" class="text-brand-500 text-3xl hover:scale-110 transition-transform">
+            <a href={featured.link} aria-label="Maritime Link" target="_blank" class="text-brand-500 text-3xl hover:scale-110 transition-transform">
               <i class={featured.linkType === 'github' ? 'fab fa-github' : 'fa-solid fa-external-link-alt'}></i>
             </a>
           </div>
@@ -45,7 +45,7 @@ const statusColors = {
           
           <div class="flex flex-wrap gap-2 pt-4">
             {featured.technologies.map((tech) => (
-              <span class="px-3 py-1 bg-slate-200 dark:bg-slate-800 rounded-full text-xs font-bold">{tech}</span>
+              <span class="px-3 py-1 bg-slate-200 dark:bg-slate-800 rounded-full text-xs font-bold hover:scale-[1.1]">{tech}</span>
             ))}
           </div>
         </div>
@@ -63,7 +63,7 @@ const statusColors = {
               </div>
               <h3 class="text-2xl font-bold">{project.title}</h3>
             </div>
-            <a href={project.link} target="_blank" class="text-brand-500 text-2xl hover:scale-110 transition-transform">
+            <a href={project.link} aria-label="Github Link" target="_blank" class="text-brand-500 text-2xl hover:scale-110 transition-transform">
               <i class={project.linkType === 'github' ? 'fab fa-github' : 'fa-solid fa-external-link-alt'}></i>
             </a>
           </div>
@@ -91,7 +91,7 @@ const statusColors = {
           
           <div class="flex flex-wrap gap-2 pt-4">
             {project.technologies.map((tech) => (
-              <span class="px-3 py-1 bg-slate-200 dark:bg-slate-800 rounded-full text-xs font-bold">{tech}</span>
+              <span class="px-3 py-1 bg-slate-200 dark:bg-slate-800 rounded-full text-xs font-bold hover:scale-[1.1]">{tech}</span>
             ))}
           </div>
         </div>

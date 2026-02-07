@@ -164,20 +164,20 @@ export const courses = [
 
 export const skills = {
   backend: [
-    { name: "C# .NET", level: "EXPERT", icon: "fas fa-circle", color: "text-brand-500" },
-    { name: "Blazor", level: "EXPERT", icon: "fas fa-circle", color: "text-brand-500" },
-    { name: "ASP.NET", level: "EXPERT", icon: "fas fa-circle", color: "text-brand-500" },
-    { name: "WPF", level: "ADVANCED", icon: "fas fa-circle", color: "text-cyan-500" },
-    { name: "Python", level: "ADVANCED", icon: "fas fa-circle", color: "text-cyan-500" },
-    { name: "PHP & Symfony", level: "INTERMEDIATE", icon: "fas fa-circle", color: "text-slate-400" }
+    { name: "C# .NET", level: "EXPERT", icon: "fas fa-circle", color: "text-brand-500 dark:text-brand-800" },
+    { name: "Blazor", level: "EXPERT", icon: "fas fa-circle", color: "text-brand-500 dark:text-brand-800" },
+    { name: "ASP.NET", level: "EXPERT", icon: "fas fa-circle", color: "text-brand-500 dark:text-brand-800" },
+    { name: "Python", level: "ADVANCED", icon: "fas fa-circle", color: "text-cyan-700" },
+    { name: "Astro", level: "INTERMEDIATE", icon: "fas fa-circle", color: "text-slate-600" },
+    { name: "PHP & Symfony", level: "INTERMEDIATE", icon: "fas fa-circle", color: "text-slate-600" }
   ],
   frontend: [
     { name: "HTML5", level: "EXPERT", icon: "fab fa-html5", color: "text-orange-500" },
     { name: "CSS3 & SASS", level: "EXPERT", icon: "fab fa-css3-alt", color: "text-blue-500" },
     { name: "JavaScript", level: "ADVANCED", icon: "fab fa-js", color: "text-yellow-500" },
-    { name: "Bootstrap", level: "ADVANCED", icon: "fab fa-bootstrap", color: "text-purple-500" },
-    { name: "jQuery", level: "ADVANCED", icon: "fas fa-code", color: "text-cyan-500" },
-    { name: "MudBlazor / Radzen", level: "ADVANCED", icon: "fas fa-layer-group", color: "text-brand-500" }
+    { name: "Bootstrap / Tailwind", level: "ADVANCED", icon: "fab fa-bootstrap", color: "text-purple-500" },
+    { name: "jQuery", level: "ADVANCED", icon: "fas fa-code", color: "text-cyan-700" },
+    { name: "MudBlazor / Radzen", level: "ADVANCED", icon: "fas fa-layer-group", color: "text-brand-500 dark:text-brand-800" }
   ],
   database: [
     { name: "SQL Server", level: "EXPERT", icon: "fas fa-database", color: "text-red-500" },

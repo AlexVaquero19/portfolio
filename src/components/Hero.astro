@@ -1,6 +1,6 @@
 ---
 import { personalInfo, about } from '../data/portfolio';
-import Stats from '../components/Stats.astro';
+import { stats } from '../data/portfolio';
 
 const startYear = 2021;
 const currentYear = new Date().getFullYear() - 1;
@@ -34,12 +34,12 @@ const yearsExperience = currentYear - startYear;
       <!-- Contact Info -->
       <div class="flex flex-col sm:flex-row gap-3 text-sm items-start sm:items-center">
         <a href={`mailto:${personalInfo.email}`} class="flex items-center gap-2 text-slate-600 dark:text-slate-400 hover:text-brand-500 transition-colors group">
-          <i class="fas fa-envelope group-hover:scale-110 transition-transform"></i>
+          <i class="fas fa-envelope group-hover:scale-[1.2] transition-transform"></i>
           {personalInfo.email}
         </a>
         <span class="hidden sm:block text-slate-300 dark:text-slate-700">•</span>
         <a href={`tel:${personalInfo.phone.replace(/\s/g, '')}`} class="flex items-center gap-2 text-slate-600 dark:text-slate-400 hover:text-brand-500 transition-colors group">
-          <i class="fas fa-phone group-hover:scale-110 transition-transform"></i>
+          <i class="fas fa-phone group-hover:scale-[1.2] transition-transform"></i>
           {personalInfo.phone}
         </a>
         <span class="hidden sm:block text-slate-300 dark:text-slate-700">•</span>
@@ -61,10 +61,10 @@ const yearsExperience = currentYear - startYear;
 
       <!-- Social Links -->
       <div class="flex gap-4 pt-2">
-        <a href={personalInfo.github} target="_blank" class="w-12 h-12 rounded-full border border-slate-200 dark:border-slate-800 flex items-center dark:hover:border-brand-500 justify-center hover:bg-slate-100 dark:hover:bg-slate-800 transition-all text-xl hover:scale-110 hover:border-brand-500">
+        <a href={personalInfo.github} aria-label="Github" target="_blank" class="w-12 h-12 rounded-full border border-slate-200 dark:border-slate-800 flex items-center dark:hover:border-brand-500 justify-center hover:bg-slate-100 dark:hover:bg-slate-800 transition-all text-xl hover:scale-110 hover:border-brand-500">
           <i class="fab fa-github"></i>
         </a>
-        <a href={personalInfo.linkedin} target="_blank" class="w-12 h-12 rounded-full border border-slate-200 dark:border-slate-800 flex items-center dark:hover:border-brand-500 justify-center hover:bg-slate-100 dark:hover:bg-slate-800 transition-all text-xl hover:scale-110 hover:border-brand-500">
+        <a href={personalInfo.linkedin} aria-label="LinkedIn" target="_blank" class="w-12 h-12 rounded-full border border-slate-200 dark:border-slate-800 flex items-center dark:hover:border-brand-500 justify-center hover:bg-slate-100 dark:hover:bg-slate-800 transition-all text-xl hover:scale-110 hover:border-brand-500">
           <i class="fab fa-linkedin-in"></i>
         </a>
       </div>
@@ -74,7 +74,13 @@ const yearsExperience = currentYear - startYear;
     <div class="relative group">
       <div class="absolute -inset-4 bg-gradient-to-r from-brand-500 to-cyan-500 rounded-full opacity-20 group-hover:opacity-30 blur-2xl transition-opacity"></div>
       <img src="/portfolio/img/me.jpg" alt={personalInfo.name} class="relative w-72 h-72 md:w-96 md:h-96 rounded-full object-cover border-4 border-white dark:border-slate-800 shadow-2xl">
-      <Stats />
+      
+      <section class="text-center p-8 mt-2 bg-white dark:bg-slate-900 rounded-3xl border border-slate-200 dark:border-slate-800 transition-transform">
+        {stats.map((stat) => (
+          <div class="text-4xl md:text-5xl font-bold text-brand-500 mb-2 stat-number">{stat.value}</div>
+          <div class="text-sm text-slate-500 dark:text-slate-400 uppercase tracking-wider">{stat.label}</div>
+        ))}
+      </section>  
     </div>
   </div>
 </section>

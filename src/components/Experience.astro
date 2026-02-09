@@ -32,7 +32,7 @@ import { experience } from '../data/portfolio';
           <div class={`relative mt-4 md:mt-0 ${index % 2 === 1 ? 'md:order-1' : ''}`}>
             <div class={`absolute ${index % 2 === 1 ? 'md:left-auto md:right-0 md:translate-x-1/2' : 'left-1/2 md:left-0 md:translate-x--1'} transform -translate-x-1/2 w-4 h-4 bg-brand-500 rounded-full border-4 border-white dark:border-brand-950 z-10 hidden md:block`}></div>
             
-            <div class="p-6 bg-white dark:bg-slate-900 rounded-2xl border border-slate-200 dark:border-slate-800 hover:scale-105 transition-transform">
+            <div class="p-6 bg-gradient-to-br from-brand-500/10 to-cyan-500/10 rounded-2xl border border-slate-200 dark:border-slate-800 hover:scale-105 transition-transform">
               <ul class="space-y-3 text-slate-600 dark:text-slate-400">
                 {job.achievements.map((achievement) => (
                   <li class="flex items-start gap-3">
@@ -43,7 +43,7 @@ import { experience } from '../data/portfolio';
               </ul>
               <div class="flex flex-wrap gap-2 mt-4">
                 {job.technologies.map((tech) => (
-                  <span class={`px-3 py-1 bg-slate-100 dark:bg-slate-800 rounded-full text-xs font-bold`}>
+                  <span class={`px-3 py-1 bg-gradient-to-br from-brand-200/10 to-cyan-200/10 dark:bg-slate-800 dark:border-0 rounded-full text-xs font-bold border-2 border-brand-500`}>
                     {tech}
                   </span>
                 ))}

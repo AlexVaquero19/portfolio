@@ -129,7 +129,9 @@ export const education = [
     type: "Higher Vocational Training (CFGS)",
     year: "2021",
     icon: "fas fa-graduation-cap",
-    color: "bg-brand-500"
+    bg: "bg-brand-500",
+    gradient: "from-brand-500/5 to-brand-500/5",
+    border: "border-brand-500/20"
   },
   {
     degree: "English B2-C1 Certificate",
@@ -137,7 +139,9 @@ export const education = [
     type: "Professional Working Proficiency",
     year: "2021",
     icon: "fas fa-language",
-    color: "bg-blue-500"
+    bg: "bg-blue-500",
+    gradient: "from-brand-500/5 to-blue-500/5",
+    border: "border-blue-500/20"
   },
   {
     degree: "Network & Microcomputer Systems",
@@ -145,7 +149,9 @@ export const education = [
     type: "Medium Vocational Training (CFGM)",
     year: "2018",
     icon: "fas fa-network-wired",
-    color: "bg-purple-500"
+    bg: "bg-purple-500",
+    gradient: "from-brand-500/5 to-purple-500/5",
+    border: "border-purple-500/20"
   }
 ];
 
@@ -190,10 +196,10 @@ export const skills = {
 };
 
 export const tools = [
-  { name: "Visual Studio", icon: "fas fa-code", color: "text-purple-500" },
-  { name: "VS Code", icon: "fas fa-code", color: "text-blue-500" },
-  { name: "DBeaver", icon: "fas fa-database", color: "text-orange-500" },
-  { name: "Postman", icon: "fas fa-paper-plane", color: "text-amber-500" }
+  { name: "Visual Studio", icon: "fas fa-code", color: "text-purple-500", bg: 'bg-purple-500', gradient: 'from-brand-500/5 to-purple-500/5', border: 'border-purple-500/20' },
+  { name: "VS Code", icon: "fas fa-code", color: "text-blue-500", bg: 'bg-blue-500', gradient: 'from-brand-500/5 to-blue-500/5', border: 'border-blue-500/20' },
+  { name: "DBeaver", icon: "fas fa-database", color: "text-orange-500", bg: 'bg-orange-500', gradient: 'from-brand-500/5 to-orange-500/5', border: 'border-orange-500/20' },
+  { name: "Postman", icon: "fas fa-paper-plane", color: "text-amber-500", bg: 'bg-amber-500', gradient: 'from-brand-500/5 to-amber-500/5', border: 'border-amber-500/20' }
 ];
 
 export const interests = [

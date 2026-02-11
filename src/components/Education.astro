@@ -9,8 +9,8 @@ import { education, courses } from '../data/portfolio';
   
   <div class="grid md:grid-cols-3 gap-6">
     {education.map((edu) => (
-      <div class="p-6 bg-white dark:bg-slate-900 rounded-2xl border border-slate-200 dark:border-slate-800 hover:scale-105 transition-transform">
-        <div class={`w-12 h-12 ${edu.color} rounded-xl flex items-center justify-center text-white text-2xl mb-4`}>
+      <div class={`p-6 rounded-2xl border hover:scale-105 transition-transform bg-gradient-to-br ${edu.gradient} ${edu.border}`}>
+        <div class={`w-12 h-12 ${edu.bg} rounded-xl flex items-center justify-center text-white text-2xl mb-4`}>
           <i class={edu.icon}></i>
         </div>
         <h3 class="font-bold text-lg mb-2">{edu.degree}</h3>

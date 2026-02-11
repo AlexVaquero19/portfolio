@@ -9,6 +9,18 @@ const statusColors = {
   'Open Source': 'bg-purple-500',
   'Education': 'bg-blue-500'
 };
+
+const statusGradientColors = {
+  'Production': 'from-brand-500/5 to-brand-500/5',
+  'Open Source': 'from-brand-500/5 to-purple-500/5',
+  'Education': 'from-brand-500/5 to-blue-500/5'
+};
+
+const statusBorderColors = {
+  'Production': 'border-brand-500/20',
+  'Open Source': 'border-purple-500/20',
+  'Education': 'border-blue-500/20'
+};
 ---
 
 <section id="projects" class="max-w-7xl mx-auto px-6 mb-12">
@@ -54,7 +66,8 @@ const statusColors = {
 
     <!-- Other Projects -->
     {others.map((project) => (
-      <div class={`group relative bg-slate-100 dark:bg-slate-900 rounded-[40px] overflow-hidden border border-slate-200 dark:border-slate-800 hover:border-brand-500 transition-all ${project.achievements.length > 2 ? 'md:col-span-2' : ''}`}>
+      <div class={`group relative  rounded-[40px] overflow-hidden border transition-all bg-gradient-to-br ${statusGradientColors[project.status]}
+                  ${project.achievements.length > 2 ? 'md:col-span-2' : ''} ${statusBorderColors[project.status]}`}>
         <div class="p-8 space-y-4">
           <div class="flex justify-between items-start">
             <div>

@@ -19,14 +19,14 @@ const levelColors = {
     Technical <span class="text-brand-500">Expertise</span>
   </h2>
 
-  <div class="grid md:grid-cols-3 gap-8">
+  <div class="grid md:grid-cols-3 sm:grid-cols-2 xs:grid-cols-1 gap-4">
     {skillCategories.map((category) => (
       <div class={`p-8 bg-gradient-to-br ${category.gradient} rounded-3xl border ${category.border}`}>
         <div class="flex items-center gap-3 mb-6">
           <div class={`w-12 h-12 ${category.color} rounded-xl flex items-center justify-center text-white text-xl`}>
             <i class={category.icon}></i>
           </div>
-          <h3 class="text-2xl font-bold">{category.title}</h3>
+          <h3 class="text-2xl font-bold cursor-default">{category.title}</h3>
         </div>
         <div class="space-y-4">
           {category.skills.map((skill) => (
@@ -51,9 +51,9 @@ const levelColors = {
     <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
       {tools.map((tool) => (
         <div class={`flex items-center justify-center gap-3 p-4 rounded-2xl border bg-gradient-to-br ${tool.gradient}
-                 ${tool.border} hover:scale-105 transition-transform`}>
+                 ${tool.border} hover:scale-105 transition-transform ${tool.bg}`}>
           <i class={`${tool.icon} text-2xl ${tool.color}`}></i>
-          <span class="font-bold">{tool.name}</span>
+          <span class="font-bold cursor-default">{tool.name}</span>
         </div>
       ))}
     </div>
@@ -66,9 +66,10 @@ const levelColors = {
     </h3>
     <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
       {interests.map((interest) => (
-        <div class="p-4 text-center rounded-2xl bg-gradient-to-br from-brand-500/10 to-brand-500/10 border border-brand-500/20 hover:scale-105 transition-transform">
-          <i class={`${interest.icon} text-3xl mb-3 text-brand-500`}></i>
-          <p class={`font-bold ${interest.italic ? 'italic' : ''}`}>{interest.name}</p>
+        <div class={`flex flex-col items-center justify-center gap-3 p-4 rounded-2xl border from-brand-500/5 to-brand-500/5 hover:scale-105 
+                     transition-transform border-brand-500/20 bg-brand-500/5`}>
+          <i class={`${interest.icon} text-3xl text-brand-500`}></i>
+          <p class={`font-bold cursor-default ${interest.italic ? 'italic' : ''}`}>{interest.name}</p>
         </div>
       ))}
     </div>

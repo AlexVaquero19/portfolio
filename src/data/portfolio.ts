@@ -159,12 +159,29 @@ export const courses = [
   {
     name: "SQL From Zero",
     platform: "OpenWebinars",
-    icon: "fas fa-database"
+    icon: "fas fa-database",
+    text: "text-red-500",
+    bg: "bg-red-500/5",
+    gradient: "from-brand-500/5 to-red-500/5",
+    border: "border-red-500/20"
   },
   {
     name: "HTML5, CSS3 & JavaScript",
     platform: "Udemy",
-    icon: "fas fa-code"
+    icon: "fas fa-code",
+    text: "text-orange-500",
+    bg: "bg-orange-500/5",
+    gradient: "from-brand-500/5 to-orange-500/5",
+    border: "border-orange-500/20"
+  },
+  {
+    name: "Python Full-Stack Development",
+    platform: "Onsite Course",
+    icon: "fa-brands fa-python",
+    text: "text-green-500",
+    bg: "bg-green-500/5",
+    gradient: "from-brand-500/5 to-v-500/5",
+    border: "border-green-500/20"
   }
 ];
 
@@ -196,10 +213,10 @@ export const skills = {
 };
 
 export const tools = [
-  { name: "Visual Studio", icon: "fas fa-code", color: "text-purple-500", bg: 'bg-purple-500', gradient: 'from-brand-500/5 to-purple-500/5', border: 'border-purple-500/20' },
-  { name: "VS Code", icon: "fas fa-code", color: "text-blue-500", bg: 'bg-blue-500', gradient: 'from-brand-500/5 to-blue-500/5', border: 'border-blue-500/20' },
-  { name: "DBeaver", icon: "fas fa-database", color: "text-orange-500", bg: 'bg-orange-500', gradient: 'from-brand-500/5 to-orange-500/5', border: 'border-orange-500/20' },
-  { name: "Postman", icon: "fas fa-paper-plane", color: "text-amber-500", bg: 'bg-amber-500', gradient: 'from-brand-500/5 to-amber-500/5', border: 'border-amber-500/20' }
+  { name: "Visual Studio", icon: "fas fa-code", color: "text-purple-500", bg: 'bg-purple-500/5', gradient: 'from-brand-500/5 to-purple-500/5', border: 'border-purple-500/20' },
+  { name: "VS Code", icon: "fas fa-code", color: "text-blue-500", bg: 'bg-blue-500/5', gradient: 'from-brand-500/5 to-blue-500/5', border: 'border-blue-500/20' },
+  { name: "DBeaver", icon: "fas fa-database", color: "text-orange-500", bg: 'bg-orange-500/5', gradient: 'from-brand-500/5 to-orange-500/5', border: 'border-orange-500/20' },
+  { name: "Postman", icon: "fas fa-paper-plane", color: "text-amber-500", bg: 'bg-amber-500/5', gradient: 'from-brand-500/5 to-amber-500/5', border: 'border-amber-500/20' }
 ];
 
 export const interests = [

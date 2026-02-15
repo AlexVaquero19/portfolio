@@ -175,8 +175,8 @@ export const courses = [
     border: "border-orange-500/20"
   },
   {
-    name: "Python Full-Stack Development",
-    platform: "Onsite Course",
+    name: "Python Application Development",
+    platform: "Formadores IT",
     icon: "fa-brands fa-python",
     text: "text-green-500",
     bg: "bg-green-500/5",

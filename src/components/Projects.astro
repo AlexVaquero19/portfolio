@@ -4,19 +4,19 @@ import { projects } from '../data/portfolio';
 const featured = projects.find(p => p.featured);
 const others = projects.filter(p => !p.featured);
 
-const statusColors = {
+const statusColors: Record<string, string> = {
   'Production': 'bg-brand-500',
   'Open Source': 'bg-purple-500',
   'Education': 'bg-blue-500'
 };
 
-const statusGradientColors = {
+const statusGradientColors: Record<string, string> = {
   'Production': 'from-brand-500/5 to-brand-500/5',
   'Open Source': 'from-brand-500/5 to-purple-500/5',
   'Education': 'from-brand-500/5 to-blue-500/5'
 };
 
-const statusBorderColors = {
+const statusBorderColors: Record<string, string> = {
   'Production': 'border-brand-500/20',
   'Open Source': 'border-purple-500/20',
   'Education': 'border-blue-500/20'

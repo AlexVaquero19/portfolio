@@ -244,6 +244,19 @@ export const projects = [
     mainTech: "ASP.NET"
   },
   {
+    title: "Emergencies & Rescue Operations Dashboard",
+    description: "Interactive dashboard for visualizing maritime emergencies and rescue operations data. Built with Astro.",
+    featured: false,
+    status: "Open Source",
+    link: "https://alexVaquero19.github.io/Emergencias-Salvamento-Maritimo",
+    linkType: "github",
+    achievements: [
+      "Interactive data visualization with charts and maps",
+      "Responsive design for desktop and mobile"
+    ],
+    technologies: ["Astro", "Tailwind CSS", "Chart.js", "Leaflet.js"]
+  },
+  {
     title: "Wallpaper Automation",
     description: "Advanced Python tool using Selenium for automated high-resolution wallpaper discovery and synchronization across devices.",
     featured: false,

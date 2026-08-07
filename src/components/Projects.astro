@@ -31,7 +31,7 @@ const statusBorderColors: Record<string, string> = {
   <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
     <!-- Featured Project -->
     {featured && (
-      <div class="md:col-span-2 group relative bg-gradient-to-br from-brand-500/10 to-cyan-500/10 rounded-[40px] overflow-hidden border-2 border-brand-500/30 hover:border-brand-500 transition-all">
+      <div class="md:col-span-2 group relative bg-linear-to-br from-brand-500/10 to-cyan-500/10 rounded-[40px] overflow-hidden border-2 border-brand-500/30 hover:border-brand-500 transition-all">
         <div class="p-10 space-y-6">
           <div class="flex justify-between items-start">
             <div>
@@ -66,7 +66,7 @@ const statusBorderColors: Record<string, string> = {
 
     <!-- Other Projects -->
     {others.map((project) => (
-      <div class={`group relative  rounded-[40px] overflow-hidden border transition-all bg-gradient-to-br ${statusGradientColors[project.status]}
+      <div class={`group relative  rounded-[40px] overflow-hidden border transition-all bg-linear-to-br ${statusGradientColors[project.status]}
                   ${project.achievements.length > 2 ? 'md:col-span-2' : ''} ${statusBorderColors[project.status]}`}>
         <div class="p-8 space-y-4">
           <div class="flex justify-between items-start">

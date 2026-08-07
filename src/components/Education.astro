@@ -9,7 +9,7 @@ import { education, courses } from '../data/portfolio';
   
   <div class="grid md:grid-cols-3 sm:grid-cols-2 xs:grid-cols-1 gap-6">
     {education.map((edu) => (
-      <div class={`p-6 rounded-2xl border hover:scale-105 transition-transform bg-gradient-to-br ${edu.gradient} ${edu.border}`}>
+      <div class={`p-6 rounded-2xl border hover:scale-105 transition-transform bg-linear-to-br ${edu.gradient} ${edu.border}`}>
         <div class={`w-12 h-12 ${edu.bg} rounded-xl flex items-center justify-center text-white text-2xl mb-4`}>
           <i class={edu.icon}></i>
         </div>
@@ -25,7 +25,7 @@ import { education, courses } from '../data/portfolio';
     <h3 class="text-2xl font-bold mb-6 text-center">Continuous Learning</h3>
     <div class="grid md:grid-cols-3 sm:grid-cols-2 xs:grid-cols-1 gap-4">
       {courses.map((course) => (
-        <div class={`flex items-center gap-4 p-4 rounded-lg border bg-gradient-to-br ${course.gradient} ${course.border} ${course.bg} hover:scale-105 transition-transform`}>
+        <div class={`flex items-center gap-4 p-4 rounded-lg border bg-linear-to-br ${course.gradient} ${course.border} ${course.bg} hover:scale-105 transition-transform`}>
           <i class={`${course.icon} text-2xl ${course.text}`}></i>
           <div>
             <p class="font-bold cursor-default">{course.name}</p>

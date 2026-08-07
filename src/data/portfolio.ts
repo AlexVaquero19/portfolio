@@ -249,7 +249,7 @@ export const projects = [
     featured: false,
     status: "Open Source",
     link: "https://alexVaquero19.github.io/Emergencias-Salvamento-Maritimo",
-    linkType: "github",
+    linkType: "external",
     achievements: [
       "Interactive data visualization with charts and maps",
       "Responsive design for desktop and mobile"

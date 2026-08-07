@@ -21,7 +21,7 @@ const levelColors = {
 
   <div class="grid md:grid-cols-3 sm:grid-cols-2 xs:grid-cols-1 gap-4">
     {skillCategories.map((category) => (
-      <div class={`p-8 bg-gradient-to-br ${category.gradient} rounded-3xl border ${category.border}`}>
+      <div class={`p-8 bg-linear-to-br ${category.gradient} rounded-3xl border ${category.border}`}>
         <div class="flex items-center gap-3 mb-6">
           <div class={`w-12 h-12 ${category.color} rounded-xl flex items-center justify-center text-white text-xl`}>
             <i class={category.icon}></i>
@@ -50,7 +50,7 @@ const levelColors = {
     <h3 class="text-2xl font-bold mb-6 text-center">Development Environment</h3>
     <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
       {tools.map((tool) => (
-        <div class={`flex items-center justify-center gap-3 p-4 rounded-2xl border bg-gradient-to-br ${tool.gradient}
+        <div class={`flex items-center justify-center gap-3 p-4 rounded-2xl border bg-linear-to-br ${tool.gradient}
                  ${tool.border} hover:scale-105 transition-transform ${tool.bg}`}>
           <i class={`${tool.icon} text-2xl ${tool.color}`}></i>
           <span class="font-bold cursor-default">{tool.name}</span>
@@ -60,7 +60,7 @@ const levelColors = {
   </div>
 
   <!-- Interests -->
-  <div class="mt-12 p-10 rounded-[32px] bg-gradient-to-br from-brand-500/5 to-cyan-500/5 border border-brand-500/20">
+  <div class="mt-12 p-10 rounded-[32px] bg-linear-to-br from-brand-500/5 to-cyan-500/5 border border-brand-500/20">
     <h3 class="text-3xl font-display font-bold mb-8 text-center">
       <i class="fa-solid fa-heart text-brand-500"></i> Beyond <span class="text-brand-500">Coding</span>
     </h3>
